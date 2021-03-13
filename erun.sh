@@ -18,15 +18,19 @@ servers=() # server PIDs
 clients=() # client PIDs
 
 # 3. start EPaxos leader
-emaster -port=$mport -N=$NS &
+emaster -port=$mport -N=$NS \
+    >${efolder}/logs/NS${NS}-NC${NC}-q${reqsNb}-w${writes}-r${rounds}-sp${serverP}-cp${clientP}-c${conflicts}-master.out 2>&1 &
 servers[0]=$!
+echo "master started"
 sleep 1
 
 # 4. start EPaxos servers
 for i in $(seq $NS); do
-    eserver -port=$(($mport + $i)) -maddr=$maddr -mport=$mport -addr=localhost -e=true -p=$serverP -thrifty=true &
+    eserver -port=$(($mport + $i)) -maddr=$maddr -mport=$mport -addr=localhost -e=true -p=$serverP -thrifty=true \
+        >${efolder}/logs/NS${NS}-NC${NC}-q${reqsNb}-w${writes}-r${rounds}-sp${serverP}-cp${clientP}-c${conflicts}-server$(($i - 1)).out 2>&1 &
     servers[i]=$!
 done
+echo "servers started"
 sleep 3
 
 # 5. start EPaxos clients
@@ -35,6 +39,7 @@ for i in $(seq $NC); do
         >${efolder}/logs/NS${NS}-NC${NC}-q${reqsNb}-w${writes}-r${rounds}-sp${serverP}-cp${clientP}-c${conflicts}-client$(($i - 1)).out 2>&1 &
     clients[$(($i - 1))]=$!
 done
+echo "clients started"
 
 # prepare nettop monitoring
 pids="" # a list of PIDs that will be monitored
@@ -57,9 +62,10 @@ for pid in ${clients[*]}; do
 done
 
 # stop monitoring 
-echo "EPaxos clients have exited, wait a few more seconds before stopping nettop (process ${netPID})..."
+echo "clients exited, wait a few more seconds before stopping nettop (process ${netPID})..."
 sleep 5
 kill -2 $netPID
 
-# stop servers and the leader
-. ${efolder}/ekill.sh
+for pid in ${servers[*]}; do
+    kill -2 $pid
+done
