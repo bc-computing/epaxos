@@ -8,7 +8,10 @@ touch ${profile} # create one if profile does not exist
 # https://stackoverflow.com/a/1397020
 # for go build to work; for running Shell code anywhere; for running EPaxos' binaries anywhere
 if [[ ":${GOPATH}:" != *":${efolder}:"* ]]; then
-  echo 'export GOPATH=${GOPATH}':"${efolder}" >>${profile}
+  # echo 'export GOPATH=${GOPATH}':"${efolder}" >>${profile}
+  # there are some unknown issue prevents the server code to compile if the GOPATH variable set in ${profile} has more than one entry
+  # as a makeshift, I will do this instead:
+  export GOPATH=${GOPATH}:${efolder} 
   source ${profile}
 fi
 if [[ ":${PATH}:" != *":${efolder}:"* ]]; then
