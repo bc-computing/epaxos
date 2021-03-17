@@ -9,7 +9,7 @@ writes=50       # the percentage of client write operations / read & write opera
 conflicts=0     # the percentage fo client read & write conflicts (cf)
 serverP=2       # server's GOMAXPROCS (sp)
 clientP=1       # client's GOMAXPROCS (cp)
-thrifty=true    # EPaxos: "Use only as many messages as strictly required for inter-replica communication" (th)
+thrifty=false   # EPaxos: "Use only as many messages as strictly required for inter-replica communication" (th)
 
 # 2. runtime variables (no need to modify)
 rounds=$(($reqsNb / $cbatch)) # the number of rounds = reqsNb / cbatch
