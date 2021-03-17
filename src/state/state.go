@@ -26,8 +26,26 @@ type Key int64
 
 type Command struct {
 	Op Operation
-	K  Key
-	V  Value
+	K  Key 		// key = 8 bytes
+	V  Value 	// 19 values * 8 bytes = 152 bytes
+	V2  Value  	// total = 160 bytes
+	V3  Value
+	V4  Value
+	V5  Value
+	V6  Value
+	V7  Value
+	V8  Value
+	V9  Value
+	V10  Value
+	V11  Value
+	V12  Value
+	V13  Value
+	V14  Value
+	V15  Value
+	V16  Value
+	V17  Value
+	V18  Value
+	V19  Value
 }
 
 type State struct {

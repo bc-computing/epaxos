@@ -19,7 +19,7 @@ def find_max_runtime(log_dir="./logs"):
     time_list = []
     for fn in find_client_log_names(log_dir):
         with open(os.path.join(log_dir, fn)) as f:
-            last = f.readlines()[-1].strip()
+            last = f.readlines()[-2].strip()
             time = float(last.split()[2])
             time_list.append(time)
     return max(time_list)

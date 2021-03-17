@@ -11,8 +11,11 @@ import (
 	"io"
 	"log"
 	"math"
+	"os"
+	"os/signal"
 	"state"
 	"sync"
+	"syscall"
 	"time"
 )
 
@@ -63,7 +66,7 @@ type Replica struct {
 	tryPreAcceptReplyRPC  uint8
 	InstanceSpace         [][]*Instance // the space of all instances (used and not yet used)
 	crtInstance           []int32       // highest active instance numbers that this replica knows about
-	CommittedUpTo         []int32     // highest committed instance per replica that this replica knows about
+	CommittedUpTo         []int32       // highest committed instance per replica that this replica knows about
 	ExecedUpTo            []int32       // instance up to which all commands have been executed (including iteslf)
 	exec                  *Exec
 	conflicts             []map[state.Key]int32
@@ -73,6 +76,8 @@ type Replica struct {
 	latestCPInstance      int32
 	clientMutex           *sync.Mutex // for synchronizing when sending replies to clients from multiple go-routines
 	instancesToRecover    chan *instanceId
+	TotalRequests         int32
+	TotalBatches          int32
 }
 
 type Instance struct {
@@ -143,7 +148,10 @@ func NewReplica(id int, peerAddrList []string, thrifty bool, exec bool, dreply b
 		0,
 		-1,
 		new(sync.Mutex),
-		make(chan *instanceId, genericsmr.CHAN_BUFFER_SIZE)}
+		make(chan *instanceId, genericsmr.CHAN_BUFFER_SIZE),
+		0,
+		0,
+	}
 
 	r.Beacon = beacon
 	r.Durable = durable
@@ -188,7 +196,7 @@ func (r *Replica) recordInstanceMetadata(inst *Instance) {
 		return
 	}
 
-	b := make([]byte, 9 + r.N * 4)
+	b := make([]byte, 9+r.N*4)
 	binary.LittleEndian.PutUint32(b[0:4], uint32(inst.ballot))
 	b[4] = byte(inst.Status)
 	binary.LittleEndian.PutUint32(b[5:9], uint32(inst.Seq))
@@ -230,7 +238,7 @@ var slowClockChan chan bool
 
 func (r *Replica) fastClock() {
 	for !r.Shutdown {
-		time.Sleep(5 * 1e6) // 5 ms
+		time.Sleep(1 * 1e6) // 5 ms
 		fastClockChan <- true
 	}
 }
@@ -304,17 +312,75 @@ func (r *Replica) run() {
 
 	onOffProposeChan := r.ProposeChan
 
+	debug := false
+	debugCallDict := map[string]int{
+		"handlePropose":           0,
+		"handlePrepare":           0,
+		"handlePreAccept":         0,
+		"handleAccept":            0,
+		"handleCommit":            0,
+		"handleCommitShort":       0,
+		"handlePrepareReply":      0,
+		"handlePreAcceptReply":    0,
+		"handlePreAcceptOK":       0,
+		"handleAcceptReply":       0,
+		"handleTryPreAccept":      0,
+		"handleTryPreAcceptReply": 0,
+	}
+	debugTimeDict := map[string]time.Duration{
+		"handlePropose":           0,
+		"handlePrepare":           0,
+		"handlePreAccept":         0,
+		"handleAccept":            0,
+		"handleCommit":            0,
+		"handleCommitShort":       0,
+		"handlePrepareReply":      0,
+		"handlePreAcceptReply":    0,
+		"handlePreAcceptOK":       0,
+		"handleAcceptReply":       0,
+		"handleTryPreAccept":      0,
+		"handleTryPreAcceptReply": 0,
+	}
+
+	if debug {
+		go func() {
+			interrupt := make(chan os.Signal, 1)
+			signal.Notify(interrupt, syscall.SIGINT, syscall.SIGKILL, syscall.SIGTERM)
+			<-interrupt
+			log.Print(debugCallDict)
+			log.Print(debugTimeDict)
+			os.Exit(0)
+		}()
+	}
+
+	go func() {
+		interrupt := make(chan os.Signal, 1)
+		signal.Notify(interrupt, syscall.SIGINT, syscall.SIGKILL, syscall.SIGTERM)
+		<-interrupt
+		log.Printf("TotalRequests=%d, TotalBatches=%d\n", r.TotalRequests, r.TotalBatches)
+		os.Exit(0)
+	}()
+
+	var tStart time.Time
+
 	for !r.Shutdown {
 
 		select {
 
 		case propose := <-onOffProposeChan:
+			if debug {
+				tStart = time.Now()
+			}
 			//got a Propose from a client
 			dlog.Printf("Proposal with op %d\n", propose.Command.Op)
 			r.handlePropose(propose)
 			//deactivate new proposals channel to prioritize the handling of other protocol messages,
 			//and to allow commands to accumulate for batching
 			onOffProposeChan = nil
+			if debug {
+				debugTimeDict["handlePropose"] += time.Now().Sub(tStart)
+				debugCallDict["handlePropose"] += 1
+			}
 			break
 
 		case <-fastClockChan:
@@ -323,78 +389,156 @@ func (r *Replica) run() {
 			break
 
 		case prepareS := <-r.prepareChan:
+			if debug {
+				tStart = time.Now()
+			}
 			prepare := prepareS.(*epaxosproto.Prepare)
 			//got a Prepare message
 			dlog.Printf("Received Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
 			r.handlePrepare(prepare)
+			if debug {
+				debugTimeDict["handlePrepare"] += time.Now().Sub(tStart)
+				debugCallDict["handlePrepare"] += 1
+			}
 			break
 
 		case preAcceptS := <-r.preAcceptChan:
+			if debug {
+				tStart = time.Now()
+			}
 			preAccept := preAcceptS.(*epaxosproto.PreAccept)
 			//got a PreAccept message
 			dlog.Printf("Received PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
 			r.handlePreAccept(preAccept)
+			if debug {
+				//fmt.Println(r.Id, "handlePreAccept", time.Now().Sub(tStart))
+				debugTimeDict["handlePreAccept"] += time.Now().Sub(tStart)
+				debugCallDict["handlePreAccept"] += 1
+			}
 			break
 
 		case acceptS := <-r.acceptChan:
+			if debug {
+				tStart = time.Now()
+			}
 			accept := acceptS.(*epaxosproto.Accept)
 			//got an Accept message
 			dlog.Printf("Received Accept for instance %d.%d\n", accept.LeaderId, accept.Instance)
 			r.handleAccept(accept)
+			if debug {
+				debugTimeDict["handleAccept"] += time.Now().Sub(tStart)
+				debugCallDict["handleAccept"] += 1
+			}
 			break
 
 		case commitS := <-r.commitChan:
+			if debug {
+				tStart = time.Now()
+			}
 			commit := commitS.(*epaxosproto.Commit)
 			//got a Commit message
 			dlog.Printf("Received Commit for instance %d.%d\n", commit.LeaderId, commit.Instance)
 			r.handleCommit(commit)
+			if debug {
+				debugTimeDict["handleCommit"] += time.Now().Sub(tStart)
+				debugCallDict["handleCommit"] += 1
+			}
 			break
 
 		case commitS := <-r.commitShortChan:
+			if debug {
+				tStart = time.Now()
+			}
 			commit := commitS.(*epaxosproto.CommitShort)
 			//got a Commit message
 			dlog.Printf("Received Commit for instance %d.%d\n", commit.LeaderId, commit.Instance)
 			r.handleCommitShort(commit)
+			if debug {
+				debugTimeDict["handleCommitShort"] += time.Now().Sub(tStart)
+				debugCallDict["handleCommitShort"] += 1
+			}
 			break
 
 		case prepareReplyS := <-r.prepareReplyChan:
+			if debug {
+				tStart = time.Now()
+			}
 			prepareReply := prepareReplyS.(*epaxosproto.PrepareReply)
 			//got a Prepare reply
 			dlog.Printf("Received PrepareReply for instance %d.%d\n", prepareReply.Replica, prepareReply.Instance)
 			r.handlePrepareReply(prepareReply)
+			if debug {
+				debugTimeDict["handlePrepareReply"] += time.Now().Sub(tStart)
+				debugCallDict["handlePrepareReply"] += 1
+			}
 			break
 
 		case preAcceptReplyS := <-r.preAcceptReplyChan:
+			if debug {
+				tStart = time.Now()
+			}
 			preAcceptReply := preAcceptReplyS.(*epaxosproto.PreAcceptReply)
 			//got a PreAccept reply
 			dlog.Printf("Received PreAcceptReply for instance %d.%d\n", preAcceptReply.Replica, preAcceptReply.Instance)
 			r.handlePreAcceptReply(preAcceptReply)
+			if debug {
+				debugTimeDict["handlePreAcceptReply"] += time.Now().Sub(tStart)
+				debugCallDict["handlePreAcceptReply"] += 1
+			}
 			break
 
 		case preAcceptOKS := <-r.preAcceptOKChan:
+			if debug {
+				tStart = time.Now()
+			}
 			preAcceptOK := preAcceptOKS.(*epaxosproto.PreAcceptOK)
 			//got a PreAccept reply
 			dlog.Printf("Received PreAcceptOK for instance %d.%d\n", r.Id, preAcceptOK.Instance)
 			r.handlePreAcceptOK(preAcceptOK)
+			if debug {
+				debugTimeDict["handlePreAcceptOK"] += time.Now().Sub(tStart)
+				debugCallDict["handlePreAcceptOK"] += 1
+			}
 			break
 
 		case acceptReplyS := <-r.acceptReplyChan:
+			if debug {
+				tStart = time.Now()
+			}
 			acceptReply := acceptReplyS.(*epaxosproto.AcceptReply)
 			//got an Accept reply
 			dlog.Printf("Received AcceptReply for instance %d.%d\n", acceptReply.Replica, acceptReply.Instance)
 			r.handleAcceptReply(acceptReply)
+			if debug {
+				debugTimeDict["handleAcceptReply"] += time.Now().Sub(tStart)
+				debugCallDict["handleAcceptReply"] += 1
+			}
 			break
 
 		case tryPreAcceptS := <-r.tryPreAcceptChan:
+			if debug {
+				tStart = time.Now()
+			}
 			tryPreAccept := tryPreAcceptS.(*epaxosproto.TryPreAccept)
 			dlog.Printf("Received TryPreAccept for instance %d.%d\n", tryPreAccept.Replica, tryPreAccept.Instance)
 			r.handleTryPreAccept(tryPreAccept)
+			if debug {
+				debugTimeDict["handleTryPreAccept"] += time.Now().Sub(tStart)
+				debugCallDict["handleTryPreAccept"] += 1
+			}
 			break
 
 		case tryPreAcceptReplyS := <-r.tryPreAcceptReplyChan:
+			if debug {
+				tStart = time.Now()
+			}
 			tryPreAcceptReply := tryPreAcceptReplyS.(*epaxosproto.TryPreAcceptReply)
 			dlog.Printf("Received TryPreAcceptReply for instance %d.%d\n", tryPreAcceptReply.Replica, tryPreAcceptReply.Instance)
 			r.handleTryPreAcceptReply(tryPreAcceptReply)
+			if debug {
+				debugTimeDict["handleTryPreAcceptReply"] += time.Now().Sub(tStart)
+				debugCallDict["handleTryPreAcceptReply"] += 1
+			}
 			break
 
 		case beacon := <-r.BeaconChan:
@@ -561,7 +705,7 @@ func (r *Replica) bcastPreAccept(replica int32, instance int32, ballot int32, cm
 
 	n := r.N - 1
 	if r.Thrifty {
-		n = r.N/2 + (r.N/2 + 1) / 2 - 1
+		n = r.N/2 + (r.N/2+1)/2 - 1
 	}
 
 	sent := 0
@@ -704,8 +848,8 @@ func (r *Replica) updateConflicts(cmds []state.Command, replica int32, instance 
 				r.conflicts[replica][cmds[i].K] = instance
 			}
 		} else {
-            r.conflicts[replica][cmds[i].K] = instance
-        }
+			r.conflicts[replica][cmds[i].K] = instance
+		}
 		if s, present := r.maxSeqPerKey[cmds[i].K]; present {
 			if s < seq {
 				r.maxSeqPerKey[cmds[i].K] = seq
@@ -805,6 +949,8 @@ func (r *Replica) handlePropose(propose *genericsmr.Propose) {
 	if batchSize > MAX_BATCH {
 		batchSize = MAX_BATCH
 	}
+	r.TotalRequests += int32(batchSize)
+	r.TotalBatches += 1
 
 	instNo := r.crtInstance[r.Id]
 	r.crtInstance[r.Id]++
@@ -1052,7 +1198,7 @@ func (r *Replica) handlePreAcceptReply(pareply *epaxosproto.PreAcceptReply) {
 	}
 
 	//can we commit on the fast path?
-	if inst.lb.preAcceptOKs >= r.N/2 + (r.N/2 + 1) / 2 - 1 && inst.lb.allEqual && allCommitted && isInitialBallot(inst.ballot) {
+	if inst.lb.preAcceptOKs >= r.N/2+(r.N/2+1)/2-1 && inst.lb.allEqual && allCommitted && isInitialBallot(inst.ballot) {
 		happy++
 		dlog.Printf("Fast path for instance %d.%d\n", pareply.Replica, pareply.Instance)
 		r.InstanceSpace[pareply.Replica][pareply.Instance].Status = epaxosproto.COMMITTED
@@ -1114,7 +1260,7 @@ func (r *Replica) handlePreAcceptOK(pareply *epaxosproto.PreAcceptOK) {
 	}
 
 	//can we commit on the fast path?
-	if inst.lb.preAcceptOKs >= r.N/2 + (r.N/2 + 1) / 2 - 1 && inst.lb.allEqual && allCommitted && isInitialBallot(inst.ballot) {
+	if inst.lb.preAcceptOKs >= r.N/2+(r.N/2+1)/2-1 && inst.lb.allEqual && allCommitted && isInitialBallot(inst.ballot) {
 		happy++
 		r.InstanceSpace[r.Id][pareply.Instance].Status = epaxosproto.COMMITTED
 		r.updateCommitted(r.Id)
