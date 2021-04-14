@@ -16,6 +16,42 @@ func (t *Command) Marshal(w io.Writer) {
 	w.Write(bs)
 	binary.LittleEndian.PutUint64(bs, uint64(t.V))
 	w.Write(bs)
+	binary.LittleEndian.PutUint64(bs, uint64(t.V2))
+	w.Write(bs)
+	binary.LittleEndian.PutUint64(bs, uint64(t.V3))
+	w.Write(bs)
+	binary.LittleEndian.PutUint64(bs, uint64(t.V4))
+	w.Write(bs)
+	binary.LittleEndian.PutUint64(bs, uint64(t.V5))
+	w.Write(bs)
+	binary.LittleEndian.PutUint64(bs, uint64(t.V6))
+	w.Write(bs)
+	binary.LittleEndian.PutUint64(bs, uint64(t.V7))
+	w.Write(bs)
+	binary.LittleEndian.PutUint64(bs, uint64(t.V8))
+	w.Write(bs)
+	binary.LittleEndian.PutUint64(bs, uint64(t.V9))
+	w.Write(bs)
+	binary.LittleEndian.PutUint64(bs, uint64(t.V10))
+	w.Write(bs)
+	binary.LittleEndian.PutUint64(bs, uint64(t.V11))
+	w.Write(bs)
+	binary.LittleEndian.PutUint64(bs, uint64(t.V12))
+	w.Write(bs)
+	binary.LittleEndian.PutUint64(bs, uint64(t.V13))
+	w.Write(bs)
+	binary.LittleEndian.PutUint64(bs, uint64(t.V14))
+	w.Write(bs)
+	binary.LittleEndian.PutUint64(bs, uint64(t.V15))
+	w.Write(bs)
+	binary.LittleEndian.PutUint64(bs, uint64(t.V16))
+	w.Write(bs)
+	binary.LittleEndian.PutUint64(bs, uint64(t.V17))
+	w.Write(bs)
+	binary.LittleEndian.PutUint64(bs, uint64(t.V18))
+	w.Write(bs)
+	binary.LittleEndian.PutUint64(bs, uint64(t.V19))
+	w.Write(bs)
 }
 
 func (t *Command) Unmarshal(r io.Reader) error {
@@ -35,6 +71,78 @@ func (t *Command) Unmarshal(r io.Reader) error {
 		return err
 	}
 	t.V = Value(binary.LittleEndian.Uint64(bs))
+	if _, err := io.ReadFull(r, bs); err != nil {
+		return err
+	}
+	t.V2 = Value(binary.LittleEndian.Uint64(bs))
+	if _, err := io.ReadFull(r, bs); err != nil {
+		return err
+	}
+	t.V3 = Value(binary.LittleEndian.Uint64(bs))
+	if _, err := io.ReadFull(r, bs); err != nil {
+		return err
+	}
+	t.V4 = Value(binary.LittleEndian.Uint64(bs))
+	if _, err := io.ReadFull(r, bs); err != nil {
+		return err
+	}
+	t.V5 = Value(binary.LittleEndian.Uint64(bs))
+	if _, err := io.ReadFull(r, bs); err != nil {
+		return err
+	}
+	t.V6 = Value(binary.LittleEndian.Uint64(bs))
+	if _, err := io.ReadFull(r, bs); err != nil {
+		return err
+	}
+	t.V7 = Value(binary.LittleEndian.Uint64(bs))
+	if _, err := io.ReadFull(r, bs); err != nil {
+		return err
+	}
+	t.V8 = Value(binary.LittleEndian.Uint64(bs))
+	if _, err := io.ReadFull(r, bs); err != nil {
+		return err
+	}
+	t.V9 = Value(binary.LittleEndian.Uint64(bs))
+	if _, err := io.ReadFull(r, bs); err != nil {
+		return err
+	}
+	t.V10 = Value(binary.LittleEndian.Uint64(bs))
+	if _, err := io.ReadFull(r, bs); err != nil {
+		return err
+	}
+	t.V11 = Value(binary.LittleEndian.Uint64(bs))
+	if _, err := io.ReadFull(r, bs); err != nil {
+		return err
+	}
+	t.V12 = Value(binary.LittleEndian.Uint64(bs))
+	if _, err := io.ReadFull(r, bs); err != nil {
+		return err
+	}
+	t.V13 = Value(binary.LittleEndian.Uint64(bs))
+	if _, err := io.ReadFull(r, bs); err != nil {
+		return err
+	}
+	t.V14 = Value(binary.LittleEndian.Uint64(bs))
+	if _, err := io.ReadFull(r, bs); err != nil {
+		return err
+	}
+	t.V15 = Value(binary.LittleEndian.Uint64(bs))
+	if _, err := io.ReadFull(r, bs); err != nil {
+		return err
+	}
+	t.V16 = Value(binary.LittleEndian.Uint64(bs))
+	if _, err := io.ReadFull(r, bs); err != nil {
+		return err
+	}
+	t.V17 = Value(binary.LittleEndian.Uint64(bs))
+	if _, err := io.ReadFull(r, bs); err != nil {
+		return err
+	}
+	t.V18 = Value(binary.LittleEndian.Uint64(bs))
+	if _, err := io.ReadFull(r, bs); err != nil {
+		return err
+	}
+	t.V19 = Value(binary.LittleEndian.Uint64(bs))
 	return nil
 }
 
