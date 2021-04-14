@@ -58,6 +58,8 @@ nettop -P -l 0 -J time,bytes_in,bytes_out ${pids} \
     >${log_file_path_head}-nettop.out 2>&1 &
 netPID=$!
 
+echo "passed nettop"
+
 # 8. waits the clients to exit
 for pid in ${clients[*]}; do
     wait $pid
