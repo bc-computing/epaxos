@@ -2,11 +2,11 @@
 maddr=localhost # EPaxos master address
 mport=17070     # EPaxos master port
 NS=3            # the number of servers (NS)
-NC=1            # the number of clients (NC)
+NC=100            # the number of clients (NC)
 reqsNb=1000     # the number of unbatched-requests per client (re)
-cbatch=1        # the number of requests in a client batch (cb)
+cbatch=10        # the number of requests in a client batch (cb)
 writes=50       # the percentage of client write operations / read & write operations (wr)
-conflicts=0     # the percentage fo client read & write conflicts (cf)
+conflicts=100     # the percentage fo client read & write conflicts (cf)
 serverP=2       # server's GOMAXPROCS (sp)
 clientP=1       # client's GOMAXPROCS (cp)
 thrifty=false   # EPaxos: "Use only as many messages as strictly required for inter-replica communication" (th)
@@ -16,8 +16,8 @@ rounds=$(($reqsNb / $cbatch)) # the number of rounds = reqsNb / cbatch
 efolder=${HOME}/go/src/epaxos
 mkdir -p ${efolder}/logs
 log_file_path_head=${efolder}/logs/NS${NS}-NC${NC}-re${reqsNb}-cb${cbatch}-wr${writes}-cf${conflicts}-sp${serverP}-cp${clientP}-th${thrifty}
-servers=() # server PIDs
-clients=() # client PIDs
+servers=(10.10.1.1 10.10.1.2 10.10.1.3) # server PIDs
+clients=(10.10.1.4 10.10.1.5) # client PIDs
 
 # 3. start the EPaxos leader
 emaster -port=$mport -N=$NS \
