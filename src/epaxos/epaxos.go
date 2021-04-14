@@ -489,7 +489,7 @@ func (r *Replica) run() {
 			}
 			prepareReply := prepareThirdRoundReplyS.(*epaxosproto.PrepareReply)
 			//got a Prepare reply
-			dlog.Printf("Received PrepareReply for instance %d.%d\n", prepareReply.Replica, prepareReply.Instance)
+			dlog.Printf("Received Third Round PrepareReply for instance %d.%d\n", prepareReply.Replica, prepareReply.Instance)
 			r.handlePrepareReply(prepareReply)
 			if debug {
 				debugTimeDict["handlePrepareReply"] += time.Now().Sub(tStart)
@@ -684,10 +684,6 @@ func replicaIdFromBallot(ballot int32) int32 {
 
 func (r *Replica) replyPrepare(replicaId int32, reply *epaxosproto.PrepareReply) {
 	r.SendMsg(replicaId, r.prepareReplyRPC, reply)
-}
-
-func (r *Replica) thirdRoundReplyPrepare(replicaId int32, reply *epaxosproto.PrepareReply) {
-	r.SendMsg(replicaId, r.prepareThirdRoundReplyRPC, reply)
 }
 
 func (r *Replica) replyPreAccept(replicaId int32, reply *epaxosproto.PreAcceptReply) {
