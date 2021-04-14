@@ -1,9 +1,0 @@
-panic: invalid argument to Intn
-
-goroutine 1 [running]:
-math/rand.(*Rand).Intn(0xc000112150, 0x0, 0xa)
-	/usr/local/go/src/math/rand/rand.go:169 +0x9d
-math/rand.Intn(...)
-	/usr/local/go/src/math/rand/rand.go:337
-main.main()
-	/root/go/src/epaxos/src/client/client.go:74 +0x711

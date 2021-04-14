@@ -1,7 +1,0 @@
-No command 'eserver' found, did you mean:
- Command 'cserver' from package 'freewnn-cserver' (universe)
- Command 'server' from package 'rsplib-legacy-wrappers' (universe)
- Command 'kserver' from package 'freewnn-kserver' (universe)
- Command 'vserver' from package 'util-vserver' (universe)
- Command 'jserver' from package 'freewnn-jserver' (universe)
-eserver: command not found

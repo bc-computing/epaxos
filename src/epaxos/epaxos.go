@@ -140,7 +140,9 @@ func NewReplica(id int, peerAddrList []string, thrifty bool, exec bool, dreply b
 		make(chan fastrpc.Serializable, genericsmr.CHAN_BUFFER_SIZE*2),
 		make(chan fastrpc.Serializable, genericsmr.CHAN_BUFFER_SIZE),
 		make(chan fastrpc.Serializable, genericsmr.CHAN_BUFFER_SIZE),
-		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		make(chan fastrpc.Serializable, genericsmr.CHAN_BUFFER_SIZE),
+		make(chan fastrpc.Serializable, genericsmr.CHAN_BUFFER_SIZE),
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0,0,
 		make([][]*Instance, len(peerAddrList)),
 		make([]int32, len(peerAddrList)),
 		make([]int32, len(peerAddrList)),
@@ -156,6 +158,46 @@ func NewReplica(id int, peerAddrList []string, thrifty bool, exec bool, dreply b
 		0,
 		0,
 	}
+	//prepareChan                chan fastrpc.Serializable done
+	//prepareThirdRoundChan      chan fastrpc.Serializable done
+	//preAcceptChan              chan fastrpc.Serializable done
+	//acceptChan                 chan fastrpc.Serializable done
+	//commitChan                 chan fastrpc.Serializable done
+	//commitShortChan            chan fastrpc.Serializable done
+	//prepareReplyChan           chan fastrpc.Serializable done
+	//prepareThirdRoundReplyChan chan fastrpc.Serializable done
+	//preAcceptReplyChan         chan fastrpc.Serializable done
+	//preAcceptOKChan            chan fastrpc.Serializable done
+	//acceptReplyChan            chan fastrpc.Serializable done
+	//tryPreAcceptChan           chan fastrpc.Serializable done
+	//tryPreAcceptReplyChan      chan fastrpc.Serializable done
+	//prepareRPC                 uint8 done
+	//prepareReplyRPC            uint8 done
+	//prepareThirdRoundRPC       uint8 done
+	//prepareThirdRoundReplyRPC  uint8 done
+	//preAcceptRPC               uint8 done
+	//preAcceptReplyRPC          uint8 done
+	//preAcceptOKRPC             uint8 done
+	//acceptRPC                  uint8 done
+	//acceptReplyRPC             uint8 done
+	//commitRPC                  uint8 done
+	//commitShortRPC             uint8 done
+	//tryPreAcceptRPC            uint8
+	//tryPreAcceptReplyRPC       uint8
+	//InstanceSpace              [][]*Instance // the space of all instances (used and not yet used)
+	//crtInstance                []int32       // highest active instance numbers that this replica knows about
+	//CommittedUpTo              []int32       // highest committed instance per replica that this replica knows about
+	//ExecedUpTo                 []int32       // instance up to which all commands have been executed (including iteslf)
+	//exec                       *Exec
+	//conflicts                  []map[state.Key]int32
+	//maxSeqPerKey               map[state.Key]int32
+	//maxSeq                     int32
+	//latestCPReplica            int32
+	//latestCPInstance           int32
+	//clientMutex                *sync.Mutex // for synchronizing when sending replies to clients from multiple go-routines
+	//instancesToRecover         chan *instanceId
+	//TotalRequests              int32
+	//TotalBatches               int32
 
 	r.Beacon = beacon
 	r.Durable = durable

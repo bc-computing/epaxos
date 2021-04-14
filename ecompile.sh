@@ -25,7 +25,7 @@ if [[ ":${PATH}:" != *":${efolder}/bin:"* ]]; then
 fi
 
 cd ${efolder}
-git checkout $branch
+#git checkout $branch
 # # prefix binaries with "e" to indicate they belong to EPaxos
 # # https://stackoverflow.com/a/33243591
 go build -o ${efolder}/bin/emaster master # emaster -N=3
