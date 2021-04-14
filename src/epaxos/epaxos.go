@@ -55,6 +55,8 @@ type Replica struct {
 	tryPreAcceptReplyChan chan fastrpc.Serializable
 	prepareRPC            uint8
 	prepareReplyRPC       uint8
+	prepareThirdRoundRPC  uint8
+	prepareThirdRoundReplyRPC uint8
 	preAcceptRPC          uint8
 	preAcceptReplyRPC     uint8
 	preAcceptOKRPC        uint8
@@ -440,6 +442,7 @@ func (r *Replica) run() {
 			commit := commitS.(*epaxosproto.Commit)
 			//got a Commit message
 			dlog.Printf("Received Commit for instance %d.%d\n", commit.LeaderId, commit.Instance)
+
 			r.handleCommit(commit)
 			if debug {
 				debugTimeDict["handleCommit"] += time.Now().Sub(tStart)
