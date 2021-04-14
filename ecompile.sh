@@ -1,6 +1,6 @@
 # assume EPaxos source code has been clone to efolder
 efolder=${HOME}/go/src/epaxos
-branch=morethan5
+branch=third-round
 profile=${HOME}/.bash_profile # .bash_profile for MacOS but .profile for Ubuntu?
 
 touch ${profile} # create one if profile does not exist
