@@ -402,6 +402,9 @@ func (r *Replica) run() {
 			//got a Prepare message
 			dlog.Printf("Received Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
 			r.handlePrepare(prepare)
+			dlog.Printf("Handled Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
+			r.handleThirdRoundPrepare(prepare) //this prepares message for the prepareThirdRoundReplyChan, which is handled below.
+			dlog.Printf("Handled Third Round Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
 			if debug {
 				debugTimeDict["handlePrepare"] += time.Now().Sub(tStart)
 				debugCallDict["handlePrepare"] += 1
@@ -472,19 +475,19 @@ func (r *Replica) run() {
 
 
 		// Third Round Code
-		case prepareThirdRoundS := <-r.prepareThirdRoundChan:
-			if debug {
-				tStart = time.Now()
-			}
-			prepare := prepareThirdRoundS.(*epaxosproto.Prepare)
-			//got a Prepare message
-			dlog.Printf("Received Third Round Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
-			r.handleThirdRoundPrepare(prepare)
-			if debug {
-				debugTimeDict["handlePrepare"] += time.Now().Sub(tStart)
-				debugCallDict["handlePrepare"] += 1
-			}
-			break
+		//case prepareThirdRoundS := <-r.prepareThirdRoundChan:
+		//	if debug {
+		//		tStart = time.Now()
+		//	}
+		//	prepare := prepareThirdRoundS.(*epaxosproto.Prepare)
+		//	//got a Prepare message
+		//	dlog.Printf("Received Third Round Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
+		//	r.handleThirdRoundPrepare(prepare)
+		//	if debug {
+		//		debugTimeDict["handlePrepare"] += time.Now().Sub(tStart)
+		//		debugCallDict["handlePrepare"] += 1
+		//	}
+		//	break
 
 
 		case prepareThirdRoundReplyS := <-r.prepareThirdRoundReplyChan:
