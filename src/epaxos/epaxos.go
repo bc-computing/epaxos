@@ -441,11 +441,15 @@ func (r *Replica) run() {
 			if debug {
 				tStart = time.Now()
 			}
+			prepareThird := commitS.(*epaxosproto.Prepare)
 			commit := commitS.(*epaxosproto.Commit)
 			//got a Commit message
 			dlog.Printf("Received Commit for instance %d.%d\n", commit.LeaderId, commit.Instance)
-
+			dlog.Printf("Preparing Third Round for instance %d.%d\n", commit.LeaderId, commit.Instance)
+			r.handleThirdRoundPrepare(prepareThird)
+			dlog.Printf("Prepared Third Round for instance %d.%d\n", commit.LeaderId, commit.Instance)
 			r.handleCommit(commit)
+			dlog.Printf("Handled Commit for instance %d.%d\n", commit.LeaderId, commit.Instance)
 			if debug {
 				debugTimeDict["handleCommit"] += time.Now().Sub(tStart)
 				debugCallDict["handleCommit"] += 1
@@ -467,7 +471,7 @@ func (r *Replica) run() {
 			break
 
 
-
+		// Third Round Code
 		case prepareThirdRoundS := <-r.prepareThirdRoundChan:
 			if debug {
 				tStart = time.Now()
@@ -475,7 +479,7 @@ func (r *Replica) run() {
 			prepare := prepareThirdRoundS.(*epaxosproto.Prepare)
 			//got a Prepare message
 			dlog.Printf("Received Third Round Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
-			r.handlePrepare(prepare)
+			r.handleThirdRoundPrepare(prepare)
 			if debug {
 				debugTimeDict["handlePrepare"] += time.Now().Sub(tStart)
 				debugCallDict["handlePrepare"] += 1
@@ -496,7 +500,7 @@ func (r *Replica) run() {
 				debugCallDict["handlePrepareReply"] += 1
 			}
 			break
-
+		// Third Round Code End
 
 		case prepareReplyS := <-r.prepareReplyChan:
 			if debug {
@@ -684,6 +688,10 @@ func replicaIdFromBallot(ballot int32) int32 {
 
 func (r *Replica) replyPrepare(replicaId int32, reply *epaxosproto.PrepareReply) {
 	r.SendMsg(replicaId, r.prepareReplyRPC, reply)
+}
+
+func (r *Replica) replyThirdRoundPrepare(replicaId int32, reply *epaxosproto.PrepareReply) {
+	r.SendMsg(replicaId, r.prepareThirdRoundReplyRPC, reply)
 }
 
 func (r *Replica) replyPreAccept(replicaId int32, reply *epaxosproto.PreAcceptReply) {
@@ -1617,6 +1625,51 @@ func (r *Replica) handlePrepare(prepare *epaxosproto.Prepare) {
 	}
 
 	r.replyPrepare(prepare.LeaderId, preply)
+}
+
+func (r *Replica) handleThirdRoundPrepare(prepare *epaxosproto.Prepare) {
+	inst := r.InstanceSpace[prepare.Replica][prepare.Instance]
+	var preply *epaxosproto.PrepareReply
+	var nildeps []int32
+
+	if inst == nil {
+		r.InstanceSpace[prepare.Replica][prepare.Instance] = &Instance{
+			nil,
+			prepare.Ballot,
+			epaxosproto.NONE,
+			0,
+			nildeps,
+			nil, 0, 0, nil}
+		preply = &epaxosproto.PrepareReply{
+			r.Id,
+			prepare.Replica,
+			prepare.Instance,
+			TRUE,
+			-1,
+			epaxosproto.NONE,
+			nil,
+			-1,
+			nildeps}
+	} else {
+		ok := TRUE
+		if prepare.Ballot < inst.ballot {
+			ok = FALSE
+		} else {
+			inst.ballot = prepare.Ballot
+		}
+		preply = &epaxosproto.PrepareReply{
+			r.Id,
+			prepare.Replica,
+			prepare.Instance,
+			ok,
+			inst.ballot,
+			inst.Status,
+			inst.Cmds,
+			inst.Seq,
+			inst.Deps}
+	}
+
+	r.replyThirdRoundPrepare(prepare.LeaderId, preply)
 }
 
 func (r *Replica) handlePrepareReply(preply *epaxosproto.PrepareReply) {
