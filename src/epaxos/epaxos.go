@@ -42,44 +42,46 @@ var cpcounter = 0
 
 type Replica struct {
 	*genericsmr.Replica
-	prepareChan           chan fastrpc.Serializable
-	preAcceptChan         chan fastrpc.Serializable
-	acceptChan            chan fastrpc.Serializable
-	commitChan            chan fastrpc.Serializable
-	commitShortChan       chan fastrpc.Serializable
-	prepareReplyChan      chan fastrpc.Serializable
-	preAcceptReplyChan    chan fastrpc.Serializable
-	preAcceptOKChan       chan fastrpc.Serializable
-	acceptReplyChan       chan fastrpc.Serializable
-	tryPreAcceptChan      chan fastrpc.Serializable
-	tryPreAcceptReplyChan chan fastrpc.Serializable
-	prepareRPC            uint8
-	prepareReplyRPC       uint8
-	prepareThirdRoundRPC  uint8
-	prepareThirdRoundReplyRPC uint8
-	preAcceptRPC          uint8
-	preAcceptReplyRPC     uint8
-	preAcceptOKRPC        uint8
-	acceptRPC             uint8
-	acceptReplyRPC        uint8
-	commitRPC             uint8
-	commitShortRPC        uint8
-	tryPreAcceptRPC       uint8
-	tryPreAcceptReplyRPC  uint8
-	InstanceSpace         [][]*Instance // the space of all instances (used and not yet used)
-	crtInstance           []int32       // highest active instance numbers that this replica knows about
-	CommittedUpTo         []int32       // highest committed instance per replica that this replica knows about
-	ExecedUpTo            []int32       // instance up to which all commands have been executed (including iteslf)
-	exec                  *Exec
-	conflicts             []map[state.Key]int32
-	maxSeqPerKey          map[state.Key]int32
-	maxSeq                int32
-	latestCPReplica       int32
-	latestCPInstance      int32
-	clientMutex           *sync.Mutex // for synchronizing when sending replies to clients from multiple go-routines
-	instancesToRecover    chan *instanceId
-	TotalRequests         int32
-	TotalBatches          int32
+	prepareChan                chan fastrpc.Serializable
+	prepareThirdRoundChan      chan fastrpc.Serializable
+	preAcceptChan              chan fastrpc.Serializable
+	acceptChan                 chan fastrpc.Serializable
+	commitChan                 chan fastrpc.Serializable
+	commitShortChan            chan fastrpc.Serializable
+	prepareReplyChan           chan fastrpc.Serializable
+	prepareThirdRoundReplyChan chan fastrpc.Serializable
+	preAcceptReplyChan         chan fastrpc.Serializable
+	preAcceptOKChan            chan fastrpc.Serializable
+	acceptReplyChan            chan fastrpc.Serializable
+	tryPreAcceptChan           chan fastrpc.Serializable
+	tryPreAcceptReplyChan      chan fastrpc.Serializable
+	prepareRPC                 uint8
+	prepareReplyRPC            uint8
+	prepareThirdRoundRPC       uint8
+	prepareThirdRoundReplyRPC  uint8
+	preAcceptRPC               uint8
+	preAcceptReplyRPC          uint8
+	preAcceptOKRPC             uint8
+	acceptRPC                  uint8
+	acceptReplyRPC             uint8
+	commitRPC                  uint8
+	commitShortRPC             uint8
+	tryPreAcceptRPC            uint8
+	tryPreAcceptReplyRPC       uint8
+	InstanceSpace              [][]*Instance // the space of all instances (used and not yet used)
+	crtInstance                []int32       // highest active instance numbers that this replica knows about
+	CommittedUpTo              []int32       // highest committed instance per replica that this replica knows about
+	ExecedUpTo                 []int32       // instance up to which all commands have been executed (including iteslf)
+	exec                       *Exec
+	conflicts                  []map[state.Key]int32
+	maxSeqPerKey               map[state.Key]int32
+	maxSeq                     int32
+	latestCPReplica            int32
+	latestCPInstance           int32
+	clientMutex                *sync.Mutex // for synchronizing when sending replies to clients from multiple go-routines
+	instancesToRecover         chan *instanceId
+	TotalRequests              int32
+	TotalBatches               int32
 }
 
 type Instance struct {
@@ -464,6 +466,38 @@ func (r *Replica) run() {
 			}
 			break
 
+
+
+		case prepareThirdRoundS := <-r.prepareThirdRoundChan:
+			if debug {
+				tStart = time.Now()
+			}
+			prepare := prepareThirdRoundS.(*epaxosproto.Prepare)
+			//got a Prepare message
+			dlog.Printf("Received Third Round Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
+			r.handlePrepare(prepare)
+			if debug {
+				debugTimeDict["handlePrepare"] += time.Now().Sub(tStart)
+				debugCallDict["handlePrepare"] += 1
+			}
+			break
+
+
+		case prepareThirdRoundReplyS := <-r.prepareThirdRoundReplyChan:
+			if debug {
+				tStart = time.Now()
+			}
+			prepareReply := prepareThirdRoundReplyS.(*epaxosproto.PrepareReply)
+			//got a Prepare reply
+			dlog.Printf("Received PrepareReply for instance %d.%d\n", prepareReply.Replica, prepareReply.Instance)
+			r.handlePrepareReply(prepareReply)
+			if debug {
+				debugTimeDict["handlePrepareReply"] += time.Now().Sub(tStart)
+				debugCallDict["handlePrepareReply"] += 1
+			}
+			break
+
+
 		case prepareReplyS := <-r.prepareReplyChan:
 			if debug {
 				tStart = time.Now()
@@ -652,7 +686,7 @@ func (r *Replica) replyPrepare(replicaId int32, reply *epaxosproto.PrepareReply)
 	r.SendMsg(replicaId, r.prepareReplyRPC, reply)
 }
 
-func (r *Replica) thirdRoundPrepare(replicaId int32, reply *epaxosproto.PrepareReply){
+func (r *Replica) thirdRoundReplyPrepare(replicaId int32, reply *epaxosproto.PrepareReply) {
 	r.SendMsg(replicaId, r.prepareThirdRoundReplyRPC, reply)
 }
 
