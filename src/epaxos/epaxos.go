@@ -167,6 +167,8 @@ func NewReplica(id int, peerAddrList []string, thrifty bool, exec bool, dreply b
 	//register RPCs
 	r.prepareRPC = r.RegisterRPC(new(epaxosproto.Prepare), r.prepareChan)
 	r.prepareReplyRPC = r.RegisterRPC(new(epaxosproto.PrepareReply), r.prepareReplyChan)
+	r.prepareThirdRoundRPC = r.RegisterRPC(new(epaxosproto.Prepare), r.prepareChan)
+	r.prepareThirdRoundReplyRPC = r.RegisterRPC(new(epaxosproto.PrepareReply), r.prepareReplyChan)
 	r.preAcceptRPC = r.RegisterRPC(new(epaxosproto.PreAccept), r.preAcceptChan)
 	r.preAcceptReplyRPC = r.RegisterRPC(new(epaxosproto.PreAcceptReply), r.preAcceptReplyChan)
 	r.preAcceptOKRPC = r.RegisterRPC(new(epaxosproto.PreAcceptOK), r.preAcceptOKChan)
@@ -501,6 +503,10 @@ func replicaIdFromBallot(ballot int32) int32 {
 
 func (r *Replica) replyPrepare(replicaId int32, reply *epaxosproto.PrepareReply) {
 	r.SendMsg(replicaId, r.prepareReplyRPC, reply)
+}
+
+func (r *Replica) thirdRoundPrepare(replicaId int32, reply *epaxosproto.PrepareReply){
+	r.SendMsg(replicaId, r.prepareThirdRoundReplyRPC, reply)
 }
 
 func (r *Replica) replyPreAccept(replicaId int32, reply *epaxosproto.PreAcceptReply) {
