@@ -6,6 +6,7 @@ import (
 	"encoding/binary"
 	"epaxosproto"
 	"fastrpc"
+	"fmt"
 	"genericsmr"
 	"genericsmrproto"
 	"io"
@@ -441,12 +442,15 @@ func (r *Replica) run() {
 				tStart = time.Now()
 			}
 			prepare := prepareS.(*epaxosproto.Prepare)
+			fmt.Println("INSIDE prepareS")
 			//got a Prepare message
-			dlog.Printf("Received Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
+			fmt.Printf("Received Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
+			//dlog.Printf("Received Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
 			r.handlePrepare(prepare)
-			dlog.Printf("Handled Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
+			fmt.Printf("Handled Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
+			fmt.Printf("Received Third Round Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
 			r.handleThirdRoundPrepare(prepare) //this prepares message for the prepareThirdRoundReplyChan, which is handled below.
-			dlog.Printf("Handled Third Round Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
+			fmt.Printf("Handled Third Round Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
 			if debug {
 				debugTimeDict["handlePrepare"] += time.Now().Sub(tStart)
 				debugCallDict["handlePrepare"] += 1
@@ -486,13 +490,9 @@ func (r *Replica) run() {
 			if debug {
 				tStart = time.Now()
 			}
-			prepareThird := commitS.(*epaxosproto.Prepare)
 			commit := commitS.(*epaxosproto.Commit)
 			//got a Commit message
 			dlog.Printf("Received Commit for instance %d.%d\n", commit.LeaderId, commit.Instance)
-			dlog.Printf("Preparing Third Round for instance %d.%d\n", commit.LeaderId, commit.Instance)
-			r.handleThirdRoundPrepare(prepareThird)
-			dlog.Printf("Prepared Third Round for instance %d.%d\n", commit.LeaderId, commit.Instance)
 			r.handleCommit(commit)
 			dlog.Printf("Handled Commit for instance %d.%d\n", commit.LeaderId, commit.Instance)
 			if debug {
