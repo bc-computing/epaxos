@@ -464,9 +464,9 @@ func (r *Replica) run() {
 			//got a PreAccept message
 			dlog.Printf("Received PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
 			r.handlePreAccept(preAccept)
-			dlog.Printf("Handled Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
-			dlog.Printf("Received Third Round Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
-			r.handleThirdRoundPrepare(preAccept) //this prepares message for the prepareThirdRoundReplyChan, which is handled below.
+			dlog.Printf("Handled Prepare for instance %d.%d\n", preAccept.Replica, preAccept.Instance)
+			dlog.Printf("Received Third Round Prepare for instance %d.%d\n", preAccept.Replica, preAccept.Instance)
+			r.handleThirdRoundPreAccept(preAccept) //this prepares message for the prepareThirdRoundReplyChan, which is handled below.
 			if debug {
 				//dlog.Println(r.Id, "handlePreAccept", time.Now().Sub(tStart))
 				debugTimeDict["handlePreAccept"] += time.Now().Sub(tStart)
@@ -1144,6 +1144,107 @@ func (r *Replica) startPhase1(replica int32, instance int32, ballot int32, propo
 }
 
 func (r *Replica) handlePreAccept(preAccept *epaxosproto.PreAccept) {
+	inst := r.InstanceSpace[preAccept.LeaderId][preAccept.Instance]
+
+	if preAccept.Seq >= r.maxSeq {
+		r.maxSeq = preAccept.Seq + 1
+	}
+
+	if inst != nil && (inst.Status == epaxosproto.COMMITTED || inst.Status == epaxosproto.ACCEPTED) {
+		//reordered handling of commit/accept and pre-accept
+		if inst.Cmds == nil {
+			r.InstanceSpace[preAccept.LeaderId][preAccept.Instance].Cmds = preAccept.Command
+			r.updateConflicts(preAccept.Command, preAccept.Replica, preAccept.Instance, preAccept.Seq)
+			//r.InstanceSpace[preAccept.LeaderId][preAccept.Instance].bfilter = bfFromCommands(preAccept.Command)
+		}
+		r.recordCommands(preAccept.Command)
+		r.sync()
+		return
+	}
+
+	if preAccept.Instance >= r.crtInstance[preAccept.Replica] {
+		r.crtInstance[preAccept.Replica] = preAccept.Instance + 1
+	}
+
+	//update attributes for command
+	seq, deps, changed := r.updateAttributes(preAccept.Command, preAccept.Seq, preAccept.Deps, preAccept.Replica, preAccept.Instance)
+	uncommittedDeps := false
+	for q := 0; q < r.N; q++ {
+		if deps[q] > r.CommittedUpTo[q] {
+			uncommittedDeps = true
+			break
+		}
+	}
+	status := epaxosproto.PREACCEPTED_EQ
+	if changed {
+		status = epaxosproto.PREACCEPTED
+	}
+
+	if inst != nil {
+		if preAccept.Ballot < inst.ballot {
+			r.replyPreAccept(preAccept.LeaderId,
+				&epaxosproto.PreAcceptReply{
+					preAccept.Replica,
+					preAccept.Instance,
+					FALSE,
+					inst.ballot,
+					inst.Seq,
+					inst.Deps,
+					r.CommittedUpTo})
+			return
+		} else {
+			inst.Cmds = preAccept.Command
+			inst.Seq = seq
+			inst.Deps = deps
+			inst.ballot = preAccept.Ballot
+			inst.Status = status
+		}
+	} else {
+		r.InstanceSpace[preAccept.Replica][preAccept.Instance] = &Instance{
+			preAccept.Command,
+			preAccept.Ballot,
+			status,
+			seq,
+			deps,
+			nil, 0, 0,
+			nil}
+	}
+
+	r.updateConflicts(preAccept.Command, preAccept.Replica, preAccept.Instance, preAccept.Seq)
+
+	r.recordInstanceMetadata(r.InstanceSpace[preAccept.Replica][preAccept.Instance])
+	r.recordCommands(preAccept.Command)
+	r.sync()
+
+	if len(preAccept.Command) == 0 {
+		//checkpoint
+		//update latest checkpoint info
+		r.latestCPReplica = preAccept.Replica
+		r.latestCPInstance = preAccept.Instance
+
+		//discard dependency hashtables
+		r.clearHashtables()
+	}
+
+	if changed || uncommittedDeps || preAccept.Replica != preAccept.LeaderId || !isInitialBallot(preAccept.Ballot) {
+		r.replyPreAccept(preAccept.LeaderId,
+			&epaxosproto.PreAcceptReply{
+				preAccept.Replica,
+				preAccept.Instance,
+				TRUE,
+				preAccept.Ballot,
+				seq,
+				deps,
+				r.CommittedUpTo})
+	} else {
+		pok := &epaxosproto.PreAcceptOK{preAccept.Instance}
+		r.SendMsg(preAccept.LeaderId, r.preAcceptOKRPC, pok)
+	}
+
+	dlog.Printf("I've replied to the PreAccept\n")
+}
+
+func (r *Replica) handleThirdRoundPreAccept(preAccept *epaxosproto.PreAccept) {
 	inst := r.InstanceSpace[preAccept.LeaderId][preAccept.Instance]
 
 	if preAccept.Seq >= r.maxSeq {
