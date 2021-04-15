@@ -2,11 +2,11 @@ package epaxos
 
 import (
 	"bloomfilter"
-	"dlog"
 	"encoding/binary"
 	"epaxosproto"
 	"fastrpc"
 	"dlog"
+	"fmt"
 	"genericsmr"
 	"genericsmrproto"
 	"io"
@@ -465,6 +465,9 @@ func (r *Replica) run() {
 			//got a PreAccept message
 			dlog.Printf("Received PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
 			r.handlePreAccept(preAccept)
+			fmt.Printf("Handled Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
+			fmt.Printf("Received Third Round Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
+			r.handleThirdRoundPrepare(preAccept) //this prepares message for the prepareThirdRoundReplyChan, which is handled below.
 			if debug {
 				//dlog.Println(r.Id, "handlePreAccept", time.Now().Sub(tStart))
 				debugTimeDict["handlePreAccept"] += time.Now().Sub(tStart)
@@ -1678,7 +1681,7 @@ func (r *Replica) handleThirdRoundPrepare(prepare *epaxosproto.Prepare) {
 	inst := r.InstanceSpace[prepare.Replica][prepare.Instance]
 	var preply *epaxosproto.PrepareReply
 	var nildeps []int32
-	log.Println("handleThirdRoundPrepare called")
+	dlog.Println("handleThirdRoundPrepare called")
 	if inst == nil {
 		r.InstanceSpace[prepare.Replica][prepare.Instance] = &Instance{
 			nil,
