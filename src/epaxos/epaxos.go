@@ -6,7 +6,7 @@ import (
 	"encoding/binary"
 	"epaxosproto"
 	"fastrpc"
-	"fmt"
+	"dlog"
 	"genericsmr"
 	"genericsmrproto"
 	"io"
@@ -442,15 +442,15 @@ func (r *Replica) run() {
 				tStart = time.Now()
 			}
 			prepare := prepareS.(*epaxosproto.Prepare)
-			fmt.Println("INSIDE prepareS")
+			dlog.Println("INSIDE prepareS")
 			//got a Prepare message
-			fmt.Printf("Received Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
+			dlog.Printf("Received Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
 			//dlog.Printf("Received Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
 			r.handlePrepare(prepare)
-			fmt.Printf("Handled Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
-			fmt.Printf("Received Third Round Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
+			dlog.Printf("Handled Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
+			dlog.Printf("Received Third Round Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
 			r.handleThirdRoundPrepare(prepare) //this prepares message for the prepareThirdRoundReplyChan, which is handled below.
-			fmt.Printf("Handled Third Round Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
+			dlog.Printf("Handled Third Round Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
 			if debug {
 				debugTimeDict["handlePrepare"] += time.Now().Sub(tStart)
 				debugCallDict["handlePrepare"] += 1
@@ -466,7 +466,7 @@ func (r *Replica) run() {
 			dlog.Printf("Received PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
 			r.handlePreAccept(preAccept)
 			if debug {
-				//fmt.Println(r.Id, "handlePreAccept", time.Now().Sub(tStart))
+				//dlog.Println(r.Id, "handlePreAccept", time.Now().Sub(tStart))
 				debugTimeDict["handlePreAccept"] += time.Now().Sub(tStart)
 				debugCallDict["handlePreAccept"] += 1
 			}
