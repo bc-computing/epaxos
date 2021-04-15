@@ -6,7 +6,6 @@ import (
 	"epaxosproto"
 	"fastrpc"
 	"dlog"
-	"fmt"
 	"genericsmr"
 	"genericsmrproto"
 	"io"
@@ -465,8 +464,8 @@ func (r *Replica) run() {
 			//got a PreAccept message
 			dlog.Printf("Received PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
 			r.handlePreAccept(preAccept)
-			fmt.Printf("Handled Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
-			fmt.Printf("Received Third Round Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
+			dlog.Printf("Handled Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
+			dlog.Printf("Received Third Round Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
 			r.handleThirdRoundPrepare(preAccept) //this prepares message for the prepareThirdRoundReplyChan, which is handled below.
 			if debug {
 				//dlog.Println(r.Id, "handlePreAccept", time.Now().Sub(tStart))
