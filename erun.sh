@@ -1,5 +1,5 @@
 # 1. user configurations
-maddr=localhost # EPaxos master address
+maddr=10.10.1.1 # EPaxos master address
 mport=17070     # EPaxos master port
 NS=3            # the number of servers (NS)
 NC=100            # the number of clients (NC)
@@ -42,23 +42,23 @@ for i in $(seq $NC); do
     clients[$(($i - 1))]=$!
 done
 echo "clients started"
-
-# 6. prepare nettop monitoring
-pids="" # a list of PIDs that will be monitored
-for pid in ${servers[*]}; do
-    pids=${pids}"-p $pid "
-done
-for pid in ${clients[*]}; do
-    pids=${pids}"-p $pid "
-done
-# echo $pids
+#
+## 6. prepare nettop monitoring
+#pids="" # a list of PIDs that will be monitored
+#for pid in ${servers[*]}; do
+#    pids=${pids}"-p $pid "
+#done
+#for pid in ${clients[*]}; do
+#    pids=${pids}"-p $pid "
+#done
+## echo $pids
 
 # 7. conduct monitoring (on Mac)
 nettop -P -l 0 -J time,bytes_in,bytes_out ${pids} \
     >${log_file_path_head}-nettop.out 2>&1 &
 netPID=$!
 
-echo "passed nettop"
+#echo "passed nettop"
 
 # 8. waits the clients to exit
 for pid in ${clients[*]}; do
@@ -67,8 +67,8 @@ done
 
 # 9. stop monitoring
 echo "clients exited, wait a few more seconds before stopping nettop (process ${netPID})..."
-sleep 5
-kill -2 $netPID
+#sleep 5
+#kill -2 $netPID
 
 # 10. stop servers and the master
 for pid in ${servers[*]}; do
