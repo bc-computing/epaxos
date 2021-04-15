@@ -1,5 +1,5 @@
 # 1. user configurations
-maddr=128.110.153.93 # EPaxos master address
+maddr=localhost # EPaxos master address
 mport=17070     # EPaxos master port
 NS=3            # the number of servers (NS)
 NC=100            # the number of clients (NC)
