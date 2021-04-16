@@ -28,18 +28,21 @@ thrifty=false   # EPaxos: "Use only as many messages as strictly required for in
 
 
 start_servers(){
+  MachineIdx=0
   for ip in "${ServerIps[@]}"; do
     if [ $ip -eq ${ServerIps[0]} ]; then
-      ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "mkdir -p ${LogFolder}; rm -rf ${LogFolder}/*; emaster -port=$FirstServerPort -N=$NumOfServerInstances \>${log_file_path_head}-master.out 2>&1"
+      echo "Starting Master: ${ip}"
+      ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "mkdir -p ${LogFolder}; rm -rf ${LogFolder}/*; ${BinFolder}/emaster -port=$FirstServerPort -N=$NumOfServerInstances \>${log_file_path_head}-master.out" 2>&1 &
     else
-      ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "mkdir -p ${LogFolder}; rm -rf ${LogFolder}/*; eserver -port=$(($FirstServerPort + $i)) -maddr=$MasterIp -mport=$FirstServerPort -addr=localhost -e=true -p=$serverP -thrifty=${thrifty} \>${log_file_path_head}-server$(($i - 1)).out 2>&1 &" 2>&1
+      ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "mkdir -p ${LogFolder}; rm -rf ${LogFolder}/*; ${BinFolder}/eserver -port=$(($FirstServerPort + $MachineIdx)) -maddr=$MasterIp -mport=$FirstServerPort -addr=localhost -e=true -p=$serverP -thrifty=${thrifty} \>${log_file_path_head}-server$(($MachineIdx - 1)).out" 2>&1 &
     fi
+    ((MachineIdx++))
   done
 }
 
 start_clients(){
   for ip in "${ClientIps[@]}"; do
-    ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "mkdir -p ${LogFolder}; rm -rf ${LogFolder}/*; eclient -maddr=$MasterIp -mport=$FirstServerPort -q=$ReqsNB -w=$Writes -e=true -r=$rounds -p=$clientP -c=$Conflicts \>${log_file_path_head}-client$(($i - 1)).out 2>&1 &"
+    ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "mkdir -p ${LogFolder}; rm -rf ${LogFolder}/*; ${BinFolder}/eclient -maddr=$MasterIp -mport=$FirstServerPort -q=$ReqsNB -w=$Writes -e=true -r=$rounds -p=$clientP -c=$Conflicts \>${log_file_path_head}-client$(($i - 1)).out"2>&1 &
   done
 }
 
