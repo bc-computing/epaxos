@@ -461,12 +461,12 @@ func (r *Replica) run() {
 				tStart = time.Now()
 			}
 			preAccept := preAcceptS.(*epaxosproto.PreAccept)
-			dlog.Printf("Handled Prepare for instance %d.%d\n", preAccept.Replica, preAccept.Instance)
-			r.handlePreAccept(preAccept)
-			//got a PreAccept message
-			dlog.Printf("Received Third Round Prepare for instance %d.%d\n", preAccept.Replica, preAccept.Instance)
-			r.handleThirdRoundPreAccept(preAccept) //this prepares message for the prepareThirdRoundReplyChan, which is handled below.
 			dlog.Printf("Received PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
+			r.handlePreAccept(preAccept)
+			dlog.Printf("Handled PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
+			dlog.Printf("Received Third Round PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
+			r.handleThirdRoundPreAccept(preAccept) //this prepares message for the prepareThirdRoundReplyChan, which is handled below.
+			dlog.Printf("Handled Third Round PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
 			if debug {
 				//dlog.Println(r.Id, "handlePreAccept", time.Now().Sub(tStart))
 				debugTimeDict["handlePreAccept"] += time.Now().Sub(tStart)

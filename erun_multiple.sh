@@ -3,6 +3,7 @@ User="$USER"
 RCFolder=~/go/src/rc3 # assuming rc4 is installed, this should be path
 EPaxosFolder=~/go/src/epaxos # assuming epaxos is installed, this should be path
 LogFolder=$EPaxosFolder/logs
+BinFolder=$EPaxosFolder/bin
 SSHKey=$RCFolder/deployment/install/id_rsa
 
 # Run Specific Vars
@@ -28,7 +29,7 @@ thrifty=false   # EPaxos: "Use only as many messages as strictly required for in
 
 start_servers(){
   for ip in "${ServerIps[@]}"; do
-    if [ $# -eq 0 ]; then
+    if [ $ip -eq ${ServerIps[0]} ]; then
       ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "mkdir -p ${LogFolder}; rm -rf ${LogFolder}/*; emaster -port=$FirstServerPort -N=$NumOfServerInstances \>${log_file_path_head}-master.out 2>&1"
     else
       ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "mkdir -p ${LogFolder}; rm -rf ${LogFolder}/*; eserver -port=$(($FirstServerPort + $i)) -maddr=$MasterIp -mport=$FirstServerPort -addr=localhost -e=true -p=$serverP -thrifty=${thrifty} \>${log_file_path_head}-server$(($i - 1)).out 2>&1 &" 2>&1
@@ -42,6 +43,32 @@ start_clients(){
   done
 }
 
+remove_logs_and_clear_project_and_compile(){
+  for ip in "${ServerIps[@]}"; do
+    ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "rm -rf ${LogFolder}/* && rm -rf ${BinFolder} && cd ${EPaxosFolder} && . ecompile.sh && echo 'compiled for ${ip}'"
+  done
+  for ip in "${ClientIps[@]}"; do
+    ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "rm -rf ${LogFolder}/* && rm -rf ${BinFolder} && cd ${EPaxosFolder} && . ecompile.sh && echo 'Compiled for ${ip}'"
+  done
+}
+
+correct_go(){
+  for ip in "${ServerIps[@]}"; do
+    ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "export PATH=$PATH:/usr/local/go/bin >> ~/.bashrc && source ~/.bashrc"
+  done
+  for ip in "${ClientIps[@]}"; do
+    ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "export PATH=$PATH:/usr/local/go/bin >> ~/.bashrc && source ~/.bashrc"
+  done
+}
+
+run_once(){
+  correct_go
+  remove_logs_and_clear_project_and_compile
+  start_servers
+  start_clients
+}
+
+run_once
 
 
 
