@@ -130,12 +130,12 @@ LogFolder=$EPaxosFolder/logs
 function prepareRun() {
     for ip in "${ServerIps[@]}"
     do
-        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "mkdir -p ${LogFolder}; rm -rf ${LogFolder}/*; cd ${ScriptFolder} && chmod 777 erun_multiple.sh" 2>&1
+        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "mkdir -p ${LogFolder}; rm -rf ${LogFolder}/*; cd ${ScriptFolder} && chmod 777 erun_multiple2.sh" 2>&1
         sleep 0.3
     done
     for ip in "${ClientIps[@]}"
     do
-        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "mkdir -p ${LogFolder}; rm -rf ${LogFolder}/*; cd ${ScriptFolder} && chmod 777 erun_multiple.sh" 2>&1
+        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "mkdir -p ${LogFolder}; rm -rf ${LogFolder}/*; cd ${ScriptFolder} && chmod 777 erun_multiple2.sh" 2>&1
         sleep 0.3
     done
     wait
@@ -179,7 +179,7 @@ function runServersAllMachines() {
     MachineIdx=0
     for ip in "${ServerIps[@]}"
     do
-        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "cd ${ScriptFolder} && EPScriptOption=StartServers EPMachineIdx=${MachineIdx} /bin/bash erun_multiple.sh" 2>&1 &
+        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "cd ${ScriptFolder} && EPScriptOption=StartServers EPMachineIdx=${MachineIdx} /bin/bash erun_multiple2.sh" \>${LogFolder}-server$(($MachineIdx - 1)).out 2>&1 &
         sleep 0.3
         ((MachineIdx++))
     done
@@ -189,7 +189,7 @@ function runClientsAllMachines() {
     MachineIdx=0
     for ip in "${ClientIps[@]}"
     do
-        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "cd ${ScriptFolder} && EPScriptOption=StartClients EPMachineIdx=${MachineIdx} /bin/bash erun_multiple.sh" 2>&1 &
+        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "cd ${ScriptFolder} && EPScriptOption=StartClients EPMachineIdx=${MachineIdx} /bin/bash erun_multiple2.sh" \>${LogFolder}-client$(($MachineIdx - 1)).out 2>&1 &
         sleep 0.3
         ((MachineIdx++))
     done
@@ -226,12 +226,12 @@ function SSHCheckClientProgress() {
 function EpKillAll() {
     for ip in "${ServerIps[@]}"
     do
-        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "cd ${ScriptFolder} && chmod 777 kill.sh && /bin/bash ekill.sh" 2>&1 &
+        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "cd ${ScriptFolder} && chmod 777 kill.sh && /bin/bash kill.sh" 2>&1 &
         sleep 0.3
     done
     for ip in "${ClientIps[@]}"
     do
-        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "cd ${ScriptFolder} && chmod 777 kill.sh && /bin/bash ekill.sh" 2>&1 &
+        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "cd ${ScriptFolder} && chmod 777 kill.sh && /bin/bash kill.sh" 2>&1 &
         sleep 0.3
     done
     wait
@@ -242,7 +242,7 @@ function DownloadLogs() {
 
     for ip in "${ClientIps[@]}"
     do
-        scp -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip":${LogFolder}/*.out ${LogFolder} 2>&1 &
+        scp -o StrictHostKeyChecking=no -r ${SSHKey} root@"$ip" : ${LogFolder}/* ${LogFolder} 2>&1 &
         sleep 0.3
     done
 
@@ -271,7 +271,20 @@ function Main() {
     esac
 }
 
-#SendEPaxosFolder
-prepareRun; Main
+
+remove_logs() {
+    for ip in "${ServerIps[@]}"; do
+        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"${ip}" "rm -rf ${LogFolder}" &
+    done
+    for ip in "${ClientIps[@]}"; do
+        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"${ip}" "rm -rf ${LogFolder}" &
+    done
+    wait
+}
+
+#remove_logs
+Main
+wait
 #SSHCheckClientProgress
-#DownloadLogs; EpKillAll; Analysis
+DownloadLogs
+EpKillAll

@@ -25,12 +25,14 @@ serverP=2       # server's GOMAXPROCS (sp)
 clientP=1       # client's GOMAXPROCS (cp)
 thrifty=false   # EPaxos: "Use only as many messages as strictly required for inter-replica communication" (th)
 
-
+start_master(){
+  ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"${ServerIps[0]}"
+}
 
 start_servers(){
   MachineIdx=0
   for ip in "${ServerIps[@]}"; do
-    if [ $ip -eq ${ServerIps[0]} ]; then
+    if [ "$ip" == "${ServerIps[0]}" ]; then
       echo "Starting Master: ${ip}"
       ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "mkdir -p ${LogFolder}; rm -rf ${LogFolder}/*; ${BinFolder}/emaster -port=$FirstServerPort -N=$NumOfServerInstances \>${log_file_path_head}-master.out" 2>&1 &
     else
