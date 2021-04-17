@@ -1,6 +1,6 @@
-ServerIps=(10.10.1.1 10.10.1.2 10.10.1.3) # 3
+ServerIps=(10.10.1.2 10.10.1.3 10.10.1.4) # 3
 #ClientIps=(10.142.0.70 10.142.0.71 10.142.0.72 10.142.0.73 10.142.0.74)
-ClientIps=(10.10.1.4 10.10.1.5)
+ClientIps=(10.10.1.5)
 #ClientIps=(10.142.0.70)
 MasterIp=10.10.1.1
 FirstServerPort=17070 # change it when only necessary (i.e., firewall blocking, port in use)

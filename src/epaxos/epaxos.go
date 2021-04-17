@@ -387,7 +387,7 @@ func (r *Replica) run() {
 			prepareReply := prepareThirdRoundReplyS.(*epaxosproto.PrepareReply)
 			//got a Prepare reply
 			dlog.Printf("Received Third Round PrepareReply for instance %d.%d\n", prepareReply.Replica, prepareReply.Instance)
-			r.handlePrepareReply(prepareReply)
+			//r.handleThirdRoundPrepareReply(prepareReply)
 			dlog.Printf("Handled Third Round PrepareReply for instance %d.%d\n", prepareReply.Replica, prepareReply.Instance)
 			break
 			// Third Round Code End
@@ -1485,6 +1485,133 @@ func (r *Replica) handleThirdRoundPrepare(prepare *epaxosproto.Prepare) {
 }
 
 func (r *Replica) handlePrepareReply(preply *epaxosproto.PrepareReply) {
+	inst := r.InstanceSpace[preply.Replica][preply.Instance]
+
+	if inst.lb == nil || !inst.lb.preparing {
+		// we've moved on -- these are delayed replies, so just ignore
+		// TODO: should replies for non-current ballots be ignored?
+		return
+	}
+
+	if preply.OK == FALSE {
+		// TODO: there is probably another active leader, back off and retry later
+		inst.lb.nacks++
+		return
+	}
+
+	//Got an ACK (preply.OK == TRUE)
+
+	inst.lb.prepareOKs++
+
+	if preply.Status == epaxosproto.COMMITTED || preply.Status == epaxosproto.EXECUTED {
+		r.InstanceSpace[preply.Replica][preply.Instance] = &Instance{
+			preply.Command,
+			inst.ballot,
+			epaxosproto.COMMITTED,
+			preply.Seq,
+			preply.Deps,
+			nil, 0, 0, nil}
+		r.bcastCommit(preply.Replica, preply.Instance, inst.Cmds, preply.Seq, preply.Deps)
+		//TODO: check if we should send notifications to clients
+		return
+	}
+
+	if preply.Status == epaxosproto.ACCEPTED {
+		if inst.lb.recoveryInst == nil || inst.lb.maxRecvBallot < preply.Ballot {
+			inst.lb.recoveryInst = &RecoveryInstance{preply.Command, preply.Status, preply.Seq, preply.Deps, 0, false}
+			inst.lb.maxRecvBallot = preply.Ballot
+		}
+	}
+
+	if (preply.Status == epaxosproto.PREACCEPTED || preply.Status == epaxosproto.PREACCEPTED_EQ) &&
+		(inst.lb.recoveryInst == nil || inst.lb.recoveryInst.status < epaxosproto.ACCEPTED) {
+		if inst.lb.recoveryInst == nil {
+			inst.lb.recoveryInst = &RecoveryInstance{preply.Command, preply.Status, preply.Seq, preply.Deps, 1, false}
+		} else if preply.Seq == inst.Seq && equal(preply.Deps, inst.Deps) {
+			inst.lb.recoveryInst.preAcceptCount++
+		} else if preply.Status == epaxosproto.PREACCEPTED_EQ {
+			// If we get different ordering attributes from pre-acceptors, we must go with the ones
+			// that agreed with the initial command leader (in case we do not use Thrifty).
+			// This is safe if we use thrifty, although we can also safely start phase 1 in that case.
+			inst.lb.recoveryInst = &RecoveryInstance{preply.Command, preply.Status, preply.Seq, preply.Deps, 1, false}
+		}
+		if preply.AcceptorId == preply.Replica {
+			//if the reply is from the initial command leader, then it's safe to restart phase 1
+			inst.lb.recoveryInst.leaderResponded = true
+			return
+		}
+	}
+
+	if inst.lb.prepareOKs < r.N/2 {
+		return
+	}
+
+	//Received Prepare replies from a majority
+
+	ir := inst.lb.recoveryInst
+
+	if ir != nil {
+		//at least one replica has (pre-)accepted this instance
+		if ir.status == epaxosproto.ACCEPTED ||
+			(!ir.leaderResponded && ir.preAcceptCount >= r.N/2 && (r.Thrifty || ir.status == epaxosproto.PREACCEPTED_EQ)) {
+			//safe to go to Accept phase
+			inst.Cmds = ir.cmds
+			inst.Seq = ir.seq
+			inst.Deps = ir.deps
+			inst.Status = epaxosproto.ACCEPTED
+			inst.lb.preparing = false
+			r.bcastAccept(preply.Replica, preply.Instance, inst.ballot, int32(len(inst.Cmds)), inst.Seq, inst.Deps)
+		} else if !ir.leaderResponded && ir.preAcceptCount >= (r.N/2+1)/2 {
+			//send TryPreAccepts
+			//but first try to pre-accept on the local replica
+			inst.lb.preAcceptOKs = 0
+			inst.lb.nacks = 0
+			inst.lb.possibleQuorum = make([]bool, r.N)
+			for q := 0; q < r.N; q++ {
+				inst.lb.possibleQuorum[q] = true
+			}
+			if conf, q, i := r.findPreAcceptConflicts(ir.cmds, preply.Replica, preply.Instance, ir.seq, ir.deps); conf {
+				if r.InstanceSpace[q][i].Status >= epaxosproto.COMMITTED {
+					//start Phase1 in the initial leader's instance
+					r.startPhase1(preply.Replica, preply.Instance, inst.ballot, inst.lb.clientProposals, ir.cmds, len(ir.cmds))
+					return
+				} else {
+					inst.lb.nacks = 1
+					inst.lb.possibleQuorum[r.Id] = false
+				}
+			} else {
+				inst.Cmds = ir.cmds
+				inst.Seq = ir.seq
+				inst.Deps = ir.deps
+				inst.Status = epaxosproto.PREACCEPTED
+				inst.lb.preAcceptOKs = 1
+			}
+			inst.lb.preparing = false
+			inst.lb.tryingToPreAccept = true
+			r.bcastTryPreAccept(preply.Replica, preply.Instance, inst.ballot, inst.Cmds, inst.Seq, inst.Deps)
+		} else {
+			//start Phase1 in the initial leader's instance
+			inst.lb.preparing = false
+			r.startPhase1(preply.Replica, preply.Instance, inst.ballot, inst.lb.clientProposals, ir.cmds, len(ir.cmds))
+		}
+	} else {
+		//try to finalize instance by proposing NO-OP
+		noop_deps := make([]int32, r.N)
+		// commands that depended on this instance must look at all previous instances
+		noop_deps[preply.Replica] = preply.Instance - 1
+		inst.lb.preparing = false
+		r.InstanceSpace[preply.Replica][preply.Instance] = &Instance{
+			nil,
+			inst.ballot,
+			epaxosproto.ACCEPTED,
+			0,
+			noop_deps,
+			inst.lb, 0, 0, nil}
+		r.bcastAccept(preply.Replica, preply.Instance, inst.ballot, 0, 0, noop_deps)
+	}
+}
+
+func (r *Replica) handleThirdRoundPrepareReply(preply *epaxosproto.PrepareReply) {
 	inst := r.InstanceSpace[preply.Replica][preply.Instance]
 
 	if inst.lb == nil || !inst.lb.preparing {
