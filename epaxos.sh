@@ -8,7 +8,7 @@ NumOfServerInstances=3 # before recompiling, try no more than 5 servers. See Kno
 NumOfClientInstances=100
 reqsNb=100000
 writes=50
-conflicts=100
+conflicts=0
 
 # if closed-loop, uncomment two lines below
 clientBatchSize=10
