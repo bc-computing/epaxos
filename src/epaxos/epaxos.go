@@ -26,6 +26,8 @@ const ADAPT_TIME_SEC = 10
 
 const MAX_BATCH = 1000
 
+const USE_THIRD_ROUND = false
+
 const COMMIT_GRACE_PERIOD = 10 * 1e9 //10 seconds
 
 const BF_K = 4
@@ -43,11 +45,13 @@ var cpcounter = 0
 type Replica struct {
 	*genericsmr.Replica
 	prepareChan           chan fastrpc.Serializable
+	prepareThirdRoundChan      chan fastrpc.Serializable
 	preAcceptChan         chan fastrpc.Serializable
 	acceptChan            chan fastrpc.Serializable
 	commitChan            chan fastrpc.Serializable
 	commitShortChan       chan fastrpc.Serializable
 	prepareReplyChan      chan fastrpc.Serializable
+	prepareThirdRoundReplyChan chan fastrpc.Serializable
 	preAcceptReplyChan    chan fastrpc.Serializable
 	preAcceptOKChan       chan fastrpc.Serializable
 	acceptReplyChan       chan fastrpc.Serializable
@@ -55,6 +59,8 @@ type Replica struct {
 	tryPreAcceptReplyChan chan fastrpc.Serializable
 	prepareRPC            uint8
 	prepareReplyRPC       uint8
+	prepareThirdRoundRPC       uint8
+	prepareThirdRoundReplyRPC  uint8
 	preAcceptRPC          uint8
 	preAcceptReplyRPC     uint8
 	preAcceptOKRPC        uint8
@@ -131,12 +137,14 @@ func NewReplica(id int, peerAddrList []string, thrifty bool, exec bool, dreply b
 		make(chan fastrpc.Serializable, genericsmr.CHAN_BUFFER_SIZE),
 		make(chan fastrpc.Serializable, genericsmr.CHAN_BUFFER_SIZE),
 		make(chan fastrpc.Serializable, genericsmr.CHAN_BUFFER_SIZE),
+		make(chan fastrpc.Serializable, genericsmr.CHAN_BUFFER_SIZE),
+		make(chan fastrpc.Serializable, genericsmr.CHAN_BUFFER_SIZE),
 		make(chan fastrpc.Serializable, genericsmr.CHAN_BUFFER_SIZE*3),
 		make(chan fastrpc.Serializable, genericsmr.CHAN_BUFFER_SIZE*3),
 		make(chan fastrpc.Serializable, genericsmr.CHAN_BUFFER_SIZE*2),
 		make(chan fastrpc.Serializable, genericsmr.CHAN_BUFFER_SIZE),
 		make(chan fastrpc.Serializable, genericsmr.CHAN_BUFFER_SIZE),
-		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0,0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 		make([][]*Instance, len(peerAddrList)),
 		make([]int32, len(peerAddrList)),
 		make([]int32, len(peerAddrList)),
@@ -175,6 +183,8 @@ func NewReplica(id int, peerAddrList []string, thrifty bool, exec bool, dreply b
 	//register RPCs
 	r.prepareRPC = r.RegisterRPC(new(epaxosproto.Prepare), r.prepareChan)
 	r.prepareReplyRPC = r.RegisterRPC(new(epaxosproto.PrepareReply), r.prepareReplyChan)
+	r.prepareThirdRoundRPC = r.RegisterRPC(new(epaxosproto.Prepare), r.prepareThirdRoundChan)
+	r.prepareThirdRoundReplyRPC = r.RegisterRPC(new(epaxosproto.PrepareReply), r.prepareThirdRoundReplyChan)
 	r.preAcceptRPC = r.RegisterRPC(new(epaxosproto.PreAccept), r.preAcceptChan)
 	r.preAcceptReplyRPC = r.RegisterRPC(new(epaxosproto.PreAcceptReply), r.preAcceptReplyChan)
 	r.preAcceptOKRPC = r.RegisterRPC(new(epaxosproto.PreAcceptOK), r.preAcceptOKChan)
@@ -407,9 +417,16 @@ func (r *Replica) run() {
 				tStart = time.Now()
 			}
 			preAccept := preAcceptS.(*epaxosproto.PreAccept)
+			prepare := &epaxosproto.Prepare{preAccept.LeaderId, preAccept.Replica, preAccept.Instance, preAccept.Ballot}
 			//got a PreAccept message
 			dlog.Printf("Received PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
 			r.handlePreAccept(preAccept)
+			dlog.Printf("Handled PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
+			if USE_THIRD_ROUND{
+				// run third round
+				dlog.Printf("Received Third Round Prepare for instance %d.%d\n", prepare.LeaderId, prepare.Instance)
+				r.handleThirdRoundPrepare(prepare)
+			}
 			if debug {
 				//fmt.Println(r.Id, "handlePreAccept", time.Now().Sub(tStart))
 				debugTimeDict["handlePreAccept"] += time.Now().Sub(tStart)
@@ -458,7 +475,16 @@ func (r *Replica) run() {
 				debugCallDict["handleCommitShort"] += 1
 			}
 			break
+			/* Third Round Start */
+		case prepareThirdRoundReplyS := <-r.prepareThirdRoundReplyChan:
+			prepareReply := prepareThirdRoundReplyS.(*epaxosproto.PrepareReply)
+			//got a Prepare reply
+			dlog.Printf("Received Third Round PrepareReply for instance %d.%d\n", prepareReply.Replica, prepareReply.Instance)
+			//r.handleThirdRoundPrepareReply(prepareReply)
+			dlog.Printf("Handled Third Round PrepareReply for instance %d.%d\n", prepareReply.Replica, prepareReply.Instance)
+			break
 
+			/* Third Round End */
 		case prepareReplyS := <-r.prepareReplyChan:
 			if debug {
 				tStart = time.Now()
@@ -645,6 +671,10 @@ func replicaIdFromBallot(ballot int32) int32 {
 
 func (r *Replica) replyPrepare(replicaId int32, reply *epaxosproto.PrepareReply) {
 	r.SendMsg(replicaId, r.prepareReplyRPC, reply)
+}
+
+func (r *Replica) replyThirdRoundPrepare(replicaId int32, reply *epaxosproto.PrepareReply) {
+	r.SendMsg(replicaId, r.prepareThirdRoundReplyRPC, reply)
 }
 
 func (r *Replica) replyPreAccept(replicaId int32, reply *epaxosproto.PreAcceptReply) {
@@ -1578,6 +1608,22 @@ func (r *Replica) handlePrepare(prepare *epaxosproto.Prepare) {
 	}
 
 	r.replyPrepare(prepare.LeaderId, preply)
+}
+
+func (r *Replica) handleThirdRoundPrepare(prepare *epaxosproto.Prepare) {
+	inst := r.InstanceSpace[prepare.Replica][prepare.Instance]
+	preply := &epaxosproto.PrepareReply{
+		r.Id,
+		prepare.Replica,
+		prepare.Instance,
+		TRUE,
+		inst.ballot,
+		inst.Status,
+		inst.Cmds,
+		inst.Seq,
+		inst.Deps}
+	dlog.Printf("Handled Third Round Prepare for instance %d.%d\n", prepare.LeaderId, prepare.Instance)
+	r.replyThirdRoundPrepare(prepare.LeaderId, preply)
 }
 
 func (r *Replica) handlePrepareReply(preply *epaxosproto.PrepareReply) {
