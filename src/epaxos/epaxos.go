@@ -22,6 +22,8 @@ const FALSE = uint8(0)
 //const DS = 5
 const ADAPT_TIME_SEC = 10
 
+const USE_THIRD_ROUND = false
+
 const MAX_BATCH = 1000
 
 const COMMIT_GRACE_PERIOD = 10 * 1e9 //10 seconds
@@ -356,8 +358,10 @@ func (r *Replica) run() {
 			dlog.Printf("Received PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
 			r.handlePreAccept(preAccept)
 			dlog.Printf("Handled PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
-			dlog.Printf("Received Third Round Prepare for instance %d.%d\n", prepare.LeaderId, prepare.Instance)
-			r.handleThirdRoundPrepare(prepare)
+			if USE_THIRD_ROUND{
+				dlog.Printf("Received Third Round Prepare for instance %d.%d\n", prepare.LeaderId, prepare.Instance)
+				r.handleThirdRoundPrepare(prepare)
+			}
 			break
 
 		case acceptS := <-r.acceptChan:
