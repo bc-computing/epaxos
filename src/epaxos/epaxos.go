@@ -1464,7 +1464,7 @@ func (r *Replica) handlePrepare(prepare *epaxosproto.Prepare) {
 			inst.Seq,
 			inst.Deps}
 	}
-
+	dlog.Printf("Handled Prepare for instance %d.%d\n", prepare.LeaderId, prepare.Instance)
 	r.replyPrepare(prepare.LeaderId, preply)
 }
 
