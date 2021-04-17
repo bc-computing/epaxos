@@ -99,7 +99,7 @@ type TryPreAcceptReply struct {
 	OK               uint8
 	Ballot           int32
 	ConflictReplica  int32
-	ConflictInstance int32
+	ConflictInstance zint32
 	ConflictStatus   int8
 }
 
