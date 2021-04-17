@@ -126,7 +126,7 @@ SSHKey=/root/go/src/rc3/deployment/install/id_rsa # RC project has it
 EPaxosFolder=/root/go/src/epaxos # where the epaxos' bin folder is located
 ScriptFolder=$EPaxosFolder # where this script, analysis_paxos.py, kill.sh, and py2TimeTool.py are located
 LogFolder=$EPaxosFolder/logs
-log_file_path_head=${EPaxosFolder}/logs/NS${NS}-NC${NC}-re${reqsNb}-cb${clientBatchSize}-wr${writes}-cf${conflicts}-sp${2}-cp${1}-th${thrifty}
+log_file_path_head=${EPaxosFolder}/logs/NS${NumOfServerInstances}-NC${NumOfClientInstances}-re${reqsNb}-cb${clientBatchSize}-wr${writes}-cf${conflicts}-sp${2}-cp${1}-th${thrifty}
 
 function prepareRun() {
     for ip in "${ServerIps[@]}"
@@ -180,7 +180,7 @@ function runServersAllMachines() {
     MachineIdx=0
     for ip in "${ServerIps[@]}"
     do
-        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "cd ${ScriptFolder} && EPScriptOption=StartServers EPMachineIdx=${MachineIdx} /bin/bash erun_multiple2.sh" > ${log_file_path_head}-server$(($i - 1)).out 2>&1 &
+        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "cd ${ScriptFolder} && EPScriptOption=StartServers EPMachineIdx=${MachineIdx} /bin/bash erun_multiple2.sh" > ${log_file_path_head}-server$(($MachineIdx - 1)).out 2>&1 &
         sleep 0.3
         ((MachineIdx++))
     done
