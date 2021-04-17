@@ -142,7 +142,7 @@ function prepareRun() {
 }
 
 function runMaster() {
-    "${EPaxosFolder}"/bin/emaster -N ${NumOfServerInstances} 2>&1 & # TODO(highlight): change master parameters here
+    "${EPaxosFolder}"/bin/emaster -N ${NumOfServerInstances} > ${LogFolder}-master.out 2>&1 & # TODO(highlight): change master parameters here
 }
 
 function runServersOneMachine() {
@@ -179,7 +179,7 @@ function runServersAllMachines() {
     MachineIdx=0
     for ip in "${ServerIps[@]}"
     do
-        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "cd ${ScriptFolder} && EPScriptOption=StartServers EPMachineIdx=${MachineIdx} /bin/bash erun_multiple2.sh" \>${LogFolder}-server$(($MachineIdx - 1)).out 2>&1 &
+        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "cd ${ScriptFolder} && EPScriptOption=StartServers EPMachineIdx=${MachineIdx} /bin/bash erun_multiple2.sh" > ${LogFolder}-server$(($MachineIdx - 1)).out 2>&1 &
         sleep 0.3
         ((MachineIdx++))
     done
@@ -189,7 +189,7 @@ function runClientsAllMachines() {
     MachineIdx=0
     for ip in "${ClientIps[@]}"
     do
-        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "cd ${ScriptFolder} && EPScriptOption=StartClients EPMachineIdx=${MachineIdx} /bin/bash erun_multiple2.sh" \>${LogFolder}-client$(($MachineIdx - 1)).out 2>&1 &
+        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "cd ${ScriptFolder} && EPScriptOption=StartClients EPMachineIdx=${MachineIdx} /bin/bash erun_multiple2.sh" > ${LogFolder}-client$(($MachineIdx - 1)).out 2>&1 &
         sleep 0.3
         ((MachineIdx++))
     done
@@ -283,8 +283,11 @@ remove_logs() {
 }
 
 #remove_logs
+prepareRun
+wait
 Main
 wait
 #SSHCheckClientProgress
-DownloadLogs
+#DownloadLogs
+wait
 EpKillAll
