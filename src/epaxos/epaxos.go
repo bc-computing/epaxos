@@ -1612,6 +1612,7 @@ func (r *Replica) handlePrepareReply(preply *epaxosproto.PrepareReply) {
 }
 
 func (r *Replica) handleThirdRoundPrepareReply(preply *epaxosproto.PrepareReply) {
+	dlog.Printf("Running handleThirdRoundPrepareReply for instance %d.%d\n", preply.LeaderId, preply.Instance)
 	inst := r.InstanceSpace[preply.Replica][preply.Instance]
 
 	if inst.lb == nil || !inst.lb.preparing {
