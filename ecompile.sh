@@ -28,9 +28,9 @@ cd ${efolder}
 #git checkout $branch
 # # prefix binaries with "e" to indicate they belong to EPaxos
 # # https://stackoverflow.com/a/33243591
-/usr/local/go/bin/go build -o ${efolder}/bin/emaster master # emaster -N=3
+/usr/local/go/bin/go build -o ${efolder}/bin/master master # emaster -N=3
 echo "Built master binary"
-/usr/local/go/bin/go build -o ${efolder}/bin/eserver server
+/usr/local/go/bin/go build -o ${efolder}/bin/server server
 echo "Built server binary"
-/usr/local/go/bin/go build -o ${efolder}/bin/eclient client
+/usr/local/go/bin/go build -o ${efolder}/bin/client client
 echo "Built client binary"

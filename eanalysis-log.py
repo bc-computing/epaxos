@@ -9,9 +9,10 @@ def find_total_requests(log_dir="./logs"):
             return num_of_clients * requests_per_client
 
 def find_client_log_names(log_dir="./logs"):
+    print(os.listdir(log_dir))
     for filename in os.listdir(log_dir):
-        if filename.endswith("-nettop.out"): # finds the first profile
-            profile_name = filename[:len(filename)-len("-nettop.out")]
+        if filename.endswith(".out"): # finds the first profile
+            profile_name = filename[:len(filename)-len(".out")]
             num_of_clients = int(profile_name.split("-")[1][2:])
             return [f"{profile_name}-client{i}.out"for i in range(num_of_clients)]
 

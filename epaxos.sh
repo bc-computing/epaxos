@@ -14,10 +14,10 @@ conflicts=100
 clientBatchSize=10
 rounds=$((reqsNb / clientBatchSize))
 # if open-loop, uncomment the line below
-rounds=1 # open-loop
+#rounds=1 # open-loop
 
 # some constants
-SSHKey=/root/go/src/rc3/aux/id_rsa # RC project has it
+SSHKey=/root/go/src/rc3/deployment/install/id_rsa # RC project has it
 EPaxosFolder=/root/go/src/epaxos # where the epaxos' bin folder is located
 LogFolder=/root/go/src/epaxos/logs
 
@@ -49,7 +49,6 @@ function runServersOneMachine() {
         if [[ ${svrIpIdx} -eq ${EPMachineIdx} ]]
         then
             "${EPaxosFolder}"/bin/server -port ${svrPort} -maddr ${MasterIp} -addr ${svrIp} -p 4 -thrifty=true -e=true 2>&1 & # TODO: change server parameters here
-#            "${EPaxosFolder}"/bin/server -port ${svrPort} -maddr ${MasterIp} -addr ${svrIp}  -p 4 -thrifty=true 2>&1 & # TODO: change server parameters here
         fi
     done
 }
@@ -97,7 +96,6 @@ function runServersAndClientsAllMachines() {
 }
 
 function SendEPaxosFolder() {
-    # send the EPaxos folder to the cluster to propagate the change
     for ip in "${ServerIps[@]}"
     do
         scp -o StrictHostKeyChecking=no -i ${SSHKey} -r ${EPaxosFolder} root@"$ip":~  2>&1 &
@@ -141,6 +139,26 @@ function DownloadLogs() {
         sleep 0.3
     done
 
+    for ip in "${ServerIps[@]}"
+    do
+        scp -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip":${EPaxosFolder}/*.out ${LogFolder} 2>&1 &
+        sleep 0.3
+    done
+
+}
+
+function RemoveLogs(){
+  for ip in "${ClientIps[@]}"
+  do
+        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "rm -rf ${LogFolder}/*" 2>&1 &
+        sleep 0.3
+  done
+
+  for ip in "${ServerIps[@]}"
+  do
+        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "rm -rf ${LogFolder}/*" 2>&1 &
+        sleep 0.3
+  done
 }
 
 function Analysis() {
@@ -167,6 +185,11 @@ function Main() {
 }
 
 #SendEPaxosFolder
-prepareRun; Main
-#SSHCheckClientProgress
-#DownloadLogs; EpKillAll; Analysis
+#prepareRun;
+RemoveLogs
+wait
+Main
+wait
+DownloadLogs
+wait
+EpKillAll
