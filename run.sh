@@ -11,8 +11,8 @@ writes=50
 conflicts=100
 
 # if closed-loop, uncomment two lines below
-#clientBatchSize=10
-#rounds=$((reqsNb / clientBatchSize))
+clientBatchSize=10
+rounds=$((reqsNb / clientBatchSize))
 # if open-loop, uncomment the line below
 rounds=1 # open-loop
 
