@@ -149,7 +149,7 @@ func main() {
 			go waitReplies(readers, leader, n, done)
 		}
 
-		// before := time.Now()
+		before := time.Now()
 
 		for i := 0; i < n+*eps; i++ {
 			dlog.Printf("Sending proposal %d\n", id)
@@ -216,7 +216,7 @@ func main() {
 			err = <-done
 		}
 
-		// after := time.Now()
+		after := time.Now()
 
 		fmt.Printf("Round took %v\n", after.Sub(before))
 

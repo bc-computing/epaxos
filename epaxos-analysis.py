@@ -169,5 +169,5 @@ if __name__ == '__main__':
     for info in infos:
         for k, v in info.items():
             if len(v) > 1 and not isinstance(v, list):
-                print(v[0], end=", ")
+                print(k,":",v[0], end=", ")
         print()
