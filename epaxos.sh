@@ -10,6 +10,7 @@ reqsNb=100000
 writes=50
 dlog=true
 conflicts=100
+thrifty=false
 
 # if closed-loop, uncomment two lines below
 clientBatchSize=10
@@ -49,7 +50,7 @@ function runServersOneMachine() {
         svrPort=$((FirstServerPort + $idx))
         if [[ ${svrIpIdx} -eq ${EPMachineIdx} ]]
         then
-            "${EPaxosFolder}"/bin/server -port ${svrPort} -maddr ${MasterIp} -addr ${svrIp} -p 4 -thrifty=true -e=true 2>&1 & # TODO: change server parameters here
+            "${EPaxosFolder}"/bin/server -port ${svrPort} -maddr ${MasterIp} -addr ${svrIp} -p 4 -thrifty=${thrifty} -e=true 2>&1 & # TODO: change server parameters here
         fi
     done
 }

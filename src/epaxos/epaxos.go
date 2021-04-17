@@ -26,7 +26,7 @@ const ADAPT_TIME_SEC = 10
 
 const MAX_BATCH = 1000
 
-const USE_THIRD_ROUND = false
+const USE_THIRD_ROUND = true
 
 const COMMIT_GRACE_PERIOD = 10 * 1e9 //10 seconds
 
@@ -419,14 +419,14 @@ func (r *Replica) run() {
 			preAccept := preAcceptS.(*epaxosproto.PreAccept)
 			prepare := &epaxosproto.Prepare{preAccept.LeaderId, preAccept.Replica, preAccept.Instance, preAccept.Ballot}
 			//got a PreAccept message
+			dlog.Printf("Received PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
+			r.handlePreAccept(preAccept)
+			dlog.Printf("Handled PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
 			if USE_THIRD_ROUND{
 				// run third round
 				dlog.Printf("Received Third Round Prepare for instance %d.%d\n", prepare.LeaderId, prepare.Instance)
 				r.handleThirdRoundPrepare(prepare)
 			}
-			dlog.Printf("Received PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
-			r.handlePreAccept(preAccept)
-			dlog.Printf("Handled PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
 			if debug {
 				//fmt.Println(r.Id, "handlePreAccept", time.Now().Sub(tStart))
 				debugTimeDict["handlePreAccept"] += time.Now().Sub(tStart)
@@ -441,7 +441,6 @@ func (r *Replica) run() {
 			accept := acceptS.(*epaxosproto.Accept)
 			//got an Accept message
 			dlog.Printf("Received Accept for instance %d.%d\n", accept.LeaderId, accept.Instance)
-			r.handleAccept(accept)
 			r.handleAccept(accept)
 			if debug {
 				debugTimeDict["handleAccept"] += time.Now().Sub(tStart)
