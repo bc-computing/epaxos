@@ -461,11 +461,12 @@ func (r *Replica) run() {
 				tStart = time.Now()
 			}
 			preAccept := preAcceptS.(*epaxosproto.PreAccept)
+			prepare := &epaxosproto.Prepare{preAccept.LeaderId, preAccept.Replica, preAccept.Instance, preAccept.Ballot}
 			dlog.Printf("Received PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
 			r.handlePreAccept(preAccept)
 			dlog.Printf("Handled PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
 			dlog.Printf("Received Third Round PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
-			r.handleThirdRoundPreAccept(preAccept) //this prepares message for the prepareThirdRoundReplyChan, which is handled below.
+			r.handleThirdRoundPrepare(prepare) //this prepares message for the prepareThirdRoundReplyChan, which is handled below.
 			dlog.Printf("Handled Third Round PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
 			if debug {
 				//dlog.Println(r.Id, "handlePreAccept", time.Now().Sub(tStart))
@@ -519,21 +520,6 @@ func (r *Replica) run() {
 
 
 		//Third Round Code
-		case prepareThirdRoundS := <-r.prepareThirdRoundChan:
-			if debug {
-				tStart = time.Now()
-			}
-			prepare := prepareThirdRoundS.(*epaxosproto.Prepare)
-			//got a Prepare message
-			dlog.Printf("Received Third Round Prepare for instance %d.%d\n", prepare.Replica, prepare.Instance)
-			r.handleThirdRoundPrepare(prepare)
-			if debug {
-				debugTimeDict["handlePrepare"] += time.Now().Sub(tStart)
-				debugCallDict["handlePrepare"] += 1
-			}
-			break
-
-
 		case prepareThirdRoundReplyS := <-r.prepareThirdRoundReplyChan:
 			if debug {
 				tStart = time.Now()
@@ -1242,10 +1228,10 @@ func (r *Replica) handlePreAccept(preAccept *epaxosproto.PreAccept) {
 	dlog.Printf("I've replied to the PreAccept\n")
 }
 
-func (r *Replica) handleThirdRoundPreAccept(preAccept *epaxosproto.PreAccept) {
+func (r *Replica) handleThirdRoundPreAccept(preAccept *epaxosproto.Prepare) {
 	//time.Sleep(0 * time.Second)
-	pok := &epaxosproto.PreAcceptOK{preAccept.Instance}
-	r.SendMsg(preAccept.LeaderId, r.preAcceptOKRPC, pok)
+	pok := &epaxosproto.PreAcceptOK{prepare.Instance}
+	r.SendMsg(preAccept.LeaderId, r.prepareReplyRPC, pok)
 	dlog.Printf("I've replied to the Third Round PreAccept\n")
 }
 
