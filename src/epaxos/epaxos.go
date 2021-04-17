@@ -527,9 +527,8 @@ func (r *Replica) run() {
 			prepareReply := prepareThirdRoundReplyS.(*epaxosproto.PrepareReply)
 			//got a Prepare reply
 			dlog.Printf("Received Third Round PrepareReply for instance %d.%d\n", prepareReply.Replica, prepareReply.Instance)
-
-			log.Println("Inside prepareThirdRoundReplyS")
 			r.handlePrepareReply(prepareReply)
+			dlog.Printf("Handled Third Round PrepareReply for instance %d.%d\n", prepareReply.Replica, prepareReply.Instance)
 			if debug {
 				debugTimeDict["handlePrepareReply"] += time.Now().Sub(tStart)
 				debugCallDict["handlePrepareReply"] += 1
