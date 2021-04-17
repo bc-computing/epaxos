@@ -26,7 +26,7 @@ const ADAPT_TIME_SEC = 10
 
 const MAX_BATCH = 1000
 
-const USE_THIRD_ROUND = true
+const USE_THIRD_ROUND = false
 
 const COMMIT_GRACE_PERIOD = 10 * 1e9 //10 seconds
 
@@ -441,6 +441,7 @@ func (r *Replica) run() {
 			accept := acceptS.(*epaxosproto.Accept)
 			//got an Accept message
 			dlog.Printf("Received Accept for instance %d.%d\n", accept.LeaderId, accept.Instance)
+			r.handleAccept(accept)
 			r.handleAccept(accept)
 			if debug {
 				debugTimeDict["handleAccept"] += time.Now().Sub(tStart)
@@ -1617,9 +1618,9 @@ func (r *Replica) handleThirdRoundPrepare(prepare *epaxosproto.Prepare) {
 		prepare.Replica,
 		prepare.Instance,
 		TRUE,
-		inst.ballot,
-		inst.Status,
-		inst.Cmds,
+		inst.ballot,//int32
+		inst.Status,//int8
+		inst.Cmds,//
 		inst.Seq,
 		inst.Deps}
 	dlog.Printf("Handled Third Round Prepare for instance %d.%d\n", prepare.LeaderId, prepare.Instance)
