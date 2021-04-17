@@ -808,7 +808,7 @@ func (r *Replica) mergeAttributes(seq1 int32, deps1 []int32, seq2 int32, deps2 [
 	return seq1, deps1, equal
 }
 
-func equal(deps1 *[]int32, deps2 *[]int32) bool {
+func equal(deps1 []int32, deps2 []int32) bool {
 	for i := 0; i < len(deps1); i++ {
 		if deps1[i] != deps2[i] {
 			return false
@@ -1527,7 +1527,7 @@ func (r *Replica) handlePrepareReply(preply *epaxosproto.PrepareReply) {
 		(inst.lb.recoveryInst == nil || inst.lb.recoveryInst.status < epaxosproto.ACCEPTED) {
 		if inst.lb.recoveryInst == nil {
 			inst.lb.recoveryInst = &RecoveryInstance{preply.Command, preply.Status, preply.Seq, preply.Deps, 1, false}
-		} else if preply.Seq == inst.Seq && equal(&preply.Deps, &inst.Deps) {
+		} else if preply.Seq == inst.Seq && equal(preply.Deps, inst.Deps) {
 			inst.lb.recoveryInst.preAcceptCount++
 		} else if preply.Status == epaxosproto.PREACCEPTED_EQ {
 			// If we get different ordering attributes from pre-acceptors, we must go with the ones
@@ -1669,7 +1669,7 @@ func (r *Replica) findPreAcceptConflicts(cmds []state.Command, replica int32, in
 			// we consider this a conflict because we shouldn't regress to PRE-ACCEPTED
 			return true, replica, instance
 		}
-		if inst.Seq == tpa.Seq && equal(&inst.Deps, &tpa.Deps) {
+		if inst.Seq == tpa.Seq && equal(inst.Deps, tpa.Deps) {
 			// already PRE-ACCEPTED, no point looking for conflicts again
 			return false, replica, instance
 		}
