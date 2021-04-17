@@ -26,7 +26,7 @@ const ADAPT_TIME_SEC = 10
 
 const MAX_BATCH = 1000
 
-const USE_THIRD_ROUND = false
+const USE_THIRD_ROUND = true
 
 const COMMIT_GRACE_PERIOD = 10 * 1e9 //10 seconds
 
