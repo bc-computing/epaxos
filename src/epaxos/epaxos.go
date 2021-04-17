@@ -1661,6 +1661,7 @@ func (r *Replica) handlePrepare(prepare *epaxosproto.Prepare) {
 
 func (r *Replica) handleThirdRoundPrepare(prepare *epaxosproto.Prepare) {
 	dlog.Printf("Handled Third Round Prepare for instance %d.%d\n", prepare.LeaderId, prepare.Instance)
+	r.replyThirdRoundPrepare(prepare.LeaderId, preply)
 }
 
 func (r *Replica) handleTryPreAccept(tpa *epaxosproto.TryPreAccept) {
