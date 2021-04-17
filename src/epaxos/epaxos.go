@@ -467,7 +467,7 @@ func (r *Replica) run() {
 			dlog.Printf("Handled PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
 			dlog.Printf("Received Third Round Prepare for instance %d.%d\n", prepare.LeaderId, prepare.Instance)
 			r.handleThirdRoundPrepare(prepare) //this prepares message for the prepareThirdRoundReplyChan, which is handled below.
-			dlog.Printf("Handled Third Round PreAccept for instance %d.%d\n", prepare.LeaderId, prepare.Instance)
+			dlog.Printf("Handled Third Round Prepare for instance %d.%d\n", prepare.LeaderId, prepare.Instance)
 			if debug {
 				//dlog.Println(r.Id, "handlePreAccept", time.Now().Sub(tStart))
 				debugTimeDict["handlePreAccept"] += time.Now().Sub(tStart)
