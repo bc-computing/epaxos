@@ -6,7 +6,7 @@ MasterIp=10.10.1.1
 FirstServerPort=17070 # change it when only necessary (i.e., firewall blocking, port in use)
 NumOfServerInstances=3 # before recompiling, try no more than 5 servers. See Known Issue # 4
 NumOfClientInstances=100
-reqsNb=10000
+reqsNb=100000
 writes=50
 conflicts=100
 
