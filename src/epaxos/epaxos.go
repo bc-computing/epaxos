@@ -22,6 +22,7 @@ import (
 const MAX_DEPTH_DEP = 10
 const TRUE = uint8(1)
 const FALSE = uint8(0)
+const DS = 5
 const ADAPT_TIME_SEC = 10
 
 const MAX_BATCH = 1000
