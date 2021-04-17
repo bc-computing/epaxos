@@ -1229,7 +1229,7 @@ func (r *Replica) handlePreAccept(preAccept *epaxosproto.PreAccept) {
 
 func (r *Replica) handleThirdRoundPreAccept(preAccept *epaxosproto.Prepare) {
 	//time.Sleep(0 * time.Second)
-	pok := &epaxosproto.PreAcceptOK{prepare.Instance}
+	pok := &epaxosproto.PreAcceptOK{preAccept.Instance}
 	r.SendMsg(preAccept.LeaderId, r.prepareReplyRPC, pok)
 	dlog.Printf("I've replied to the Third Round PreAccept\n")
 }
