@@ -1,0 +1,575 @@
+2021/04/17 13:35:19 Master starting on port 7087
+2021/04/17 13:35:19 ...waiting for 3 replicas
+2021/04/17 13:35:22 Server starting on port 17070
+2021/04/17 13:35:22 Server starting on port 17071
+2021/04/17 13:35:23 Server starting on port 17072
+2021/04/17 13:35:23 Starting Egalitarian Paxos replica...
+2021/04/17 13:35:23 rpc.Register: method "ConnectToPeers" has 1 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: method "ConnectToPeersNoListeners" has 1 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: reply type of method "RegisterRPC" is not a pointer: "chan fastrpc.Serializable"
+2021/04/17 13:35:23 rpc.Register: method "ReplyBeacon" has 2 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: method "ReplyPropose" has 0 output parameters; needs exactly one
+2021/04/17 13:35:23 rpc.Register: method "ReplyProposeTS" has 0 output parameters; needs exactly one
+2021/04/17 13:35:23 rpc.Register: method "SendBeacon" has 2 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: method "SendMsg" has 4 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: method "SendMsgNoFlush" has 4 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: method "UpdatePreferredPeerOrder" has 2 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: method "WaitForClientConnections" has 1 input parameters; needs exactly three
+2021/04/17 13:35:23 Starting Egalitarian Paxos replica...
+2021/04/17 13:35:23 rpc.Register: method "ConnectToPeers" has 1 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: method "ConnectToPeersNoListeners" has 1 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: reply type of method "RegisterRPC" is not a pointer: "chan fastrpc.Serializable"
+2021/04/17 13:35:23 rpc.Register: method "ReplyBeacon" has 2 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: method "ReplyPropose" has 0 output parameters; needs exactly one
+2021/04/17 13:35:23 rpc.Register: method "ReplyProposeTS" has 0 output parameters; needs exactly one
+2021/04/17 13:35:23 rpc.Register: method "SendBeacon" has 2 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: method "SendMsg" has 4 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: method "SendMsgNoFlush" has 4 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: method "UpdatePreferredPeerOrder" has 2 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: method "WaitForClientConnections" has 1 input parameters; needs exactly three
+2021/04/17 13:35:23 Starting Egalitarian Paxos replica...
+2021/04/17 13:35:23 rpc.Register: method "ConnectToPeers" has 1 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: method "ConnectToPeersNoListeners" has 1 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: reply type of method "RegisterRPC" is not a pointer: "chan fastrpc.Serializable"
+2021/04/17 13:35:23 rpc.Register: method "ReplyBeacon" has 2 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: method "ReplyPropose" has 0 output parameters; needs exactly one
+2021/04/17 13:35:23 rpc.Register: method "ReplyProposeTS" has 0 output parameters; needs exactly one
+2021/04/17 13:35:23 rpc.Register: method "SendBeacon" has 2 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: method "SendMsg" has 4 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: method "SendMsgNoFlush" has 4 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: method "UpdatePreferredPeerOrder" has 2 input parameters; needs exactly three
+2021/04/17 13:35:23 rpc.Register: method "WaitForClientConnections" has 1 input parameters; needs exactly three
+2021/04/17 13:35:24 Replica id: 0. Done connecting to peers
+2021/04/17 13:35:24 Waiting for client connections
+2021/04/17 13:35:24 Replica id: 2. Done connecting to peers
+2021/04/17 13:35:24 Waiting for client connections
+2021/04/17 13:35:24 Replica id: 1. Done connecting to peers
+2021/04/17 13:35:24 Waiting for client connections
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 0
+2021/04/17 13:35:28 Batching 10
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Received Third Round Prepare for instance 0.0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 1
+2021/04/17 13:35:28 Batching 20
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 2
+2021/04/17 13:35:28 Batching 30
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+panic: runtime error: invalid memory address or nil pointer dereference
+[signal SIGSEGV: segmentation violation code=0x1 addr=0x18 pc=0x56d6b1]
+
+goroutine 9 [running]:
+epaxos.(*Replica).handleThirdRoundPrepare(0xc00013c000, 0xc0001598c0)
+	/root/go/src/epaxos/src/epaxos/epaxos.go:1620 +0xb1
+epaxos.(*Replica).run(0xc00013c000)
+	/root/go/src/epaxos/src/epaxos/epaxos.go:425 +0x1b8f
+created by epaxos.NewReplica
+	/root/go/src/epaxos/src/epaxos/epaxos.go:198 +0x1579
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 3
+2021/04/17 13:35:28 Batching 10
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 4
+2021/04/17 13:35:28 Batching 1
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 5
+2021/04/17 13:35:28 Batching 19
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 6
+2021/04/17 13:35:28 Batching 10
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 7
+2021/04/17 13:35:28 Batching 10
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 8
+2021/04/17 13:35:28 Batching 30
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 9
+2021/04/17 13:35:28 Batching 30
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 10
+2021/04/17 13:35:28 Batching 1
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 11
+2021/04/17 13:35:28 Batching 39
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 12
+2021/04/17 13:35:28 Batching 50
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 13
+2021/04/17 13:35:28 Batching 24
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 14
+2021/04/17 13:35:28 Batching 16
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 15
+2021/04/17 13:35:28 Batching 50
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 16
+2021/04/17 13:35:28 Batching 10
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 17
+2021/04/17 13:35:28 Batching 1
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 18
+2021/04/17 13:35:28 Batching 9
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 19
+2021/04/17 13:35:28 Batching 10
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 20
+2021/04/17 13:35:28 Batching 10
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 21
+2021/04/17 13:35:28 Batching 21
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 22
+2021/04/17 13:35:28 Batching 59
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 23
+2021/04/17 13:35:28 Batching 160
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 24
+2021/04/17 13:35:28 Batching 12
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 25
+2021/04/17 13:35:28 Batching 28
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 26
+2021/04/17 13:35:28 Batching 1
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 27
+2021/04/17 13:35:28 Batching 32
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 28
+2021/04/17 13:35:28 Batching 129
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 29
+2021/04/17 13:35:28 Batching 68
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 weird 0; conflicted 0; slow 0; happy 0
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 30
+2021/04/17 13:35:28 Batching 1
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 31
+2021/04/17 13:35:28 Batching 19
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 32
+2021/04/17 13:35:28 Batching 51
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 33
+2021/04/17 13:35:28 Batching 19
+2021/04/17 13:35:28 Proposal with op 1
+2021/04/17 13:35:28 Starting instance 34
+2021/04/17 13:35:28 Batching 10
+pid: 29952, cmd: /root/go/src/epaxos/bin/master -N 3
+pid: 30063, cmd: /root/go/src/epaxos/bin/server -port 17070 -maddr 10.10.1.2 -addr 10.10.1.2 -p 4 -thrifty=true -e=true
+epaxos.sh: line 193: 30063 Killed                  "${EPaxosFolder}"/bin/server -port ${svrPort} -maddr ${MasterIp} -addr ${svrIp} -p 4 -thrifty=true -e=true 2>&1
+pid: 26032, cmd: /root/go/src/epaxos/bin/server -port 17072 -maddr 10.10.1.2 -addr 10.10.1.4 -p 4 -thrifty=true -e=true
+epaxos.sh: line 193: 26032 Killed                  "${EPaxosFolder}"/bin/server -port ${svrPort} -maddr ${MasterIp} -addr ${svrIp} -p 4 -thrifty=true -e=true 2>&1
+pid: 7003, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7004, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7005, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7006, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7007, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7008, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7009, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7010, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7011, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7012, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7013, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7014, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7021, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7022, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7023, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7027, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7028, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7029, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7030, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7032, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7035, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7036, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7040, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7042, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7045, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7046, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7051, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7060, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7066, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7071, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7074, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7079, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7082, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7083, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7085, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7089, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7093, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7097, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7101, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7105, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7108, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7111, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7112, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7118, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7126, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7135, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7136, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7137, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7139, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7156, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7170, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7178, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7183, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7192, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7201, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7205, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7210, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7219, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7223, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7234, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7240, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7251, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7256, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7258, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7286, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7290, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7299, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7305, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7330, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7343, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7344, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7346, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7348, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7353, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7370, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7387, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7391, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7411, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7422, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7428, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7429, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7431, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7432, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7434, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7440, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7450, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7457, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7466, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7468, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7478, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7484, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7485, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7490, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7496, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7506, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7512, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7513, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7514, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7520, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+pid: 7521, cmd: /root/go/src/epaxos/bin/client -maddr 10.10.1.2 -q 100000 -w 50 -r 10000 -p 30 -c 100
+epaxos.sh: line 193:  7003 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7010 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7012 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7013 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7014 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7021 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7022 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7023 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7027 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7028 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7029 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7030 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7035 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7036 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7040 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7042 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7045 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7046 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7071 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7074 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7082 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7118 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7136 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7178 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7201 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7210 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7219 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7286 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7290 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7330 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7353 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7411 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7422 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7004 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7005 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7006 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7007 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7008 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7009 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7011 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7032 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7066 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7085 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7089 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7093 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7097 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7101 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7126 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7135 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7137 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7139 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7156 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7170 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7183 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7192 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7205 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7223 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7234 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7240 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7256 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7258 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7299 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7305 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7346 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7370 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7387 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7429 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7431 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7434 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7440 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7450 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7457 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7466 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7468 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7478 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7484 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7485 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7490 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7496 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7506 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7512 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7513 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7514 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7051 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7108 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7111 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7112 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7343 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7432 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7520 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7060 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7079 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7083 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7344 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7348 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7521 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7105 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7251 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7391 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
+epaxos.sh: line 193:  7428 Killed                  "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1
