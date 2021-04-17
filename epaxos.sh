@@ -139,11 +139,11 @@ function DownloadLogs() {
         sleep 0.3
     done
 
-    for ip in "${ServerIps[@]}"
-    do
-        scp -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip":${EPaxosFolder}/*.out ${LogFolder} 2>&1 &
-        sleep 0.3
-    done
+#    for ip in "${ServerIps[@]}"
+#    do
+#        scp -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip":${EPaxosFolder}/*.out ${LogFolder} 2>&1 &
+#        sleep 0.3
+#    done
 
 }
 

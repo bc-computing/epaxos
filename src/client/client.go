@@ -218,7 +218,7 @@ func main() {
 
 		// after := time.Now()
 
-		// fmt.Printf("Round took %v\n", after.Sub(before))
+		fmt.Printf("Round took %v\n", after.Sub(before))
 
 		if *check {
 			for j := 0; j < n; j++ {
