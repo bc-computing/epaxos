@@ -4,6 +4,7 @@ import (
 	"bloomfilter"
 	"dlog"
 	"encoding/binary"
+	"encoding/json"
 	"epaxosproto"
 	"fastrpc"
 	"genericsmr"
@@ -357,8 +358,10 @@ func (r *Replica) run() {
 			interrupt := make(chan os.Signal, 1)
 			signal.Notify(interrupt, syscall.SIGINT, syscall.SIGKILL, syscall.SIGTERM)
 			<-interrupt
-			log.Print(debugCallDict)
-			log.Print(debugTimeDict)
+			debugCalljson, _ := json.Marshal(debugCallDict)
+			debugTimejson, _ := json.Marshal(debugTimeDict)
+			dlog.Println("CALL DICT: ",string(debugCalljson))
+			dlog.Println("TIME DICT: ",string(debugTimejson))
 			os.Exit(0)
 		}()
 	}

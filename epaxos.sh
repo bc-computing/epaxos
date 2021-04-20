@@ -11,6 +11,8 @@ writes=50
 dlog=false
 conflicts=0
 thrifty=true
+serverP=2       # server's GOMAXPROCS (sp)
+clientP=1       # client's GOMAXPROCS (cp)
 
 # if closed-loop, uncomment two lines below
 clientBatchSize=10
@@ -22,7 +24,7 @@ rounds=$((reqsNb / clientBatchSize))
 SSHKey=/root/go/src/rc3/deployment/install/id_rsa # RC project has it
 EPaxosFolder=/root/go/src/epaxos # where the epaxos' bin folder is located
 LogFolder=/root/go/src/epaxos/logs
-
+log_file_path_head=${EPaxosFolder}/logs/NS${NumOfServerInstances}-NC${NumOfClientInstances}-re${reqsNb}-cb${clientBatchSize}-wr${writes}-cf${conflicts}-sp${serverP}-cp${clientP}-th${thrifty}
 
 function prepareRun() {
     for ip in "${ServerIps[@]}"
@@ -50,7 +52,7 @@ function runServersOneMachine() {
         svrPort=$((FirstServerPort + $idx))
         if [[ ${svrIpIdx} -eq ${EPMachineIdx} ]]
         then
-            "${EPaxosFolder}"/bin/server -port ${svrPort} -maddr ${MasterIp} -addr ${svrIp} -p 4 -thrifty=${thrifty} -e=true 2>&1 & # TODO: change server parameters here
+            "${EPaxosFolder}"/bin/server -port ${svrPort} -maddr ${MasterIp} -addr ${svrIp} -p 4 -thrifty=${thrifty} -e=true > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--server${idx}.out 2>&1 &
         fi
     done
 }
