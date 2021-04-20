@@ -1,4 +1,27 @@
-source epaxos-testing.sh
+ServerIps=(10.142.0.27 10.142.0.37 10.142.0.63) # 3
+#ClientIps=(10.142.0.70 10.142.0.71 10.142.0.72 10.142.0.73 10.142.0.74)
+ClientIps=(10.142.0.11 10.142.0.103 10.142.0.104)
+#ClientIps=(10.142.0.70)
+MasterIp=10.142.0.27
+FirstServerPort=17070 # change it when only necessary (i.e., firewall blocking, port in use)
+NumOfServerInstances=3 # before recompiling, try no more than 5 servers. See Known Issue # 4
+NumOfClientInstances=100
+reqsNb=100000
+writes=50
+dlog=false
+conflicts=0
+thrifty=true
+
+# if closed-loop, uncomment two lines below
+clientBatchSize=10
+rounds=$((reqsNb / clientBatchSize))
+# if open-loop, uncomment the line below
+#rounds=1 # open-loop
+
+# some constants
+SSHKey=/root/go/src/rc3/deployment/install/id_rsa # RC project has it
+EPaxosFolder=/root/go/src/epaxos # where the epaxos' bin folder is located
+LogFolder=/root/go/src/epaxos/logs
 
 
 function prepareRun() {
