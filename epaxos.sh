@@ -9,8 +9,8 @@ NumOfClientInstances=100
 reqsNb=100000
 writes=50
 dlog=false
-conflicts=0
-thrifty=true
+conflicts=100
+thrifty=false
 
 # if closed-loop, uncomment two lines below
 clientBatchSize=10
