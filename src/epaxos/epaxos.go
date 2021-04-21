@@ -4,8 +4,10 @@ import (
 	"bloomfilter"
 	"dlog"
 	"encoding/binary"
+	"encoding/json"
 	"epaxosproto"
 	"fastrpc"
+	"fmt"
 	"genericsmr"
 	"genericsmrproto"
 	"io"
@@ -312,7 +314,8 @@ func (r *Replica) run() {
 
 	onOffProposeChan := r.ProposeChan
 
-	debug := false
+	debug := true
+	counter := 0
 	debugCallDict := map[string]int{
 		"handlePropose":           0,
 		"handlePrepare":           0,
@@ -347,8 +350,10 @@ func (r *Replica) run() {
 			interrupt := make(chan os.Signal, 1)
 			signal.Notify(interrupt, syscall.SIGINT, syscall.SIGKILL, syscall.SIGTERM)
 			<-interrupt
-			log.Print(debugCallDict)
-			log.Print(debugTimeDict)
+			fmt.Println("DEBUG->")
+			fmt.Println(debugCallDict)
+			fmt.Println(debugTimeDict)
+			fmt.Println("<-DEBUG")
 			os.Exit(0)
 		}()
 	}
@@ -364,6 +369,16 @@ func (r *Replica) run() {
 	var tStart time.Time
 
 	for !r.Shutdown {
+
+		if counter == 1000 {
+			fmt.Println("Replica: ", r.Id)
+			callJson, _ := json.Marshal(debugCallDict)
+			timeJson, _ := json.Marshal(debugTimeDict)
+			fmt.Println("CALLS_R_",r.Id,"=",string(callJson))
+			fmt.Println("TIMES_R_",r.Id,"=",string(timeJson))
+			counter = 0
+		}
+		counter += 1
 
 		select {
 
