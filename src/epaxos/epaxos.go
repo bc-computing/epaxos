@@ -379,12 +379,13 @@ func (r *Replica) run() {
 
 	for !r.Shutdown {
 
-		if counter == 10000{
+		if counter == 10000 {
 			fmt.Println("Working?")
 			fmt.Println(debugCallDict)
 			fmt.Println(debugTimeDict)
 			counter = 0
 		}
+		counter += 1
 
 		select {
 
@@ -432,7 +433,7 @@ func (r *Replica) run() {
 			dlog.Printf("Received PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
 			r.handlePreAccept(preAccept)
 			dlog.Printf("Handled PreAccept for instance %d.%d\n", preAccept.LeaderId, preAccept.Instance)
-			if USE_THIRD_ROUND{
+			if USE_THIRD_ROUND {
 				// run third round
 				prepare := &epaxosproto.Prepare{preAccept.LeaderId, preAccept.Replica, preAccept.Instance, preAccept.Ballot}
 				dlog.Printf("Received Third Round Prepare for instance %d.%d\n", prepare.LeaderId, prepare.Instance)
@@ -601,7 +602,6 @@ func (r *Replica) run() {
 			r.startRecoveryForInstance(iid.replica, iid.instance)
 		}
 	}
-	counter += 1
 }
 
 /***********************************
