@@ -357,10 +357,6 @@ func (r *Replica) run() {
 			interrupt := make(chan os.Signal, 1)
 			signal.Notify(interrupt, syscall.SIGINT, syscall.SIGKILL, syscall.SIGTERM)
 			<-interrupt
-			log.Println("DEBUG START")
-			log.Print(debugCallDict)
-			log.Print(debugTimeDict)
-			log.Println("DEBUG END")
 			os.Exit(0)
 		}()
 	}
@@ -370,6 +366,10 @@ func (r *Replica) run() {
 		signal.Notify(interrupt, syscall.SIGINT, syscall.SIGKILL, syscall.SIGTERM)
 		<-interrupt
 		log.Printf("TotalRequests=%d, TotalBatches=%d\n", r.TotalRequests, r.TotalBatches)
+		log.Println("DEBUG START")
+		log.Print(debugCallDict)
+		log.Print(debugTimeDict)
+		log.Println("DEBUG END")
 		os.Exit(0)
 	}()
 

@@ -2,9 +2,9 @@
 maddr=localhost # EPaxos master address
 mport=17070     # EPaxos master port
 NS=3            # the number of servers (NS)
-NC=1            # the number of clients (NC)
-reqsNb=1000     # the number of unbatched-requests per client (re)
-cbatch=1        # the number of requests in a client batch (cb)
+NC=100            # the number of clients (NC)
+reqsNb=10000    # the number of unbatched-requests per client (re)
+cbatch=10        # the number of requests in a client batch (cb)
 writes=50       # the percentage of client write operations / read & write operations (wr)
 conflicts=0     # the percentage fo client read & write conflicts (cf)
 serverP=2       # server's GOMAXPROCS (sp)
@@ -20,7 +20,7 @@ servers=() # server PIDs
 clients=() # client PIDs
 
 # 3. start the EPaxos leader
-emaster -port=$mport -N=$NS \
+master -port=$mport -N=$NS \
     >${log_file_path_head}-master.out 2>&1 &
 servers[0]=$!
 echo "master started"
@@ -28,7 +28,7 @@ sleep 1
 
 # 4. start EPaxos servers
 for i in $(seq $NS); do
-    eserver -port=$(($mport + $i)) -maddr=$maddr -mport=$mport -addr=localhost -e=true -p=$serverP -thrifty=${thrifty} \
+    server -port=$(($mport + $i)) -maddr=$maddr -mport=$mport -addr=localhost -e=true -p=$serverP -thrifty=${thrifty} \
         >${log_file_path_head}-server$(($i - 1)).out 2>&1 &
     servers[i]=$!
 done
@@ -37,7 +37,7 @@ sleep 3
 
 # 5. start EPaxos clients
 for i in $(seq $NC); do
-    eclient -maddr=$maddr -mport=$mport -q=$reqsNb -w=$writes -e=true -r=$rounds -p=$clientP -c=$conflicts \
+    client -maddr=$maddr -mport=$mport -q=$reqsNb -w=$writes -e=true -r=$rounds -p=$clientP -c=$conflicts \
         >${log_file_path_head}-client$(($i - 1)).out 2>&1 &
     clients[$(($i - 1))]=$!
 done
@@ -54,9 +54,9 @@ done
 # echo $pids
 
 # 7. conduct monitoring (on Mac)
-nettop -P -l 0 -J time,bytes_in,bytes_out ${pids} \
-    >${log_file_path_head}-nettop.out 2>&1 &
-netPID=$!
+#nettop -P -l 0 -J time,bytes_in,bytes_out ${pids} \
+#    >${log_file_path_head}-nettop.out 2>&1 &
+#netPID=$!
 
 # 8. waits the clients to exit
 for pid in ${clients[*]}; do
