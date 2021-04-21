@@ -31,8 +31,13 @@ def get_avgs(logs: list):
 
 
 def print_avgs(final: dict):
+    funcFinal = ""
+    strFinal = ""
     for func, avg_time in final.items():
-        print(func, " : ", avg_time, "milliseconds")
+        funcFinal += func + ", "
+        strFinal += str(avg_time) + ", "
+    print(funcFinal)
+    print(strFinal)
 
 
 # 0 conflicts, thrify = true, cb= 10
@@ -239,7 +244,7 @@ CB_1_TIME_R2 = {"handleAccept":273663,"handleAcceptReply":0,"handleCommit":0,"ha
 
 print("Client Batch = 1")
 CB_1_RESULT = get_avgs([CB_1_CALL_R1, CB_1_TIME_R1, CB_1_CALL_R0, CB_1_TIME_R0, CB_1_CALL_R2, CB_1_TIME_R2])
-print(CB_1_RESULT)
+print_avgs(CB_1_RESULT)
 
 CB_10_CALL_R1 = {"handleAccept":35,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":23763,"handlePreAccept":23763,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
 CB_10_TIME_R1 = {"handleAccept":354926,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":22743373,"handlePreAccept":1502289556,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
@@ -264,7 +269,7 @@ CB_10_TIME_R2 = {"handleAccept":267054,"handleAcceptReply":0,"handleCommit":0,"h
 
 print("Client Batch = 10")
 CB_10_RESULT = get_avgs([CB_10_CALL_R1, CB_10_TIME_R1, CB_10_CALL_R0, CB_10_TIME_R0, CB_10_CALL_R2, CB_10_TIME_R2])
-print(CB_10_RESULT)
+print_avgs(CB_10_RESULT)
 
 
 CB_20_CALL_R1 = {"handleAccept":73,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":12382,"handlePreAccept":12382,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
@@ -289,7 +294,7 @@ CB_20_TIME_R2 = {"handleAccept":412306,"handleAcceptReply":0,"handleCommit":0,"h
 
 print("Client Batch = 20")
 CB_20_RESULT = get_avgs([CB_20_CALL_R1, CB_20_TIME_R1, CB_20_CALL_R0, CB_20_TIME_R0, CB_20_CALL_R2, CB_20_TIME_R2])
-print(CB_20_RESULT)
+print_avgs(CB_20_RESULT)
 
 
 
@@ -318,7 +323,7 @@ CB_40_TIME_R2 = {"handleAccept":2650662,"handleAcceptReply":0,"handleCommit":0,"
 
 print("Client Batch = 40")
 CB_40_RESULT = get_avgs([CB_40_CALL_R1, CB_40_TIME_R1, CB_40_CALL_R0, CB_40_TIME_R0, CB_40_CALL_R2, CB_40_TIME_R2])
-print(CB_40_RESULT)
+print_avgs(CB_40_RESULT)
 
 
 
@@ -347,7 +352,34 @@ CB_80_TIME_R2 = {"handleAccept":4429238,"handleAcceptReply":0,"handleCommit":0,"
 
 print("Client Batch = 80")
 CB_80_RESULT = get_avgs([CB_80_CALL_R1, CB_80_TIME_R1, CB_80_CALL_R0, CB_80_TIME_R0, CB_80_CALL_R2, CB_80_TIME_R2])
-print(CB_80_RESULT)
+print_avgs(CB_80_RESULT)
+
+
+CB_1_CLIENTS_1_CALL_R1 = {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1899,"handlePreAccept":1899,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+CB_1_CLIENTS_1_TIME_R1 = {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1378745,"handlePreAccept":30078121,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+CB_1_CLIENTS_1_CALL_R0 = {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3875,"handlePreAcceptReply":19,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":1983,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+CB_1_CLIENTS_1_TIME_R0 = {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":86351104,"handlePreAcceptReply":12414,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":68166028,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+CB_1_CLIENTS_1_CALL_R2 = {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1892,"handlePreAccept":1893,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+CB_1_CLIENTS_1_TIME_R2 = {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1308822,"handlePreAccept":31698838,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+
+print("Client Batch = 1")
+CB_1_CLIENTS_1_RESULT = get_avgs([CB_1_CLIENTS_1_CALL_R1, CB_1_CLIENTS_1_TIME_R1, CB_1_CLIENTS_1_CALL_R0, CB_1_CLIENTS_1_TIME_R0, CB_1_CLIENTS_1_CALL_R2, CB_1_CLIENTS_1_TIME_R2])
+print_avgs(CB_1_CLIENTS_1_RESULT)
+
+# Replica:  2
+# Call Dict:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1892,"handlePreAccept":1893,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+# Time Dict Map:  map[handleAccept:0s handleAcceptReply:0s handleCommit:0s handleCommitShort:1.308822ms handlePreAccept:31.698838ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+# Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1308822,"handlePreAccept":31698838,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+# Replica:  1
+# Call Dict:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1899,"handlePreAccept":1899,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+# Time Dict Map:  map[handleAccept:0s handleAcceptReply:0s handleCommit:0s handleCommitShort:1.378745ms handlePreAccept:30.078121ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+# Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1378745,"handlePreAccept":30078121,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+# pid: 9861, cmd: /root/go/src/epaxos/bin/server -port 17070 -maddr 10.142.0.27 -addr 10.142.0.27 -p 4 -thrifty=false -e=true
+# pid: 9385, cmd: /root/go/src/epaxos/bin/server -port 17072 -maddr 10.142.0.27 -addr 10.142.0.63 -p 4 -thrifty=false -e=true
+# Replica:  0
+# Call Dict:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3875,"handlePreAcceptReply":19,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":1983,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+# Time Dict Map:  map[handleAccept:0s handleAcceptReply:0s handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:86.351104ms handlePreAcceptReply:12.414µs handlePrepare:0s handlePrepareReply:0s handlePropose:68.166028ms handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+# Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":86351104,"handlePreAcceptReply":12414,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":68166028,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
 
 
 LABELS = CB_1_CALL_R0.keys()  # can be any
@@ -360,10 +392,11 @@ fig2, ax = plt.subplots()
 SPACE_FACTOR = 0.2
 
 rects1 = ax.bar(x + SPACE_FACTOR + width, CB_1_RESULT.values(), width, label='ClientBatch = 1')
-rects2 = ax.bar(x + SPACE_FACTOR + 2 * width, CB_10_RESULT.values(), width, label='ClientBatch = 10')
-rects3 = ax.bar(x + SPACE_FACTOR + 3 * width, CB_20_RESULT.values(), width, label='ClientBatch = 20')
-rects4 = ax.bar(x + SPACE_FACTOR + 4 * width, CB_40_RESULT.values(), width, label='ClientBatch = 40')
-rects5 = ax.bar(x + SPACE_FACTOR + 5 * width, CB_80_RESULT.values(), width, label='ClientBatch = 80')
+rects6 = ax.bar(x + SPACE_FACTOR + 2 * width, CB_1_CLIENTS_1_RESULT.values(), width, label='ClientBatch = 1 && CL=1')
+rects2 = ax.bar(x + SPACE_FACTOR + 3 * width, CB_10_RESULT.values(), width, label='ClientBatch = 10')
+rects3 = ax.bar(x + SPACE_FACTOR + 4 * width, CB_20_RESULT.values(), width, label='ClientBatch = 20')
+rects4 = ax.bar(x + SPACE_FACTOR + 5 * width, CB_40_RESULT.values(), width, label='ClientBatch = 40')
+rects5 = ax.bar(x + SPACE_FACTOR + 6 * width, CB_80_RESULT.values(), width, label='ClientBatch = 80')
 
 ax.set_ylabel('Avg Runtime (ms)')
 ax.set_title('Avg Runtime by Client Batch, Optimal Situation')
@@ -379,7 +412,9 @@ ax.legend()
 
 fig2.tight_layout(pad=3.0)
 
-plt.savefig("epaxos_thrifty_off_conflicts_0_client_batch.png")
+# plt.savefig("epaxos_thrifty_off_conflicts_0_client_batch.png")
 plt.show()
+
+
 
 

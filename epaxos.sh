@@ -5,7 +5,7 @@ ClientIps=(10.142.0.11 10.142.0.103 10.142.0.104)
 MasterIp=10.142.0.27
 FirstServerPort=17070 # change it when only necessary (i.e., firewall blocking, port in use)
 NumOfServerInstances=3 # before recompiling, try no more than 5 servers. See Known Issue # 4
-NumOfClientInstances=100
+NumOfClientInstances=1
 reqsNb=100000
 writes=50
 dlog=false
@@ -15,7 +15,7 @@ serverP=2       # server's GOMAXPROCS (sp)
 clientP=1       # client's GOMAXPROCS (cp)
 
 # if closed-loop, uncomment two lines below
-clientBatchSize=80
+clientBatchSize=1
 rounds=$((reqsNb / clientBatchSize))
 # if open-loop, uncomment the line below
 #rounds=1 # open-loop
