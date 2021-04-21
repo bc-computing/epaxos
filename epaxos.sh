@@ -51,7 +51,7 @@ function runServersOneMachine() {
         svrPort=$((FirstServerPort + $idx))
         if [[ ${svrIpIdx} -eq ${EPMachineIdx} ]]
         then
-            "${EPaxosFolder}"/bin/server -port ${svrPort} -maddr ${MasterIp} -addr ${svrIp} -p 4 -thrifty=${thrifty} -e=true >${EPaxosFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--server${idx}.out 2>&1 &
+            "${EPaxosFolder}"/bin/server -port ${svrPort} -maddr ${MasterIp} -addr ${svrIp} -p 4 -thrifty=${thrifty} -e=true 2>&1 & #>${EPaxosFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--server${idx}.out
         fi
     done
 }
