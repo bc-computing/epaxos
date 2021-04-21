@@ -1,0 +1,1144 @@
+2021/04/21 19:12:10 Master starting on port 7087
+2021/04/21 19:12:10 ...waiting for 3 replicas
+2021/04/21 19:12:15 Server starting on port 17070
+2021/04/21 19:12:15 Server starting on port 17071
+2021/04/21 19:12:15 Server starting on port 17072
+2021/04/21 19:12:15 Starting Egalitarian Paxos replica...
+2021/04/21 19:12:15 rpc.Register: method "ConnectToPeers" has 1 input parameters; needs exactly three
+2021/04/21 19:12:15 rpc.Register: method "ConnectToPeersNoListeners" has 1 input parameters; needs exactly three
+2021/04/21 19:12:15 rpc.Register: reply type of method "RegisterRPC" is not a pointer: "chan fastrpc.Serializable"
+2021/04/21 19:12:15 rpc.Register: method "ReplyBeacon" has 2 input parameters; needs exactly three
+2021/04/21 19:12:15 rpc.Register: method "ReplyPropose" has 0 output parameters; needs exactly one
+2021/04/21 19:12:15 rpc.Register: method "ReplyProposeTS" has 0 output parameters; needs exactly one
+2021/04/21 19:12:15 rpc.Register: method "SendBeacon" has 2 input parameters; needs exactly three
+2021/04/21 19:12:15 rpc.Register: method "SendMsg" has 4 input parameters; needs exactly three
+2021/04/21 19:12:15 rpc.Register: method "SendMsgNoFlush" has 4 input parameters; needs exactly three
+2021/04/21 19:12:15 rpc.Register: method "UpdatePreferredPeerOrder" has 2 input parameters; needs exactly three
+2021/04/21 19:12:15 rpc.Register: method "WaitForClientConnections" has 1 input parameters; needs exactly three
+2021/04/21 19:12:16 Starting Egalitarian Paxos replica...
+2021/04/21 19:12:16 rpc.Register: method "ConnectToPeers" has 1 input parameters; needs exactly three
+2021/04/21 19:12:16 rpc.Register: method "ConnectToPeersNoListeners" has 1 input parameters; needs exactly three
+2021/04/21 19:12:16 rpc.Register: reply type of method "RegisterRPC" is not a pointer: "chan fastrpc.Serializable"
+2021/04/21 19:12:16 rpc.Register: method "ReplyBeacon" has 2 input parameters; needs exactly three
+2021/04/21 19:12:16 rpc.Register: method "ReplyPropose" has 0 output parameters; needs exactly one
+2021/04/21 19:12:16 rpc.Register: method "ReplyProposeTS" has 0 output parameters; needs exactly one
+2021/04/21 19:12:16 rpc.Register: method "SendBeacon" has 2 input parameters; needs exactly three
+2021/04/21 19:12:16 rpc.Register: method "SendMsg" has 4 input parameters; needs exactly three
+2021/04/21 19:12:16 rpc.Register: method "SendMsgNoFlush" has 4 input parameters; needs exactly three
+2021/04/21 19:12:16 rpc.Register: method "UpdatePreferredPeerOrder" has 2 input parameters; needs exactly three
+2021/04/21 19:12:16 rpc.Register: method "WaitForClientConnections" has 1 input parameters; needs exactly three
+2021/04/21 19:12:16 Starting Egalitarian Paxos replica...
+2021/04/21 19:12:16 rpc.Register: method "ConnectToPeers" has 1 input parameters; needs exactly three
+2021/04/21 19:12:16 rpc.Register: method "ConnectToPeersNoListeners" has 1 input parameters; needs exactly three
+2021/04/21 19:12:16 rpc.Register: reply type of method "RegisterRPC" is not a pointer: "chan fastrpc.Serializable"
+2021/04/21 19:12:16 rpc.Register: method "ReplyBeacon" has 2 input parameters; needs exactly three
+2021/04/21 19:12:16 rpc.Register: method "ReplyPropose" has 0 output parameters; needs exactly one
+2021/04/21 19:12:16 rpc.Register: method "ReplyProposeTS" has 0 output parameters; needs exactly one
+2021/04/21 19:12:16 rpc.Register: method "SendBeacon" has 2 input parameters; needs exactly three
+2021/04/21 19:12:16 rpc.Register: method "SendMsg" has 4 input parameters; needs exactly three
+2021/04/21 19:12:16 rpc.Register: method "SendMsgNoFlush" has 4 input parameters; needs exactly three
+2021/04/21 19:12:16 rpc.Register: method "UpdatePreferredPeerOrder" has 2 input parameters; needs exactly three
+2021/04/21 19:12:16 rpc.Register: method "WaitForClientConnections" has 1 input parameters; needs exactly three
+2021/04/21 19:12:16 Replica id: 0. Done connecting to peers
+2021/04/21 19:12:16 Replica id: 2. Done connecting to peers
+2021/04/21 19:12:16 Replica id: 1. Done connecting to peers
+Replica:  1
+Call Dict:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:0s handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:0s handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:0s handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:0s handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:0s handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:0s handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:0s handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:0s handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:0s handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 1
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 2
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 2; conflicted 0; slow 2; happy 1
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 1
+Replica:  1
+Call Dict:  {"handleAccept":3,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":31,"handlePreAccept":33,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:35.815µs handleAcceptReply:0s handleCommit:0s handleCommitShort:25.953µs handlePreAccept:3.100394ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":35815,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":25953,"handlePreAccept":3100394,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":3,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":31,"handlePreAccept":33,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:16.719µs handleAcceptReply:0s handleCommit:0s handleCommitShort:27.667µs handlePreAccept:3.643527ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":16719,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":27667,"handlePreAccept":3643527,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":6,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":54,"handlePreAcceptReply":149,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":104,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:2.469867ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:74.858811ms handlePreAcceptReply:96.154066ms handlePrepare:0s handlePrepareReply:0s handlePropose:96.221156ms handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":2469867,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":74858811,"handlePreAcceptReply":96154066,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":96221156,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 1; conflicted 0; slow 1; happy 110
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 1
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 1
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 1
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 1
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 5; conflicted 0; slow 5; happy 64
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 1
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 1
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 2
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 2
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 1
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 1
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 3
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 1
+2021/04/21 19:12:21 weird 0; conflicted 0; slow 0; happy 0
+Replica:  1
+Call Dict:  {"handleAccept":9,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":209,"handlePreAccept":211,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:99.646µs handleAcceptReply:0s handleCommit:0s handleCommitShort:175.733µs handlePreAccept:24.888248ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":99646,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":175733,"handlePreAccept":24888248,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":9,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":211,"handlePreAccept":212,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:94.965µs handleAcceptReply:0s handleCommit:0s handleCommitShort:216.045µs handlePreAccept:24.886285ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":94965,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":216045,"handlePreAccept":24886285,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":20,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":116,"handlePreAcceptReply":490,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":305,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:21.65679ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:179.320982ms handlePreAcceptReply:556.561967ms handlePrepare:0s handlePrepareReply:0s handlePropose:343.899219ms handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":21656790,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":179320982,"handlePreAcceptReply":556561967,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":343899219,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":10,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":374,"handlePreAccept":377,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:103.423µs handleAcceptReply:0s handleCommit:0s handleCommitShort:329.455µs handlePreAccept:44.042054ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":103423,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":329455,"handlePreAccept":44042054,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":10,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":376,"handlePreAccept":379,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:99.181µs handleAcceptReply:0s handleCommit:0s handleCommitShort:441.615µs handlePreAccept:45.238331ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":99181,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":441615,"handlePreAccept":45238331,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":42,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":184,"handlePreAcceptReply":859,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":524,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:53.97914ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:291.961284ms handlePreAcceptReply:1.096857973s handlePrepare:0s handlePrepareReply:0s handlePropose:628.918325ms handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":53979140,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":291961284,"handlePreAcceptReply":1096857973,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":628918325,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":21,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":539,"handlePreAccept":541,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:186.042µs handleAcceptReply:0s handleCommit:0s handleCommitShort:547.95µs handlePreAccept:64.155438ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":186042,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":547950,"handlePreAccept":64155438,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":21,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":540,"handlePreAccept":542,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:179.904µs handleAcceptReply:0s handleCommit:0s handleCommitShort:684.257µs handlePreAccept:65.283274ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":179904,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":684257,"handlePreAccept":65283274,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":38,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":699,"handlePreAccept":701,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:427.514µs handleAcceptReply:0s handleCommit:0s handleCommitShort:743.625µs handlePreAccept:84.247715ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":427514,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":743625,"handlePreAccept":84247715,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":38,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":699,"handlePreAccept":703,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:349.563µs handleAcceptReply:0s handleCommit:0s handleCommitShort:930.192µs handlePreAccept:85.670418ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":349563,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":930192,"handlePreAccept":85670418,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":76,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":262,"handlePreAcceptReply":1203,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":735,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:108.182859ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:422.976662ms handlePreAcceptReply:1.584783749s handlePrepare:0s handlePrepareReply:0s handlePropose:913.958014ms handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":108182859,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":422976662,"handlePreAcceptReply":1584783749,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":913958014,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":44,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":862,"handlePreAccept":865,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:484.642µs handleAcceptReply:0s handleCommit:0s handleCommitShort:977.951µs handlePreAccept:105.570669ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":484642,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":977951,"handlePreAccept":105570669,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":44,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":863,"handlePreAccept":866,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:394.507µs handleAcceptReply:0s handleCommit:0s handleCommitShort:1.186056ms handlePreAccept:106.611018ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":394507,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1186056,"handlePreAccept":106611018,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":102,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":358,"handlePreAcceptReply":1536,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":948,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:150.746733ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:577.799712ms handlePreAcceptReply:2.072979046s handlePrepare:0s handlePrepareReply:0s handlePropose:1.205874846s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":150746733,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":577799712,"handlePreAcceptReply":2072979046,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":1205874846,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":51,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1029,"handlePreAccept":1031,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:544.291µs handleAcceptReply:0s handleCommit:0s handleCommitShort:1.239734ms handlePreAccept:126.862956ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":544291,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1239734,"handlePreAccept":126862956,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":51,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1030,"handlePreAccept":1035,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:446.537µs handleAcceptReply:0s handleCommit:0s handleCommitShort:1.414582ms handlePreAccept:127.931209ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":446537,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1414582,"handlePreAccept":127931209,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":110,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":432,"handlePreAcceptReply":1899,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":1166,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:161.686373ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:690.072341ms handlePreAcceptReply:2.601099905s handlePrepare:0s handlePrepareReply:0s handlePropose:1.4587097s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":161686373,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":690072341,"handlePreAcceptReply":2601099905,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":1458709700,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":58,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1195,"handlePreAccept":1197,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:604.03µs handleAcceptReply:0s handleCommit:0s handleCommitShort:1.438279ms handlePreAccept:148.400579ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":604030,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1438279,"handlePreAccept":148400579,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":58,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1197,"handlePreAccept":1199,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:510.244µs handleAcceptReply:0s handleCommit:0s handleCommitShort:1.649293ms handlePreAccept:148.129325ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":510244,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1649293,"handlePreAccept":148129325,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":60,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1360,"handlePreAccept":1362,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:611.704µs handleAcceptReply:0s handleCommit:0s handleCommitShort:1.624614ms handlePreAccept:168.905428ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":611704,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1624614,"handlePreAccept":168905428,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":60,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1362,"handlePreAccept":1365,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:521.366µs handleAcceptReply:0s handleCommit:0s handleCommitShort:1.898514ms handlePreAccept:169.016267ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":521366,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1898514,"handlePreAccept":169016267,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":122,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":502,"handlePreAcceptReply":2255,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":1381,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:182.635262ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:806.806604ms handlePreAcceptReply:3.145691993s handlePrepare:0s handlePrepareReply:0s handlePropose:1.744009944s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":182635262,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":806806604,"handlePreAcceptReply":3145691993,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":1744009944,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":69,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1524,"handlePreAccept":1526,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:719.175µs handleAcceptReply:0s handleCommit:0s handleCommitShort:1.840656ms handlePreAccept:190.150805ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":719175,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1840656,"handlePreAccept":190150805,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":69,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1525,"handlePreAccept":1526,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:607.574µs handleAcceptReply:0s handleCommit:0s handleCommitShort:2.093225ms handlePreAccept:190.032357ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":607574,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2093225,"handlePreAccept":190032357,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":138,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":570,"handlePreAcceptReply":2617,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":1596,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:212.324779ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:915.357888ms handlePreAcceptReply:3.673140235s handlePrepare:0s handlePrepareReply:0s handlePropose:2.005608907s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":212324779,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":915357888,"handlePreAcceptReply":3673140235,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":2005608907,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":72,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1693,"handlePreAccept":1698,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:735.845µs handleAcceptReply:0s handleCommit:0s handleCommitShort:2.028346ms handlePreAccept:211.266185ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":735845,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2028346,"handlePreAccept":211266185,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":72,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1693,"handlePreAccept":1698,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:619.916µs handleAcceptReply:0s handleCommit:0s handleCommitShort:2.271048ms handlePreAccept:210.149868ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":619916,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2271048,"handlePreAccept":210149868,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":146,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":646,"handlePreAcceptReply":2988,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":1818,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:225.791046ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:1.038863175s handlePreAcceptReply:4.218457637s handlePrepare:0s handlePrepareReply:0s handlePropose:2.27953918s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":225791046,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1038863175,"handlePreAcceptReply":4218457637,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":2279539180,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":75,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1866,"handlePreAccept":1867,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:762.259µs handleAcceptReply:0s handleCommit:0s handleCommitShort:2.233137ms handlePreAccept:233.538491ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":762259,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2233137,"handlePreAccept":233538491,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":75,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1866,"handlePreAccept":1867,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:634.617µs handleAcceptReply:0s handleCommit:0s handleCommitShort:2.473609ms handlePreAccept:231.047519ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":634617,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2473609,"handlePreAccept":231047519,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":78,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2029,"handlePreAccept":2031,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:660.056µs handleAcceptReply:0s handleCommit:0s handleCommitShort:2.658214ms handlePreAccept:251.418845ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":660056,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2658214,"handlePreAccept":251418845,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":78,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2030,"handlePreAccept":2031,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:784.035µs handleAcceptReply:0s handleCommit:0s handleCommitShort:2.443645ms handlePreAccept:255.606083ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":784035,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2443645,"handlePreAccept":255606083,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":156,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":712,"handlePreAcceptReply":3364,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":2040,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:241.315887ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:1.140140258s handlePreAcceptReply:4.803757878s handlePrepare:0s handlePrepareReply:0s handlePropose:2.558167863s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":241315887,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1140140258,"handlePreAcceptReply":4803757878,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":2558167863,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":81,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2193,"handlePreAccept":2197,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:684.344µs handleAcceptReply:0s handleCommit:0s handleCommitShort:2.843005ms handlePreAccept:271.40391ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":684344,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2843005,"handlePreAccept":271403910,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":81,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2194,"handlePreAccept":2197,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:800.475µs handleAcceptReply:0s handleCommit:0s handleCommitShort:2.640616ms handlePreAccept:277.639589ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":800475,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2640616,"handlePreAccept":277639589,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":164,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":792,"handlePreAcceptReply":3717,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":2259,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:253.223556ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:1.270107342s handlePreAcceptReply:5.339066246s handlePrepare:0s handlePrepareReply:0s handlePropose:2.838654593s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":253223556,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1270107342,"handlePreAcceptReply":5339066246,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":2838654593,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":83,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2361,"handlePreAccept":2361,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:705.516µs handleAcceptReply:0s handleCommit:0s handleCommitShort:3.023275ms handlePreAccept:290.41632ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":705516,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3023275,"handlePreAccept":290416320,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":83,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2361,"handlePreAccept":2363,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:810.816µs handleAcceptReply:0s handleCommit:0s handleCommitShort:2.846351ms handlePreAccept:297.206902ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":810816,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2846351,"handlePreAccept":297206902,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":170,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":852,"handlePreAcceptReply":4098,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":2475,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:264.627063ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:1.375376515s handlePreAcceptReply:5.935878301s handlePrepare:0s handlePrepareReply:0s handlePropose:3.132646416s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":264627063,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1375376515,"handlePreAcceptReply":5935878301,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":3132646416,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":86,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2521,"handlePreAccept":2521,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:840.482µs handleAcceptReply:0s handleCommit:0s handleCommitShort:3.072746ms handlePreAccept:317.596036ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":840482,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3072746,"handlePreAccept":317596036,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":86,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2521,"handlePreAccept":2521,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:719.231µs handleAcceptReply:0s handleCommit:0s handleCommitShort:3.188578ms handlePreAccept:311.198362ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":719231,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3188578,"handlePreAccept":311198362,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":87,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2690,"handlePreAccept":2692,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:723.71µs handleAcceptReply:0s handleCommit:0s handleCommitShort:3.389154ms handlePreAccept:330.82041ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":723710,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3389154,"handlePreAccept":330820410,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":87,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2690,"handlePreAccept":2692,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:853.212µs handleAcceptReply:0s handleCommit:0s handleCommitShort:3.326648ms handlePreAccept:338.213271ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":853212,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3326648,"handlePreAccept":338213271,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":174,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":904,"handlePreAcceptReply":4486,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":2698,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:271.523378ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:1.458698429s handlePreAcceptReply:6.514391421s handlePrepare:0s handlePrepareReply:0s handlePropose:3.419853702s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":271523378,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1458698429,"handlePreAcceptReply":6514391421,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":3419853702,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":89,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2849,"handlePreAccept":2854,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:761.012µs handleAcceptReply:0s handleCommit:0s handleCommitShort:3.55491ms handlePreAccept:349.620859ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":761012,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3554910,"handlePreAccept":349620859,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":89,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":2852,"handlePreAccept":2854,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:874.327µs handleAcceptReply:0s handleCommit:0s handleCommitShort:3.534255ms handlePreAccept:356.437882ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":874327,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3534255,"handlePreAccept":356437882,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":184,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":976,"handlePreAcceptReply":4849,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":2917,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:287.658492ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:1.595563999s handlePreAcceptReply:7.072372659s handlePrepare:0s handlePrepareReply:0s handlePropose:3.737622169s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":287658492,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1595563999,"handlePreAcceptReply":7072372659,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":3737622169,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":93,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3003,"handlePreAccept":3007,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:782.431µs handleAcceptReply:0s handleCommit:0s handleCommitShort:3.740827ms handlePreAccept:368.857439ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":782431,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3740827,"handlePreAccept":368857439,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":93,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3004,"handlePreAccept":3008,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:999.368µs handleAcceptReply:0s handleCommit:0s handleCommitShort:3.715669ms handlePreAccept:376.191448ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":999368,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3715669,"handlePreAccept":376191448,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":186,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1039,"handlePreAcceptReply":5238,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":3140,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:291.586124ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:1.706342181s handlePreAcceptReply:7.663027242s handlePrepare:0s handlePrepareReply:0s handlePropose:4.028755595s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":291586124,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1706342181,"handlePreAcceptReply":7663027242,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":4028755595,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":93,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3174,"handlePreAccept":3176,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:782.431µs handleAcceptReply:0s handleCommit:0s handleCommitShort:3.960061ms handlePreAccept:387.712936ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":782431,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3960061,"handlePreAccept":387712936,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":93,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3176,"handlePreAccept":3176,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:999.368µs handleAcceptReply:0s handleCommit:0s handleCommitShort:3.911934ms handlePreAccept:396.229723ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":999368,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3911934,"handlePreAccept":396229723,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":95,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3341,"handlePreAccept":3342,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:790.759µs handleAcceptReply:0s handleCommit:0s handleCommitShort:4.161175ms handlePreAccept:407.18053ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":790759,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4161175,"handlePreAccept":407180530,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":95,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3343,"handlePreAccept":3345,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.016373ms handleAcceptReply:0s handleCommit:0s handleCommitShort:4.087273ms handlePreAccept:417.265383ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1016373,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4087273,"handlePreAccept":417265383,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":190,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1128,"handlePreAcceptReply":5585,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":3360,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:298.215635ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:1.85801635s handlePreAcceptReply:8.193843804s handlePrepare:0s handlePrepareReply:0s handlePropose:4.311276528s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":298215635,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1858016350,"handlePreAcceptReply":8193843804,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":4311276528,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":97,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3505,"handlePreAccept":3509,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:799.302µs handleAcceptReply:0s handleCommit:0s handleCommitShort:4.362519ms handlePreAccept:427.911331ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":799302,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4362519,"handlePreAccept":427911331,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":97,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3508,"handlePreAccept":3512,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.027655ms handleAcceptReply:0s handleCommit:0s handleCommitShort:4.283549ms handlePreAccept:438.95433ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1027655,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4283549,"handlePreAccept":438954330,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":196,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1214,"handlePreAcceptReply":5933,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":3577,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:308.101381ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:2.005623927s handlePreAcceptReply:8.722375902s handlePrepare:0s handlePrepareReply:0s handlePropose:4.60367637s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":308101381,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2005623927,"handlePreAcceptReply":8722375902,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":4603676370,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":102,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3663,"handlePreAccept":3664,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:827.086µs handleAcceptReply:0s handleCommit:0s handleCommitShort:4.585561ms handlePreAccept:447.594765ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":827086,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4585561,"handlePreAccept":447594765,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":102,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3666,"handlePreAccept":3666,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.064415ms handleAcceptReply:0s handleCommit:0s handleCommitShort:4.445338ms handlePreAccept:458.535931ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1064415,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4445338,"handlePreAccept":458535931,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":216,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1314,"handlePreAcceptReply":6265,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":3790,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:341.775369ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:2.164307119s handlePreAcceptReply:9.223608433s handlePrepare:0s handlePrepareReply:0s handlePropose:4.875876713s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":341775369,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2164307119,"handlePreAcceptReply":9223608433,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":4875876713,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":109,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3835,"handlePreAccept":3836,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:873.465µs handleAcceptReply:0s handleCommit:0s handleCommitShort:4.762277ms handlePreAccept:468.582801ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":873465,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4762277,"handlePreAccept":468582801,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":109,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3837,"handlePreAccept":3840,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.117342ms handleAcceptReply:0s handleCommit:0s handleCommitShort:4.624835ms handlePreAccept:480.366949ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1117342,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4624835,"handlePreAccept":480366949,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":113,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3994,"handlePreAccept":3996,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:894.385µs handleAcceptReply:0s handleCommit:0s handleCommitShort:4.945694ms handlePreAccept:487.814351ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":894385,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4945694,"handlePreAccept":487814351,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":113,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":3998,"handlePreAccept":3999,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.15783ms handleAcceptReply:0s handleCommit:0s handleCommitShort:4.823005ms handlePreAccept:499.910892ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1157830,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4823005,"handlePreAccept":499910892,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":226,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1378,"handlePreAcceptReply":6637,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":4009,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:358.06393ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:2.270509092s handlePreAcceptReply:9.786936907s handlePrepare:0s handlePrepareReply:0s handlePropose:5.152609042s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":358063930,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2270509092,"handlePreAcceptReply":9786936907,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":5152609042,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":118,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4153,"handlePreAccept":4154,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:935.072µs handleAcceptReply:0s handleCommit:0s handleCommitShort:5.142157ms handlePreAccept:508.083098ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":935072,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5142157,"handlePreAccept":508083098,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":119,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4157,"handlePreAccept":4159,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.223325ms handleAcceptReply:0s handleCommit:0s handleCommitShort:5.058059ms handlePreAccept:520.224728ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1223325,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5058059,"handlePreAccept":520224728,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":240,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1466,"handlePreAcceptReply":6988,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":4228,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:380.904795ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:2.415307097s handlePreAcceptReply:10.340265579s handlePrepare:0s handlePrepareReply:0s handlePropose:5.439448185s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":380904795,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2415307097,"handlePreAcceptReply":10340265579,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":5439448185,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":120,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4318,"handlePreAccept":4320,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:944.522µs handleAcceptReply:0s handleCommit:0s handleCommitShort:5.314453ms handlePreAccept:529.835376ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":944522,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5314453,"handlePreAccept":529835376,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":120,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4323,"handlePreAccept":4325,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.230315ms handleAcceptReply:0s handleCommit:0s handleCommitShort:5.293093ms handlePreAccept:542.259328ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1230315,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5293093,"handlePreAccept":542259328,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":246,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1546,"handlePreAcceptReply":7343,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":4449,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:390.908863ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:2.547365813s handlePreAcceptReply:10.87850442s handlePrepare:0s handlePrepareReply:0s handlePropose:5.711533998s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":390908863,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2547365813,"handlePreAcceptReply":10878504420,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":5711533998,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":123,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4490,"handlePreAccept":4492,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:958.892µs handleAcceptReply:0s handleCommit:0s handleCommitShort:5.556901ms handlePreAccept:550.881451ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":958892,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5556901,"handlePreAccept":550881451,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":123,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4495,"handlePreAccept":4496,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.243508ms handleAcceptReply:0s handleCommit:0s handleCommitShort:5.486372ms handlePreAccept:562.869538ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1243508,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5486372,"handlePreAccept":562869538,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":132,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4652,"handlePreAccept":4654,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.009143ms handleAcceptReply:0s handleCommit:0s handleCommitShort:5.784468ms handlePreAccept:570.648849ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1009143,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5784468,"handlePreAccept":570648849,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":132,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4658,"handlePreAccept":4658,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.377685ms handleAcceptReply:0s handleCommit:0s handleCommitShort:5.697168ms handlePreAccept:582.670644ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1377685,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5697168,"handlePreAccept":582670644,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":264,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1618,"handlePreAcceptReply":7706,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":4663,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:422.774259ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:2.667014959s handlePreAcceptReply:11.384342048s handlePrepare:0s handlePrepareReply:0s handlePropose:5.984966289s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":422774259,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2667014959,"handlePreAcceptReply":11384342048,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":5984966289,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":141,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4814,"handlePreAccept":4815,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.057753ms handleAcceptReply:0s handleCommit:0s handleCommitShort:6.007759ms handlePreAccept:590.301431ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1057753,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6007759,"handlePreAccept":590301431,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":142,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4819,"handlePreAccept":4821,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.446672ms handleAcceptReply:0s handleCommit:0s handleCommitShort:5.872773ms handlePreAccept:603.352578ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1446672,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5872773,"handlePreAccept":603352578,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":284,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1713,"handlePreAcceptReply":8040,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":4877,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:457.865126ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:2.82167589s handlePreAcceptReply:11.885406841s handlePrepare:0s handlePrepareReply:0s handlePropose:6.262487723s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":457865126,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2821675890,"handlePreAcceptReply":11885406841,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":6262487723,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":143,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4981,"handlePreAccept":4982,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.069162ms handleAcceptReply:0s handleCommit:0s handleCommitShort:6.213387ms handlePreAccept:611.797219ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1069162,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6213387,"handlePreAccept":611797219,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":143,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":4987,"handlePreAccept":4987,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.450495ms handleAcceptReply:0s handleCommit:0s handleCommitShort:6.062307ms handlePreAccept:624.913974ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1450495,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6062307,"handlePreAccept":624913974,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":290,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1772,"handlePreAcceptReply":8413,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":5095,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:469.126741ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:2.917327393s handlePreAcceptReply:12.426118432s handlePrepare:0s handlePrepareReply:0s handlePropose:6.536368527s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":469126741,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2917327393,"handlePreAcceptReply":12426118432,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":6536368527,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":146,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5149,"handlePreAccept":5151,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.089907ms handleAcceptReply:0s handleCommit:0s handleCommitShort:6.445027ms handlePreAccept:631.929009ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1089907,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6445027,"handlePreAccept":631929009,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":146,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5154,"handlePreAccept":5155,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.475993ms handleAcceptReply:0s handleCommit:0s handleCommitShort:6.271796ms handlePreAccept:645.21519ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1475993,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6271796,"handlePreAccept":645215190,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":151,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5307,"handlePreAccept":5308,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.136165ms handleAcceptReply:0s handleCommit:0s handleCommitShort:6.673878ms handlePreAccept:649.823062ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1136165,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6673878,"handlePreAccept":649823062,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":302,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1826,"handlePreAcceptReply":8796,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":5312,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:490.027811ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:3.009882487s handlePreAcceptReply:13.001619398s handlePrepare:0s handlePrepareReply:0s handlePropose:6.874691214s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":490027811,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3009882487,"handlePreAcceptReply":13001619398,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":6874691214,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":151,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5312,"handlePreAccept":5313,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.531886ms handleAcceptReply:0s handleCommit:0s handleCommitShort:6.495542ms handlePreAccept:664.617839ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1531886,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6495542,"handlePreAccept":664617839,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":152,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5459,"handlePreAccept":5461,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.140496ms handleAcceptReply:0s handleCommit:0s handleCommitShort:6.892195ms handlePreAccept:668.318806ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1140496,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6892195,"handlePreAccept":668318806,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":152,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5463,"handlePreAccept":5468,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.544499ms handleAcceptReply:0s handleCommit:0s handleCommitShort:6.669605ms handlePreAccept:683.40439ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1544499,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6669605,"handlePreAccept":683404390,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":304,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1920,"handlePreAcceptReply":9139,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":5532,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:493.919ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:3.172024143s handlePreAcceptReply:13.54190885s handlePrepare:0s handlePrepareReply:0s handlePropose:7.219932641s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":493919000,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3172024143,"handlePreAcceptReply":13541908850,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":7219932641,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":152,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5623,"handlePreAccept":5625,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.140496ms handleAcceptReply:0s handleCommit:0s handleCommitShort:7.097399ms handlePreAccept:687.860323ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1140496,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7097399,"handlePreAccept":687860323,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":152,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5627,"handlePreAccept":5628,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.544499ms handleAcceptReply:0s handleCommit:0s handleCommitShort:6.862309ms handlePreAccept:703.269555ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1544499,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6862309,"handlePreAccept":703269555,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":312,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":1974,"handlePreAcceptReply":9522,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":5751,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:506.820424ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:3.265131799s handlePreAcceptReply:14.085105201s handlePrepare:0s handlePrepareReply:0s handlePropose:7.484074183s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":506820424,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3265131799,"handlePreAcceptReply":14085105201,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":7484074183,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":157,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5801,"handlePreAccept":5803,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.198126ms handleAcceptReply:0s handleCommit:0s handleCommitShort:7.316431ms handlePreAccept:708.036161ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1198126,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7316431,"handlePreAccept":708036161,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":157,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5805,"handlePreAccept":5807,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.583924ms handleAcceptReply:0s handleCommit:0s handleCommitShort:7.109743ms handlePreAccept:724.716514ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1583924,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7109743,"handlePreAccept":724716514,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":157,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5968,"handlePreAccept":5973,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.198126ms handleAcceptReply:0s handleCommit:0s handleCommitShort:7.518389ms handlePreAccept:728.609669ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1198126,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7518389,"handlePreAccept":728609669,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":314,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2034,"handlePreAcceptReply":9907,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":5974,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:509.955532ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:3.365817535s handlePreAcceptReply:14.66923444s handlePrepare:0s handlePrepareReply:0s handlePropose:7.753958298s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":509955532,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3365817535,"handlePreAcceptReply":14669234440,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":7753958298,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":157,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":5974,"handlePreAccept":5976,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.583924ms handleAcceptReply:0s handleCommit:0s handleCommitShort:7.303045ms handlePreAccept:745.556058ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1583924,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7303045,"handlePreAccept":745556058,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":158,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6137,"handlePreAccept":6138,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.202247ms handleAcceptReply:0s handleCommit:0s handleCommitShort:7.687707ms handlePreAccept:748.875639ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1202247,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7687707,"handlePreAccept":748875639,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":158,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6140,"handlePreAccept":6144,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.593127ms handleAcceptReply:0s handleCommit:0s handleCommitShort:7.525228ms handlePreAccept:766.986186ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1593127,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7525228,"handlePreAccept":766986186,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":320,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2112,"handlePreAcceptReply":10268,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":6192,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:521.07394ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:3.486631066s handlePreAcceptReply:15.217604452s handlePrepare:0s handlePrepareReply:0s handlePropose:8.043148462s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":521073940,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3486631066,"handlePreAcceptReply":15217604452,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":8043148462,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":163,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6297,"handlePreAccept":6298,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.243327ms handleAcceptReply:0s handleCommit:0s handleCommitShort:7.867021ms handlePreAccept:769.033658ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1243327,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7867021,"handlePreAccept":769033658,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":163,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6300,"handlePreAccept":6302,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.622109ms handleAcceptReply:0s handleCommit:0s handleCommitShort:7.736805ms handlePreAccept:787.41484ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1622109,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7736805,"handlePreAccept":787414840,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":328,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2222,"handlePreAcceptReply":10600,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":6413,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:533.335039ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:3.668031048s handlePreAcceptReply:15.739398679s handlePrepare:0s handlePrepareReply:0s handlePropose:8.33331254s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":533335039,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3668031048,"handlePreAcceptReply":15739398679,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":8333312540,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":167,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6460,"handlePreAccept":6462,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.259571ms handleAcceptReply:0s handleCommit:0s handleCommitShort:8.057325ms handlePreAccept:789.519884ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1259571,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8057325,"handlePreAccept":789519884,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":167,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6463,"handlePreAccept":6466,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.654562ms handleAcceptReply:0s handleCommit:0s handleCommitShort:7.936523ms handlePreAccept:809.078773ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1654562,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7936523,"handlePreAccept":809078773,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":344,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2314,"handlePreAcceptReply":10944,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":6630,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:558.029853ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:3.815280004s handlePreAcceptReply:16.240201187s handlePrepare:0s handlePrepareReply:0s handlePropose:8.601712762s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":558029853,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3815280004,"handlePreAcceptReply":16240201187,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":8601712762,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":172,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6631,"handlePreAccept":6632,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.28525ms handleAcceptReply:0s handleCommit:0s handleCommitShort:8.2611ms handlePreAccept:810.856268ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1285250,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8261100,"handlePreAccept":810856268,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":172,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6633,"handlePreAccept":6635,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.685567ms handleAcceptReply:0s handleCommit:0s handleCommitShort:8.143889ms handlePreAccept:830.627099ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1685567,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8143889,"handlePreAccept":830627099,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":174,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6796,"handlePreAccept":6800,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.296033ms handleAcceptReply:0s handleCommit:0s handleCommitShort:8.491724ms handlePreAccept:831.852116ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1296033,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8491724,"handlePreAccept":831852116,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":174,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6799,"handlePreAccept":6801,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.706889ms handleAcceptReply:0s handleCommit:0s handleCommitShort:8.381642ms handlePreAccept:851.544412ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1706889,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8381642,"handlePreAccept":851544412,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":350,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2401,"handlePreAcceptReply":11297,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":6853,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:567.643632ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:3.955018559s handlePreAcceptReply:16.769223802s handlePrepare:0s handlePrepareReply:0s handlePropose:8.89180958s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":567643632,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3955018559,"handlePreAcceptReply":16769223802,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":8891809580,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":176,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6960,"handlePreAccept":6961,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.304226ms handleAcceptReply:0s handleCommit:0s handleCommitShort:8.709535ms handlePreAccept:852.018514ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1304226,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8709535,"handlePreAccept":852018514,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":176,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":6963,"handlePreAccept":6965,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.718443ms handleAcceptReply:0s handleCommit:0s handleCommitShort:8.578582ms handlePreAccept:872.287279ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1718443,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8578582,"handlePreAccept":872287279,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":355,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2476,"handlePreAcceptReply":11658,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":7068,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:578.305675ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:4.078762661s handlePreAcceptReply:17.307878524s handlePrepare:0s handlePrepareReply:0s handlePropose:9.247859447s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":578305675,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":4078762661,"handlePreAcceptReply":17307878524,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":9247859447,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":183,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7113,"handlePreAccept":7114,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.371403ms handleAcceptReply:0s handleCommit:0s handleCommitShort:8.897763ms handlePreAccept:870.385431ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1371403,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8897763,"handlePreAccept":870385431,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":183,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7116,"handlePreAccept":7119,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.801496ms handleAcceptReply:0s handleCommit:0s handleCommitShort:8.797817ms handlePreAccept:891.405636ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1801496,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8797817,"handlePreAccept":891405636,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":183,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7270,"handlePreAccept":7275,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.371403ms handleAcceptReply:0s handleCommit:0s handleCommitShort:9.068462ms handlePreAccept:890.539865ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1371403,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9068462,"handlePreAccept":890539865,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":183,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7275,"handlePreAccept":7278,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.801496ms handleAcceptReply:0s handleCommit:0s handleCommitShort:8.987901ms handlePreAccept:912.152915ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1801496,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8987901,"handlePreAccept":912152915,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":366,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2531,"handlePreAcceptReply":12031,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":7283,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:596.842741ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:4.170035822s handlePreAcceptReply:17.893882229s handlePrepare:0s handlePrepareReply:0s handlePropose:9.586553249s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":596842741,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":4170035822,"handlePreAcceptReply":17893882229,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":9586553249,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":185,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7435,"handlePreAccept":7439,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.381957ms handleAcceptReply:0s handleCommit:0s handleCommitShort:9.222446ms handlePreAccept:911.406141ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1381957,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9222446,"handlePreAccept":911406141,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":185,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7440,"handlePreAccept":7444,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.811684ms handleAcceptReply:0s handleCommit:0s handleCommitShort:9.201981ms handlePreAccept:934.823963ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1811684,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9201981,"handlePreAccept":934823963,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":378,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2609,"handlePreAcceptReply":12400,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":7506,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:616.449244ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:4.289779368s handlePreAcceptReply:18.452278369s handlePrepare:0s handlePrepareReply:0s handlePropose:9.860868718s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":616449244,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":4289779368,"handlePreAcceptReply":18452278369,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":9860868718,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":189,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7606,"handlePreAccept":7608,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.398727ms handleAcceptReply:0s handleCommit:0s handleCommitShort:9.409025ms handlePreAccept:931.619944ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1398727,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9409025,"handlePreAccept":931619944,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":189,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7611,"handlePreAccept":7613,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.856718ms handleAcceptReply:0s handleCommit:0s handleCommitShort:9.411287ms handlePreAccept:956.412373ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1856718,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9411287,"handlePreAccept":956412373,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":384,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2665,"handlePreAcceptReply":12784,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":7728,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:627.107236ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:4.37956297s handlePreAcceptReply:19.035209002s handlePrepare:0s handlePrepareReply:0s handlePropose:10.135766652s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":627107236,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":4379562970,"handlePreAcceptReply":19035209002,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":10135766652,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":193,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7775,"handlePreAccept":7778,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.43966ms handleAcceptReply:0s handleCommit:0s handleCommitShort:9.600189ms handlePreAccept:952.191715ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1439660,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9600189,"handlePreAccept":952191715,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":193,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7781,"handlePreAccept":7782,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.909634ms handleAcceptReply:0s handleCommit:0s handleCommitShort:9.637246ms handlePreAccept:977.880895ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1909634,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9637246,"handlePreAccept":977880895,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":200,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7935,"handlePreAccept":7937,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.484831ms handleAcceptReply:0s handleCommit:0s handleCommitShort:9.826625ms handlePreAccept:972.818965ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1484831,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9826625,"handlePreAccept":972818965,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":400,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2762,"handlePreAcceptReply":13116,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":7940,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:653.504105ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:4.542118878s handlePreAcceptReply:19.532961001s handlePrepare:0s handlePrepareReply:0s handlePropose:10.411835768s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":653504105,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":4542118878,"handlePreAcceptReply":19532961001,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":10411835768,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":200,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":7940,"handlePreAccept":7941,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.960023ms handleAcceptReply:0s handleCommit:0s handleCommitShort:9.837827ms handlePreAccept:998.481195ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1960023,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9837827,"handlePreAccept":998481195,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":211,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8100,"handlePreAccept":8100,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.552537ms handleAcceptReply:0s handleCommit:0s handleCommitShort:10.01988ms handlePreAccept:992.551601ms handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1552537,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10019880,"handlePreAccept":992551601,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":213,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8104,"handlePreAccept":8106,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.101833ms handleAcceptReply:0s handleCommit:0s handleCommitShort:10.033485ms handlePreAccept:1.019156828s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2101833,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10033485,"handlePreAccept":1019156828,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":428,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2841,"handlePreAcceptReply":13461,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":8153,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:702.061583ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:4.669881949s handlePreAcceptReply:20.012269368s handlePrepare:0s handlePrepareReply:0s handlePropose:10.684363482s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":702061583,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":4669881949,"handlePreAcceptReply":20012269368,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":10684363482,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":217,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8260,"handlePreAccept":8263,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.609797ms handleAcceptReply:0s handleCommit:0s handleCommitShort:10.241701ms handlePreAccept:1.013622352s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1609797,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10241701,"handlePreAccept":1013622352,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":218,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8264,"handlePreAccept":8267,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.157151ms handleAcceptReply:0s handleCommit:0s handleCommitShort:10.21968ms handlePreAccept:1.039290953s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2157151,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10219680,"handlePreAccept":1039290953,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":474,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":2939,"handlePreAcceptReply":13788,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":8366,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:774.054383ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:4.836712286s handlePreAcceptReply:20.46637658s handlePrepare:0s handlePrepareReply:0s handlePropose:10.972107266s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":774054383,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":4836712286,"handlePreAcceptReply":20466376580,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":10972107266,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":240,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8422,"handlePreAccept":8426,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.85315ms handleAcceptReply:0s handleCommit:0s handleCommitShort:10.44144ms handlePreAccept:1.033959794s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1853150,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10441440,"handlePreAccept":1033959794,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":240,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8427,"handlePreAccept":8428,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.40146ms handleAcceptReply:0s handleCommit:0s handleCommitShort:10.392407ms handlePreAccept:1.058341735s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2401460,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10392407,"handlePreAccept":1058341735,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":502,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3019,"handlePreAcceptReply":14134,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":8579,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:821.073583ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:4.961258331s handlePreAcceptReply:20.944176418s handlePrepare:0s handlePrepareReply:0s handlePropose:11.23104692s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":821073583,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":4961258331,"handlePreAcceptReply":20944176418,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":11231046920,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":251,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8590,"handlePreAccept":8591,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.970391ms handleAcceptReply:0s handleCommit:0s handleCommitShort:10.648875ms handlePreAccept:1.054264909s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1970391,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10648875,"handlePreAccept":1054264909,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":251,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8593,"handlePreAccept":8594,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.494836ms handleAcceptReply:0s handleCommit:0s handleCommitShort:10.567151ms handlePreAccept:1.078947442s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2494836,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10567151,"handlePreAccept":1078947442,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":253,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8753,"handlePreAccept":8755,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.982646ms handleAcceptReply:0s handleCommit:0s handleCommitShort:10.816725ms handlePreAccept:1.075097721s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1982646,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10816725,"handlePreAccept":1075097721,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":253,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8756,"handlePreAccept":8760,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.516071ms handleAcceptReply:0s handleCommit:0s handleCommitShort:10.740037ms handlePreAccept:1.099794339s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2516071,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10740037,"handlePreAccept":1099794339,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":509,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3103,"handlePreAcceptReply":14490,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":8797,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:834.879524ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:5.09771375s handlePreAcceptReply:21.493514395s handlePrepare:0s handlePrepareReply:0s handlePropose:11.519552873s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":834879524,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":5097713750,"handlePreAcceptReply":21493514395,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":11519552873,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":255,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8914,"handlePreAccept":8917,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:1.993511ms handleAcceptReply:0s handleCommit:0s handleCommitShort:11.035628ms handlePreAccept:1.0952654s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":1993511,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":11035628,"handlePreAccept":1095265400,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":255,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":8918,"handlePreAccept":8920,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.536234ms handleAcceptReply:0s handleCommit:0s handleCommitShort:10.928165ms handlePreAccept:1.120494767s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2536234,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10928165,"handlePreAccept":1120494767,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":526,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3199,"handlePreAcceptReply":14835,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":9019,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:861.043893ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:5.261931317s handlePreAcceptReply:22.005238152s handlePrepare:0s handlePrepareReply:0s handlePropose:11.803956056s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":861043893,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":5261931317,"handlePreAcceptReply":22005238152,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":11803956056,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":272,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9077,"handlePreAccept":9081,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.14738ms handleAcceptReply:0s handleCommit:0s handleCommitShort:11.225861ms handlePreAccept:1.114684056s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2147380,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":11225861,"handlePreAccept":1114684056,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":272,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9082,"handlePreAccept":9086,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.706551ms handleAcceptReply:0s handleCommit:0s handleCommitShort:11.139297ms handlePreAccept:1.140399359s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2706551,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":11139297,"handlePreAccept":1140399359,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":566,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3263,"handlePreAcceptReply":15194,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":9235,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:923.715141ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:5.364808125s handlePreAcceptReply:22.452236028s handlePrepare:0s handlePrepareReply:0s handlePropose:12.052943858s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":923715141,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":5364808125,"handlePreAcceptReply":22452236028,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":12052943858,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":286,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9258,"handlePreAccept":9262,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.28877ms handleAcceptReply:0s handleCommit:0s handleCommitShort:11.426513ms handlePreAccept:1.134867773s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2288770,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":11426513,"handlePreAccept":1134867773,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":290,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9262,"handlePreAccept":9264,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.926385ms handleAcceptReply:0s handleCommit:0s handleCommitShort:11.34674ms handlePreAccept:1.16167503s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2926385,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":11346740,"handlePreAccept":1161675030,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":294,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9423,"handlePreAccept":9427,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.37036ms handleAcceptReply:0s handleCommit:0s handleCommitShort:11.603933ms handlePreAccept:1.155707545s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2370360,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":11603933,"handlePreAccept":1155707545,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":294,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9428,"handlePreAccept":9430,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.961146ms handleAcceptReply:0s handleCommit:0s handleCommitShort:11.526805ms handlePreAccept:1.183355059s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2961146,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":11526805,"handlePreAccept":1183355059,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":588,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3339,"handlePreAcceptReply":15550,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":9448,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:957.182556ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:5.489658065s handlePreAcceptReply:22.951506326s handlePrepare:0s handlePrepareReply:0s handlePropose:12.31720233s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":957182556,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":5489658065,"handlePreAcceptReply":22951506326,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":12317202330,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":297,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9588,"handlePreAccept":9591,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.404706ms handleAcceptReply:0s handleCommit:0s handleCommitShort:11.791673ms handlePreAccept:1.176720102s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2404706,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":11791673,"handlePreAccept":1176720102,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":297,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9592,"handlePreAccept":9597,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.989149ms handleAcceptReply:0s handleCommit:0s handleCommitShort:11.725509ms handlePreAccept:1.204755438s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2989149,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":11725509,"handlePreAccept":1204755438,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":594,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3413,"handlePreAcceptReply":15914,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":9669,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:966.773427ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:5.607838461s handlePreAcceptReply:23.502916536s handlePrepare:0s handlePrepareReply:0s handlePropose:12.600920888s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":966773427,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":5607838461,"handlePreAcceptReply":23502916536,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":12600920888,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":298,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9759,"handlePreAccept":9760,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.408837ms handleAcceptReply:0s handleCommit:0s handleCommitShort:11.96025ms handlePreAccept:1.196539792s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2408837,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":11960250,"handlePreAccept":1196539792,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":298,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9762,"handlePreAccept":9765,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.994162ms handleAcceptReply:0s handleCommit:0s handleCommitShort:11.961349ms handlePreAccept:1.225736925s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2994162,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":11961349,"handlePreAccept":1225736925,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":598,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3499,"handlePreAcceptReply":16270,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":9885,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:974.53688ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:5.750378418s handlePreAcceptReply:24.047181216s handlePrepare:0s handlePrepareReply:0s handlePropose:12.872499759s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":974536880,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":5750378418,"handlePreAcceptReply":24047181216,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":12872499759,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":299,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9919,"handlePreAccept":9922,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.413181ms handleAcceptReply:0s handleCommit:0s handleCommitShort:12.135895ms handlePreAccept:1.217720558s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2413181,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":12135895,"handlePreAccept":1217720558,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":299,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":9923,"handlePreAccept":9924,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.997533ms handleAcceptReply:0s handleCommit:0s handleCommitShort:12.15696ms handlePreAccept:1.245452172s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2997533,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":12156960,"handlePreAccept":1245452172,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":306,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10077,"handlePreAccept":10078,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.468544ms handleAcceptReply:0s handleCommit:0s handleCommitShort:12.330433ms handlePreAccept:1.238103201s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2468544,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":12330433,"handlePreAccept":1238103201,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":306,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10081,"handlePreAccept":10081,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:3.06558ms handleAcceptReply:0s handleCommit:0s handleCommitShort:12.372778ms handlePreAccept:1.265629954s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":3065580,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":12372778,"handlePreAccept":1265629954,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":614,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3601,"handlePreAcceptReply":16599,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":10102,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:1.001111121s handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:5.926080717s handlePreAcceptReply:24.572085311s handlePrepare:0s handlePrepareReply:0s handlePropose:13.188250864s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":1001111121,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":5926080717,"handlePreAcceptReply":24572085311,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":13188250864,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":313,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10215,"handlePreAccept":10217,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.509303ms handleAcceptReply:0s handleCommit:0s handleCommitShort:12.499567ms handlePreAccept:1.254398026s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2509303,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":12499567,"handlePreAccept":1254398026,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":313,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10218,"handlePreAccept":10221,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:3.18721ms handleAcceptReply:0s handleCommit:0s handleCommitShort:12.543475ms handlePreAccept:1.283012279s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":3187210,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":12543475,"handlePreAccept":1283012279,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":628,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3736,"handlePreAcceptReply":16899,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":10319,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:1.026726941s handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:6.175975304s handlePreAcceptReply:25.061658015s handlePrepare:0s handlePrepareReply:0s handlePropose:13.560627202s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":1026726941,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":6175975304,"handlePreAcceptReply":25061658015,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":13560627202,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":318,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10374,"handlePreAccept":10376,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.555168ms handleAcceptReply:0s handleCommit:0s handleCommitShort:12.693487ms handlePreAccept:1.274184773s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2555168,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":12693487,"handlePreAccept":1274184773,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":318,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10378,"handlePreAccept":10380,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:3.228784ms handleAcceptReply:0s handleCommit:0s handleCommitShort:12.734877ms handlePreAccept:1.302892715s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":3228784,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":12734877,"handlePreAccept":1302892715,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":640,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3823,"handlePreAcceptReply":17252,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":10539,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:1.046889294s handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:6.31638447s handlePreAcceptReply:25.557904933s handlePrepare:0s handlePrepareReply:0s handlePropose:13.816107792s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":1046889294,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":6316384470,"handlePreAcceptReply":25557904933,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":13816107792,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":323,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10549,"handlePreAccept":10552,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.596009ms handleAcceptReply:0s handleCommit:0s handleCommitShort:12.88432ms handlePreAccept:1.294814039s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2596009,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":12884320,"handlePreAccept":1294814039,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":323,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10553,"handlePreAccept":10554,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:3.286197ms handleAcceptReply:0s handleCommit:0s handleCommitShort:12.933326ms handlePreAccept:1.324444295s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":3286197,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":12933326,"handlePreAccept":1324444295,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":327,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10723,"handlePreAccept":10723,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.650662ms handleAcceptReply:0s handleCommit:0s handleCommitShort:13.102935ms handlePreAccept:1.315353294s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2650662,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":13102935,"handlePreAccept":1315353294,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":327,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10727,"handlePreAccept":10728,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:3.354583ms handleAcceptReply:0s handleCommit:0s handleCommitShort:13.147866ms handlePreAccept:1.344589173s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":3354583,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":13147866,"handlePreAccept":1344589173,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":654,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3929,"handlePreAcceptReply":17583,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":10756,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:1.06746467s handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:6.453206466s handlePreAcceptReply:25.969835938s handlePrepare:0s handlePrepareReply:0s handlePropose:14.056997658s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":1067464670,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":6453206466,"handlePreAcceptReply":25969835938,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":14056997658,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  2
+Call Dict:  {"handleAccept":327,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10756,"handlePreAccept":10756,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.650662ms handleAcceptReply:0s handleCommit:0s handleCommitShort:13.129691ms handlePreAccept:1.317336363s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2650662,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":13129691,"handlePreAccept":1317336363,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  1
+Call Dict:  {"handleAccept":327,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10756,"handlePreAccept":10756,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:3.354583ms handleAcceptReply:0s handleCommit:0s handleCommitShort:13.172091ms handlePreAccept:1.346111132s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":3354583,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":13172091,"handlePreAccept":1346111132,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":654,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3929,"handlePreAcceptReply":17583,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":10756,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:1.06746467s handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:6.453206466s handlePreAcceptReply:25.969835938s handlePrepare:0s handlePrepareReply:0s handlePropose:14.056997658s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":1067464670,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":6453206466,"handlePreAcceptReply":25969835938,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":14056997658,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+pid: 6086, cmd: /root/go/src/epaxos/bin/master -N 3
+pid: 6086, cmd: /root/go/src/epaxos/bin/master -N 3
+pid: 6086, cmd: /root/go/src/epaxos/bin/master -N 3
+pid: 5972, cmd: /root/go/src/epaxos/bin/server -port 17071 -maddr 10.142.0.27 -addr 10.142.0.37 -p 4 -thrifty=false -e=true
+pid: 5972, cmd: /root/go/src/epaxos/bin/server -port 17071 -maddr 10.142.0.27 -addr 10.142.0.37 -p 4 -thrifty=false -e=true
+pid: 5972, cmd: /root/go/src/epaxos/bin/server -port 17071 -maddr 10.142.0.27 -addr 10.142.0.37 -p 4 -thrifty=false -e=true
+pid: 6349, cmd: /root/go/src/epaxos/bin/server -port 17070 -maddr 10.142.0.27 -addr 10.142.0.27 -p 4 -thrifty=false -e=true
+Replica:  2
+Call Dict:  {"handleAccept":327,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10756,"handlePreAccept":10756,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:2.650662ms handleAcceptReply:0s handleCommit:0s handleCommitShort:13.129691ms handlePreAccept:1.317336363s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":2650662,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":13129691,"handlePreAccept":1317336363,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+pid: 6022, cmd: /root/go/src/epaxos/bin/server -port 17072 -maddr 10.142.0.27 -addr 10.142.0.63 -p 4 -thrifty=false -e=true
+Replica:  1
+Call Dict:  {"handleAccept":327,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10756,"handlePreAccept":10756,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:3.354583ms handleAcceptReply:0s handleCommit:0s handleCommitShort:13.172091ms handlePreAccept:1.346111132s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":3354583,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":13172091,"handlePreAccept":1346111132,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+pid: 6349, cmd: /root/go/src/epaxos/bin/server -port 17070 -maddr 10.142.0.27 -addr 10.142.0.27 -p 4 -thrifty=false -e=true
+pid: 6349, cmd: /root/go/src/epaxos/bin/server -port 17070 -maddr 10.142.0.27 -addr 10.142.0.27 -p 4 -thrifty=false -e=true
+pid: 6022, cmd: /root/go/src/epaxos/bin/server -port 17072 -maddr 10.142.0.27 -addr 10.142.0.63 -p 4 -thrifty=false -e=true
+pid: 6022, cmd: /root/go/src/epaxos/bin/server -port 17072 -maddr 10.142.0.27 -addr 10.142.0.63 -p 4 -thrifty=false -e=true
+Replica:  0
+Call Dict:  {"handleAccept":0,"handleAcceptReply":654,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":3929,"handlePreAcceptReply":17583,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":10756,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+Time Dict Map:  map[handleAccept:0s handleAcceptReply:1.06746467s handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:6.453206466s handlePreAcceptReply:25.969835938s handlePrepare:0s handlePrepareReply:0s handlePropose:14.056997658s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
+Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":1067464670,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":6453206466,"handlePreAcceptReply":25969835938,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":14056997658,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}

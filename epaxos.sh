@@ -10,12 +10,12 @@ reqsNb=100000
 writes=50
 dlog=false
 conflicts=0
-thrifty=true
+thrifty=false
 serverP=2       # server's GOMAXPROCS (sp)
 clientP=1       # client's GOMAXPROCS (cp)
 
 # if closed-loop, uncomment two lines below
-clientBatchSize=10
+clientBatchSize=80
 rounds=$((reqsNb / clientBatchSize))
 # if open-loop, uncomment the line below
 #rounds=1 # open-loop

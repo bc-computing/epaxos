@@ -4,6 +4,7 @@ import (
 	"bloomfilter"
 	"dlog"
 	"encoding/binary"
+	"encoding/json"
 	"epaxosproto"
 	"fastrpc"
 	"fmt"
@@ -379,10 +380,13 @@ func (r *Replica) run() {
 
 	for !r.Shutdown {
 
-		if counter == 10000 {
-			fmt.Println("Working?")
-			fmt.Println(debugCallDict)
-			fmt.Println(debugTimeDict)
+		if counter == 1000 {
+			fmt.Println("Replica: ", r.Id)
+			callJson, _ := json.Marshal(debugCallDict)
+			timeJson, _ := json.Marshal(debugTimeDict)
+			fmt.Println("CALLS_R_",r.Id,"=",string(callJson))
+			fmt.Println("Time Dict Map: ",debugTimeDict)
+			fmt.Println("TIMES_R_",r.Id,"=",string(timeJson))
 			counter = 0
 		}
 		counter += 1
