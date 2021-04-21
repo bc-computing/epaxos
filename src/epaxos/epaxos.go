@@ -323,6 +323,7 @@ func (r *Replica) run() {
 
 	onOffProposeChan := r.ProposeChan
 
+	counter := 0
 	debug := true
 	debugCallDict := map[string]int{
 		"handlePropose":           0,
@@ -377,6 +378,13 @@ func (r *Replica) run() {
 	var tStart time.Time
 
 	for !r.Shutdown {
+
+		if counter == 10000{
+			fmt.Println("Working?")
+			fmt.Println(debugCallDict)
+			fmt.Println(debugTimeDict)
+			counter = 0
+		}
 
 		select {
 
@@ -593,6 +601,7 @@ func (r *Replica) run() {
 			r.startRecoveryForInstance(iid.replica, iid.instance)
 		}
 	}
+	counter += 1
 }
 
 /***********************************
