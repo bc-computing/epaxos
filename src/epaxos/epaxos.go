@@ -6,6 +6,7 @@ import (
 	"encoding/binary"
 	"epaxosproto"
 	"fastrpc"
+	"fmt"
 	"genericsmr"
 	"genericsmrproto"
 	"io"
@@ -367,8 +368,8 @@ func (r *Replica) run() {
 		<-interrupt
 		log.Printf("TotalRequests=%d, TotalBatches=%d\n", r.TotalRequests, r.TotalBatches)
 		log.Println("DEBUG START")
-		log.Print(debugCallDict)
-		log.Print(debugTimeDict)
+		fmt.Println(debugCallDict)
+		fmt.Println(debugTimeDict)
 		log.Println("DEBUG END")
 		os.Exit(0)
 	}()
