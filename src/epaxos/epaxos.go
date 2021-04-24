@@ -366,6 +366,7 @@ func (r *Replica) run() {
 	var tStart time.Time
 
 	for !r.Shutdown {
+
 		select {
 
 		case propose := <-onOffProposeChan:
