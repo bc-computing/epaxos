@@ -314,7 +314,7 @@ func (r *Replica) run() {
 
 	onOffProposeChan := r.ProposeChan
 
-	debug := true
+	debug := false
 	debugCallDict := map[string]int{
 		"handlePropose":           0,
 		"handlePrepare":           0,
