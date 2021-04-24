@@ -315,7 +315,6 @@ func (r *Replica) run() {
 	onOffProposeChan := r.ProposeChan
 
 	debug := true
-	counter := 0
 	debugCallDict := map[string]int{
 		"handlePropose":           0,
 		"handlePrepare":           0,
@@ -369,17 +368,6 @@ func (r *Replica) run() {
 	var tStart time.Time
 
 	for !r.Shutdown {
-
-		if counter == 1000 {
-			fmt.Println("Replica: ", r.Id)
-			callJson, _ := json.Marshal(debugCallDict)
-			timeJson, _ := json.Marshal(debugTimeDict)
-			fmt.Println("CALLS_R_",r.Id,"=",string(callJson))
-			fmt.Println("TIMES_R_",r.Id,"=",string(timeJson))
-			counter = 0
-		}
-		counter += 1
-
 		select {
 
 		case propose := <-onOffProposeChan:
