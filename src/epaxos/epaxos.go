@@ -349,10 +349,8 @@ func (r *Replica) run() {
 			interrupt := make(chan os.Signal, 1)
 			signal.Notify(interrupt, syscall.SIGINT, syscall.SIGKILL, syscall.SIGTERM)
 			<-interrupt
-			fmt.Println("DEBUG->")
 			fmt.Println(debugCallDict)
 			fmt.Println(debugTimeDict)
-			fmt.Println("<-DEBUG")
 			os.Exit(0)
 		}()
 	}
