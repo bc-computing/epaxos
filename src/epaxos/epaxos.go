@@ -4,7 +4,6 @@ import (
 	"bloomfilter"
 	"dlog"
 	"encoding/binary"
-	"encoding/json"
 	"epaxosproto"
 	"fastrpc"
 	"fmt"
