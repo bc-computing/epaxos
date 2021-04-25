@@ -171,4 +171,3 @@ if __name__ == '__main__':
         for k, v in info.items():
             if len(v) > 1 and not isinstance(v, list):
                 print(v[0], end=", ")
-        print()
