@@ -5,7 +5,7 @@ ClientIps=(10.142.0.11 10.142.0.103 10.142.0.104)
 MasterIp=10.142.0.27
 FirstServerPort=17070 # change it when only necessary (i.e., firewall blocking, port in use)
 NumOfServerInstances=3 # before recompiling, try no more than 5 servers. See Known Issue # 4
-NumOfClientInstances=20 #20,40,60,80,100,200
+NumOfClientInstances=10 #20,40,60,80,100,200
 reqsNb=100000
 writes=50
 dlog=false
@@ -40,7 +40,7 @@ function prepareRun() {
 }
 
 function runMaster() {
-    "${EPaxosFolder}"/bin/master -N ${NumOfServerInstances} 2>&1 & # TODO(highlight): change master parameters here
+    "${EPaxosFolder}"/bin/master -N ${NumOfServerInstances} 2>&1 &
 }
 
 function runServersOneMachine() {
@@ -57,7 +57,7 @@ function runServersOneMachine() {
 }
 
 function runClientsOneMachine() {
-#    ulimit -n 65536
+    ulimit -n 65536
     mkdir -p ${LogFolder}
     for idx in $(seq 0 $((NumOfClientInstances - 1)))
     do
@@ -65,7 +65,7 @@ function runClientsOneMachine() {
         cliIp=${ClientIps[cliIpIdx]}
         if [[ ${cliIpIdx} -eq ${EPMachineIdx} ]]
         then
-            "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} >${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1 &# TODO: change client parameters here
+            "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -p 30 -c ${conflicts} 2>&1 &# >${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out
         fi
     done
 }
