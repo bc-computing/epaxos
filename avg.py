@@ -242,7 +242,16 @@ CB_1_TIME_R0 = {"handleAccept":0,"handleAcceptReply":7962217,"handleCommit":0,"h
 CB_1_CALL_R2 = {"handleAccept":34,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":169905,"handlePreAccept":169905,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
 CB_1_TIME_R2 = {"handleAccept":273663,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":119698961,"handlePreAccept":3146523020,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
 
+logs = [CB_1_CALL_R1, CB_1_TIME_R1, CB_1_CALL_R0, CB_1_TIME_R0, CB_1_CALL_R2, CB_1_TIME_R2]
+
+
+
 print("Client Batch = 1")
+for log in logs:
+    [print(key, end =", ") for key in log.keys()]
+    print()
+    [print(value, end =", ") for value in log.values()]
+    print()
 CB_1_RESULT = get_avgs([CB_1_CALL_R1, CB_1_TIME_R1, CB_1_CALL_R0, CB_1_TIME_R0, CB_1_CALL_R2, CB_1_TIME_R2])
 print_avgs(CB_1_RESULT)
 
@@ -267,7 +276,13 @@ CB_10_TIME_R2 = {"handleAccept":267054,"handleAcceptReply":0,"handleCommit":0,"h
 # Time Dict Map:  map[handleAccept:0s handleAcceptReply:23.814066ms handleCommit:0s handleCommitShort:0s handlePreAccept:0s handlePreAcceptOK:22.914272209s handlePreAcceptReply:19.381186832s handlePrepare:0s handlePrepareReply:0s handlePropose:14.240012584s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
 # Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":23814066,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":22914272209,"handlePreAcceptReply":19381186832,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":14240012584,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
 
+logs = [CB_10_CALL_R1, CB_10_TIME_R1, CB_10_CALL_R0, CB_10_TIME_R0, CB_10_CALL_R2, CB_10_TIME_R2]
 print("Client Batch = 10")
+for log in logs:
+    [print(key, end =", ") for key in log.keys()]
+    print()
+    [print(value, end =", ") for value in log.values()]
+    print()
 CB_10_RESULT = get_avgs([CB_10_CALL_R1, CB_10_TIME_R1, CB_10_CALL_R0, CB_10_TIME_R0, CB_10_CALL_R2, CB_10_TIME_R2])
 print_avgs(CB_10_RESULT)
 
@@ -292,7 +307,15 @@ CB_20_TIME_R2 = {"handleAccept":412306,"handleAcceptReply":0,"handleCommit":0,"h
 # Time Dict Map:  map[handleAccept:818.865µs handleAcceptReply:0s handleCommit:0s handleCommitShort:14.93499ms handlePreAccept:1.362012662s handlePreAcceptOK:0s handlePreAcceptReply:0s handlePrepare:0s handlePrepareReply:0s handlePropose:0s handleTryPreAccept:0s handleTryPreAcceptReply:0s]
 # Time Dict UnMarshalled:  {"handleAccept":818865,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":14934990,"handlePreAccept":1362012662,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
 
+logs = [CB_20_CALL_R1, CB_20_TIME_R1, CB_20_CALL_R0, CB_20_TIME_R0, CB_20_CALL_R2, CB_20_TIME_R2]
+
+
 print("Client Batch = 20")
+for log in logs:
+    [print(key, end =", ") for key in log.keys()]
+    print()
+    [print(value, end =", ") for value in log.values()]
+    print()
 CB_20_RESULT = get_avgs([CB_20_CALL_R1, CB_20_TIME_R1, CB_20_CALL_R0, CB_20_TIME_R0, CB_20_CALL_R2, CB_20_TIME_R2])
 print_avgs(CB_20_RESULT)
 
@@ -304,6 +327,8 @@ CB_40_CALL_R0 = {"handleAccept":0,"handleAcceptReply":654,"handleCommit":0,"hand
 CB_40_TIME_R0 = {"handleAccept":0,"handleAcceptReply":1067464670,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":6453206466,"handlePreAcceptReply":25969835938,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":14056997658,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
 CB_40_CALL_R2 = {"handleAccept":327,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":10756,"handlePreAccept":10756,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
 CB_40_TIME_R2 = {"handleAccept":2650662,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":13129691,"handlePreAccept":1317336363,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
+
+
 
 
 #
@@ -321,7 +346,15 @@ CB_40_TIME_R2 = {"handleAccept":2650662,"handleAcceptReply":0,"handleCommit":0,"
 # Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":1067464670,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":6453206466,"handlePreAcceptReply":25969835938,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":14056997658,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
 
 
+logs = [CB_40_CALL_R1, CB_40_TIME_R1, CB_40_CALL_R0, CB_40_TIME_R0, CB_40_CALL_R2, CB_40_TIME_R2]
+
+
 print("Client Batch = 40")
+for log in logs:
+    [print(key, end =", ") for key in log.keys()]
+    print()
+    [print(value, end =", ") for value in log.values()]
+    print()
 CB_40_RESULT = get_avgs([CB_40_CALL_R1, CB_40_TIME_R1, CB_40_CALL_R0, CB_40_TIME_R0, CB_40_CALL_R2, CB_40_TIME_R2])
 print_avgs(CB_40_RESULT)
 
@@ -350,7 +383,15 @@ CB_80_TIME_R2 = {"handleAccept":4429238,"handleAcceptReply":0,"handleCommit":0,"
 # Time Dict UnMarshalled:  {"handleAccept":0,"handleAcceptReply":1342276108,"handleCommit":0,"handleCommitShort":0,"handlePreAccept":0,"handlePreAcceptOK":4153507341,"handlePreAcceptReply":21655302078,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":12723884896,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
 
 
+logs = [CB_80_CALL_R1, CB_80_TIME_R1, CB_80_CALL_R0, CB_80_TIME_R0, CB_80_CALL_R2, CB_80_TIME_R2]
+
+
 print("Client Batch = 80")
+for log in logs:
+    [print(key, end =", ") for key in log.keys()]
+    print()
+    [print(value, end =", ") for value in log.values()]
+    print()
 CB_80_RESULT = get_avgs([CB_80_CALL_R1, CB_80_TIME_R1, CB_80_CALL_R0, CB_80_TIME_R0, CB_80_CALL_R2, CB_80_TIME_R2])
 print_avgs(CB_80_RESULT)
 
@@ -362,7 +403,15 @@ CB_1_CLIENTS_1_TIME_R0 = {"handleAccept":0,"handleAcceptReply":0,"handleCommit":
 CB_1_CLIENTS_1_CALL_R2 = {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1892,"handlePreAccept":1893,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
 CB_1_CLIENTS_1_TIME_R2 = {"handleAccept":0,"handleAcceptReply":0,"handleCommit":0,"handleCommitShort":1308822,"handlePreAccept":31698838,"handlePreAcceptOK":0,"handlePreAcceptReply":0,"handlePrepare":0,"handlePrepareReply":0,"handlePropose":0,"handleTryPreAccept":0,"handleTryPreAcceptReply":0}
 
+logs = [CB_1_CLIENTS_1_CALL_R1, CB_1_CLIENTS_1_TIME_R1, CB_1_CLIENTS_1_CALL_R0, CB_1_CLIENTS_1_TIME_R0, CB_1_CLIENTS_1_CALL_R2, CB_1_CLIENTS_1_TIME_R2]
+
+
 print("Client Batch = 1")
+for log in logs:
+    [print(key, end =", ") for key in log.keys()]
+    print()
+    [print(value, end =", ") for value in log.values()]
+    print()
 CB_1_CLIENTS_1_RESULT = get_avgs([CB_1_CLIENTS_1_CALL_R1, CB_1_CLIENTS_1_TIME_R1, CB_1_CLIENTS_1_CALL_R0, CB_1_CLIENTS_1_TIME_R0, CB_1_CLIENTS_1_CALL_R2, CB_1_CLIENTS_1_TIME_R2])
 print_avgs(CB_1_CLIENTS_1_RESULT)
 
