@@ -155,7 +155,7 @@ func (r *Replica) handleReplicaConnection(rid int, reader *bufio.Reader) error {
 				cmd.Unmarshal(reader)
 				r.commandsMutex.Lock()
 				if _, present := r.commands[cid]; !present {
-					if cmd.Op != 0 || cmd.K != 0 || cmd.V != 0 {
+					if cmd.Op != 0 || cmd.K != 0 || cmd.V1 != 0 { //changing V to V1 for multiple Vs
 						r.commands[cid] = cmd
 					}
 				}
