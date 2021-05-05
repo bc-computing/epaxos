@@ -128,7 +128,9 @@ func main() {
 
 	var id int32 = 0
 	done := make(chan bool, N)
-	args := genericsmrproto.Propose{id, state.Command{state.PUT, 0, 0}, 0}
+	
+	//Changes made to accomandate DataSize=256B  (in total 32 0s in state.Command{})
+	args := genericsmrproto.Propose{id, state.Command{state.PUT, 0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0}, 0}
 
 	before_total := time.Now()
 
@@ -151,7 +153,7 @@ func main() {
 			go waitReplies(readers, leader, n, done)
 		}
 
-		before := time.Now()
+		//before := time.Now()
 
 		for i := 0; i < n+*eps; i++ {
 			dlog.Printf("Sending proposal %d\n", id)
@@ -161,8 +163,41 @@ func main() {
 			} else {
 				args.Command.Op = state.GET
 			}
+			
+			//Changes made to accomandate DataSize=256B  (in total 32 0s in state.Command{})
 			args.Command.K = state.Key(karray[i])
-			args.Command.V = state.Value(i)
+			args.Command.V1 = state.Value(i)
+			args.Command.V2 = state.Value(i)
+ 			args.Command.V3 = state.Value(i)
+ 			args.Command.V4 = state.Value(i)
+ 			args.Command.V5 = state.Value(i)
+ 			args.Command.V6 = state.Value(i)
+ 			args.Command.V7 = state.Value(i)
+ 			args.Command.V8 = state.Value(i)
+ 			args.Command.V9 = state.Value(i)
+ 			args.Command.V10 = state.Value(i)
+ 			args.Command.V11 = state.Value(i)
+ 			args.Command.V12 = state.Value(i)
+ 			args.Command.V13 = state.Value(i)
+ 			args.Command.V14 = state.Value(i)
+ 			args.Command.V15 = state.Value(i)
+ 			args.Command.V16 = state.Value(i)
+ 			args.Command.V17 = state.Value(i)
+ 			args.Command.V18 = state.Value(i)
+ 			args.Command.V19 = state.Value(i)
+			args.Command.V20 = state.Value(i)
+ 			args.Command.V21 = state.Value(i)
+ 			args.Command.V22 = state.Value(i)
+ 			args.Command.V23 = state.Value(i)
+ 			args.Command.V24 = state.Value(i)
+ 			args.Command.V25 = state.Value(i)
+ 			args.Command.V26 = state.Value(i)
+ 			args.Command.V27 = state.Value(i)
+ 			args.Command.V28 = state.Value(i)
+ 			args.Command.V29 = state.Value(i)
+			args.Command.V30 = state.Value(i)
+ 			args.Command.V31 = state.Value(i)
+			
 			//args.Timestamp = time.Now().UnixNano()
 			if !*fast {
 				if *noLeader {
@@ -200,8 +235,8 @@ func main() {
 			err = <-done
 		}
 
-		after := time.Now()
-		fmt.Printf("Round took %v\n", after.Sub(before))
+		//after := time.Now()
+		//fmt.Printf("Round took %v\n", after.Sub(before))
 
 		if *check {
 			for j := 0; j < n; j++ {
@@ -224,7 +259,7 @@ func main() {
 	}
 
 	after_total := time.Now()
-	fmt.Printf("Test took %v\n", after_total.Sub(before_total))
+	fmt.Printf("Test took %v Seconds.\n", after_total.Sub(before_total).Seconds())
 
 	s := 0
 	for _, succ := range successful {
