@@ -461,12 +461,15 @@ func (r *Replica) handlePrepare(prepare *menciusproto.Prepare) {
 
 	if inst == nil {
 		dlog.Println("Replying OK to null-instance Prepare")
+		
+		
+		//Changes made here to accomandate DataSize=256 (32 0s)
 		r.replyPrepare(prepare.LeaderId, &menciusproto.PrepareReply{prepare.Instance,
 			TRUE,
 			-1,
 			FALSE,
 			0,
-			state.Command{state.NONE, 0, 0}})
+			state.Command{state.NONE, 0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0}})
 
 		r.instanceSpace[prepare.Instance] = &Instance{false,
 			0,
@@ -480,7 +483,8 @@ func (r *Replica) handlePrepare(prepare *menciusproto.Prepare) {
 			ok = FALSE
 		}
 		if inst.command == nil {
-			inst.command = &state.Command{state.NONE, 0, 0}
+			//Changes made here to accomandate DataSize=256 (32 0s)
+			inst.command = &state.Command{state.NONE, 0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0}
 		}
 		skipped := FALSE
 		if inst.skipped {
@@ -883,9 +887,11 @@ func (r *Replica) forceCommit() {
 	if int(problemInstance)%r.N == int(r.Id+1)%r.N {
 		log.Println("Replica", r.Id, "Trying to take over instance", problemInstance)
 		if r.instanceSpace[problemInstance] == nil {
+			
+			//Changes made here to accomandate DataSize=256 (32 0s)
 			r.instanceSpace[problemInstance] = &Instance{true,
-				NB_INST_TO_SKIP,
-				&state.Command{state.NONE, 0, 0},
+				NB_INST_TO_SKIP,			     
+				&state.Command{state.NONE, 0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0},
 				r.makeUniqueBallot(1),
 				PREPARING,
 				&LeaderBookkeeping{nil, 0, 0, 0, 0}}
