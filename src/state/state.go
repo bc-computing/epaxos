@@ -120,8 +120,8 @@ func (c *Command) Execute(st *State) Value {
 		   st.DB.Set(key[:], value[:], nil)
 		*/
 
-		st.Store[c.K] = c.V
-		return c.V
+		st.Store[c.K] = c.V1
+		return c.V1
 
 	case GET:
 		if val, present := st.Store[c.K]; present {
