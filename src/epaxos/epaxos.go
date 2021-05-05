@@ -22,7 +22,7 @@ const FALSE = uint8(0)
 const DS = 5
 const ADAPT_TIME_SEC = 10
 
-const MAX_BATCH = 1000 // switch for testing original=1K
+const MAX_BATCH = 300 // switch for testing original=1K
 
 const COMMIT_GRACE_PERIOD = 10 * 1e9 //10 seconds
 
@@ -230,7 +230,7 @@ var slowClockChan chan bool
 
 func (r *Replica) fastClock() {
 	for !r.Shutdown {
-		time.Sleep(5 * 1e6) // 5 ms
+		time.Sleep(5000) // 5us <-changed
 		fastClockChan <- true
 	}
 }
