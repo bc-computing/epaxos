@@ -1,20 +1,27 @@
-ServerIps=(10.142.0.27 10.142.0.37 10.142.0.63) # 3
-ClientIps=(10.142.0.11 10.142.0.103 10.142.0.104)
-MasterIp=10.142.0.27
-FirstServerPort=17070 # change it when only necessary (i.e., firewall blocking, port in use)
-NumOfServerInstances=3 # before recompiling, try no more than 5 servers. See Known Issue # 4
-NumOfClientInstances=500 #20,40,60,80,100,200,300,400,500
+NumOfClientInstances=15
+
+ServerIps=(10.142.15.206 10.142.0.28 10.142.0.95) # 3-same zone
+ServerIps=(10.142.15.206 10.142.0.45 10.142.0.91) # 3-diff zone
+ClientIps=(10.142.15.203 10.142.0.7 10.142.0.9)
+MasterIp=10.142.15.206
+
+TypeEp=false
+NumOfServerInstances=3 
+
+# if closed-loop, uncomment two lines below
+#clientBatchSize=10
+#rounds=$((reqsNb / clientBatchSize))
+# if open-loop, uncomment the line below
+rounds=1 # open-loop
+
+FirstServerPort=17070
 reqsNb=10000
 writes=50
 dlog=false
 conflicts=0
 thrifty=false
 
-# if closed-loop, uncomment two lines below
-clientBatchSize=10
-rounds=$((reqsNb / clientBatchSize))
-# if open-loop, uncomment the line below
-#rounds=1 # open-loop
+
 
 # some constants
 SSHKey=/root/go/src/rc3/deployment/install/id_rsa # RC project has it
@@ -47,7 +54,7 @@ function runServersOneMachine() {
         svrPort=$((FirstServerPort + $idx))
         if [[ ${svrIpIdx} -eq ${EPMachineIdx} ]]
         then
-            "${EPaxosFolder}"/bin/server -port ${svrPort} -maddr ${MasterIp} -addr ${svrIp} -p 4 -thrifty=${thrifty} -e=true 2>&1 &
+            "${EPaxosFolder}"/bin/server -port ${svrPort} -maddr ${MasterIp} -addr ${svrIp} -p 4 -thrifty=${thrifty} -e=${TypeEp} 2>&1 &
         fi
     done
 }
@@ -61,7 +68,7 @@ function runClientsOneMachine() {
         cliIp=${ClientIps[cliIpIdx]}
         if [[ ${cliIpIdx} -eq ${EPMachineIdx} ]]
         then
-            "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -e=true -r ${rounds} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1 &
+            "${EPaxosFolder}"/bin/client -maddr ${MasterIp} -q ${reqsNb} -w ${writes} -r ${rounds} -e=${TypeEp} -p 30 -c ${conflicts} > ${LogFolder}/S${NumOfServerInstances}-C${NumOfClientInstances}-q${reqsNb}-w${writes}-r${rounds}-c${conflicts}--client${idx}.out 2>&1 &
         fi
     done
 }
