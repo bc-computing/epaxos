@@ -1,27 +1,25 @@
 NumOfClientInstances=15
+reqsNb=120
+clientBatchSize=20
+TypeEp=false
 
-ServerIps=(10.142.15.206 10.142.0.28 10.142.0.95) # 3-same zone
-ServerIps=(10.142.15.206 10.142.0.45 10.142.0.91) # 3-diff zone
-ClientIps=(10.142.15.203 10.142.0.7 10.142.0.9)
+ServerIps=(10.142.15.206 10.142.0.95 10.142.0.96 10.142.15.211)
+ClientIps=(10.142.15.203)
 MasterIp=10.142.15.206
 
-TypeEp=false
-NumOfServerInstances=3 
+FirstServerPort=17070 # change it when only necessary (i.e., firewall blocking, port in use)
+NumOfServerInstances=3 # before recompiling, try no more than 5 servers. See Known Issue # 4
+
+writes=50
+dlog=false
+conflicts=0
+thrifty=false
 
 # if closed-loop, uncomment two lines below
 #clientBatchSize=10
 #rounds=$((reqsNb / clientBatchSize))
 # if open-loop, uncomment the line below
 rounds=1 # open-loop
-
-FirstServerPort=17070
-reqsNb=10000
-writes=50
-dlog=false
-conflicts=0
-thrifty=false
-
-
 
 # some constants
 SSHKey=/root/go/src/rc3/deployment/install/id_rsa # RC project has it
