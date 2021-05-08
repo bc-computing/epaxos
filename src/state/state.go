@@ -26,38 +26,38 @@ type Key int64
 
 type Command struct {
 	Op Operation
-	K  Key 		// key = 8 bytes
- 	V1  Value 	// 31 values * 8 bytes = 248 bytes
- 	V2  Value  	// total = 256 bytes
- 	V3  Value
- 	V4  Value
- 	V5  Value
- 	V6  Value
- 	V7  Value
- 	V8  Value
- 	V9  Value
- 	V10  Value
- 	V11  Value
- 	V12  Value
- 	V13  Value
- 	V14  Value
- 	V15  Value
- 	V16  Value
- 	V17  Value
- 	V18  Value
- 	V19  Value
-	V20  Value
- 	V21  Value
- 	V22  Value
- 	V23  Value
- 	V24  Value
- 	V25  Value
- 	V26  Value
- 	V27  Value
- 	V28  Value
- 	V29  Value
-	V30  Value
- 	V31  Value
+	K   Key
+	V   Value
+	//K1  Key
+	//V1  Value
+	//K2  Key
+	//V2  Value
+	//K3  Key
+	//V3  Value
+	//K4  Key
+	//V4  Value
+	//K5  Key
+	//V5  Value
+	//K6  Key
+	//V6  Value
+	//K7  Key
+	//V7  Value
+	//K8  Key
+	//V8  Value
+	//K9  Key
+	//V9  Value
+	//K10 Key
+	//V10 Value
+	//K11 Key
+	//V11 Value
+	//K12 Key
+	//V12 Value
+	//K13 Key
+	//V13 Value
+	//K14 Key
+	//V14 Value
+	//K15 Key
+	//V15 Value
 }
 
 type State struct {
@@ -119,9 +119,24 @@ func (c *Command) Execute(st *State) Value {
 		   binary.LittleEndian.PutUint64(value[:], uint64(c.V))
 		   st.DB.Set(key[:], value[:], nil)
 		*/
+		st.Store[c.K] = c.V
+		//st.Store[c.K1] = c.V1
+		//st.Store[c.K2] = c.V2
+		//st.Store[c.K3] = c.V3
+		//st.Store[c.K4] = c.V4
+		//st.Store[c.K5] = c.V5
+		//st.Store[c.K6] = c.V6
+		//st.Store[c.K7] = c.V7
+		//st.Store[c.K8] = c.V8
+		//st.Store[c.K9] = c.V9
+		//st.Store[c.K10] = c.V10
+		//st.Store[c.K11] = c.V11
+		//st.Store[c.K12] = c.V12
+		//st.Store[c.K13] = c.V13
+		//st.Store[c.K14] = c.V14
+		//st.Store[c.K15] = c.V15
 
-		st.Store[c.K] = c.V1
-		return c.V1
+		return c.V
 
 	case GET:
 		if val, present := st.Store[c.K]; present {

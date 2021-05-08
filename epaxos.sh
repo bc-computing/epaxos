@@ -1,9 +1,10 @@
 NumOfClientInstances=15
-reqsNb=120
+reqsNb=1000
 clientBatchSize=20
 TypeEp=false
 
-ServerIps=(10.142.15.206 10.142.0.95 10.142.0.96 10.142.15.211)
+
+ServerIps=(10.142.15.206 10.142.0.96 10.142.15.211)
 ClientIps=(10.142.15.203)
 MasterIp=10.142.15.206
 
@@ -16,7 +17,7 @@ conflicts=0
 thrifty=false
 
 # if closed-loop, uncomment two lines below
-#clientBatchSize=10
+#clientBatchSize=10/-
 #rounds=$((reqsNb / clientBatchSize))
 # if open-loop, uncomment the line below
 rounds=1 # open-loop
@@ -52,7 +53,7 @@ function runServersOneMachine() {
         svrPort=$((FirstServerPort + $idx))
         if [[ ${svrIpIdx} -eq ${EPMachineIdx} ]]
         then
-            "${EPaxosFolder}"/bin/server -port ${svrPort} -maddr ${MasterIp} -addr ${svrIp} -p 4 -thrifty=${thrifty} -e=${TypeEp} 2>&1 &
+            "${EPaxosFolder}"/bin/server -port ${svrPort} -maddr ${MasterIp} -addr ${svrIp} -e=${TypeEp} -p 4 -thrifty=${thrifty}  2>&1 &
         fi
     done
 }

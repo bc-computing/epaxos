@@ -17,7 +17,7 @@ const CHAN_BUFFER_SIZE = 200000
 const TRUE = uint8(1)
 const FALSE = uint8(0)
 
-const MAX_BATCH = 300
+const MAX_BATCH = 5000
 
 type Replica struct {
 	*genericsmr.Replica // extends a generic Paxos replica
@@ -155,7 +155,7 @@ var clockChan chan bool
 
 func (r *Replica) clock() {
 	for !r.Shutdown {
-		time.Sleep(5000)
+		time.Sleep(1000*1000*5)
 		clockChan <- true
 	}
 }

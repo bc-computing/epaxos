@@ -155,7 +155,7 @@ func (r *Replica) handleReplicaConnection(rid int, reader *bufio.Reader) error {
 				cmd.Unmarshal(reader)
 				r.commandsMutex.Lock()
 				if _, present := r.commands[cid]; !present {
-					if cmd.Op != 0 || cmd.K != 0 || cmd.V1 != 0 { //changing V to V1 for multiple Vs
+					if cmd.Op != 0 || cmd.K != 0 || cmd.V != 0 { //changing V to V1 for multiple Vs
 						r.commands[cid] = cmd
 					}
 				}
@@ -220,7 +220,7 @@ func (r *Replica) send1b(msg *gpaxosproto.M_1b, w *bufio.Writer) {
 	msg.Marshal(w)
 	
 	//changes are made to accomandate DataSize=256B (32+1=33 0s are needed)  (why 33 not 32? hmmm)
-	dummy := state.Command{0, 0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0}
+	dummy := state.Command{0, 0, 0}//, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 	for _, cid := range msg.Cstruct {
 		if cmd, present := r.commands[cid]; present {
 			cmd.Marshal(w)
