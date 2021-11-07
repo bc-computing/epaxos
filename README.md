@@ -1,40 +1,41 @@
-## Testing Epaxos and Paxos in Cloudlab
-### Experiment Setup
-1. 3 server machines
-2. 1 client machine
+Gryff
+======
 
-### Switching Between Paxos  and EPaxos 
-#### Paxos
-Do `git checkout paxos-no-batching` to get the setup we used to get the results for Paxos  in Table 1. Then, follow the instructions down below.
-#### EPaxos
-Do `git checkout epaxos-no-batching` to get the setup we used to get the results for EPaxos  in Table 1. Then, follow the instructions down below.
 
-### Installation (***For Each Machine***)
-1. Make sure Rabia is properly installed. Follow the instructions in the repo. This step is critical as it provides the go binary and python3.8 needed for testing.
-2. SSH into each of the VMs and do the following inside `~/go/src`:
-    1. ```git clone https://github.com/rabia-consensus/epaxos.git && cd epaxos```
-    4. ```. compile.sh```
-    5. After compiling, you should see
-       </br>
-       ```Built Master```
-       </br>
-       ```Built Server```
-       </br>
-       ```Built Client```
+### What is Gryff?
 
-### Configure Machines
 
-#### Find the Experiment Network IP Address of each Machine
-1. First, find the description of your machine by looking for a `<node>` tag with the attribute `client_id=<your_machine_name>`.2. Inside the node tag, look for `<interface>`, and inside it you should see an `<ip/>` tag. The attribute `address` will give you the machine's experiment network ip.
-2. The address likely has the format `10.10.1.x`.
-3. ![Identifying Master Server IP Screenshot](./README-images/Identifying%20Master%20Server%20IP.png)
+Gryff is a replicated storage system that provides the shared object programming interface. Objects of arbitrary size are
+accessed with read, write, and read-modify-write operations. Read and write operations correspond to the simplified get/put
+interface of key-value stores and they comprise the bulk of many application workloads. Read-modify-write operations allow
+clients to atomically read and modify the value of an object, which enables strong synchronization such as compare-and-swaps
+or conditional writes.
 
-#### Modify Each Machine's Execution Script
-Inside ```epaxos.sh```, configure the experimental network IP address of all server machines, client machines, and the specific address of the server machine that will be the master.
+### What makes Gryff novel?
 
-### Run
-1. Finally, run ```. epaxos.sh > run.txt``` on your master machine.
-2. If all works correctly, you should see n client logs inside the /logs directory in your master machine.
-3. For throughput/latency analysis, run:
-    1. ```python3.8 analysis.py ./logs```
-    
+Gryff provides its interface with low read tail latency relative to state-of-the-art linearizable replication protocols. It does so by unifying two existing techniques for replicated storage: state machine replication and shared registers. State machine replication is necessary to implement strong synchronization primitives, but it has fundamental limitations that inhibit practical systems from achieving low read tail latency. Shared register protocols, on the other hand, provide a read/write interface with low read tail latency, but are fundamentally too weak to implement strong synchronization. Gryff safely and efficiently unifies these two techniques to achieve the best of both.
+
+### How does Gryff work?
+
+Our [NSDI 2020 paper](https://www.usenix.org/conference/nsdi20/presentation/burke) describes the motivation, design, implementation, and evaluation of Gryff.
+
+### What is in this repository?
+
+This repository contains the Go implementations of:
+
+* Gryff
+* ABD
+* EPaxos
+* (classic) MultiPaxos
+* Mencius
+* Generalized Paxos
+
+The implementations of EPaxos, MultiPaxos, Mencius, and Generalized Paxos were created by Iulian Moraru, David G. Andersen, and Michael Kaminsky as part of the [EPaxos project](https://github.com/efficient/epaxos).
+
+This repository also contains the experimental scripts and configuration used in our NSDI 2020 paper. The experiments may be run on CloudLab using these scripts. A more detailed explanation of how to run these experiments is coming soon!
+
+AUTHORS:
+
+Matthew Burke -- Cornell University
+
+Audrey Cheng, Wyatt Lloyd -- Princeton University
