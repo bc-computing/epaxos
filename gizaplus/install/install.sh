@@ -7,7 +7,7 @@ source ../base-profile.sh
 function install_key() {
     mkdir -p ~/.ssh/
     cat "${EPaxosFolder}"/gizaplus/install/id_rsa.pub >>~/.ssh/authorized_keys # public key is stored in .ssh folder to accept ssh connections
-    chmod 400 "${SSHKey}" # private key is readable to connect to other nodes with corresponding public key
+    chmod 400 ${SSHKey} # private key is readable to connect to other nodes with corresponding public key
     echo 'ssh keys configured'
 }
 

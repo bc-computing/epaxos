@@ -27,7 +27,7 @@ function runServersOneMachine() {
         svrPort=$((FirstServerPort + $idx))
         if [[ ${svrIpIdx} -eq ${EPMachineIdx} ]]
         then
-            "${EPaxosFolder}"/bin/server -port ${svrPort} -maddr ${MasterIp} -addr ${svrIp} -p 4 -thrifty=${thrifty} -doAbd=true 2>&1 &
+            "${EPaxosFolder}"/bin/server -port ${svrPort} -maddr ${MasterIp} -addr ${svrIp} -p 4 -thrifty=${thrifty} -a=true 2>&1 &
         fi
     done
 }
@@ -129,7 +129,7 @@ function RemoveLogs(){
 function Analysis() {
     sleep 3
 #    cat ${LogFolder}/*.out  # for visual inspection
-    python3.8 analysis_paxos.py ${LogFolder} print-title
+    python3.8 analysis.py ${LogFolder} print-title
 }
 
 function Main() {

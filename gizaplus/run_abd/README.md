@@ -10,16 +10,8 @@
    1. ```cd gizaplus/install```
    2. ```. install.sh```
 3. Compile go binaries
-   1. ```cd ../.. && . compile.sh``` 
-   2. After compiling, you should see:
-      </br>
-      ```Built Master```
-      </br>
-      ```Built Server```
-      </br>
-      ```Built Client```
-
-
+   1. ```cd ../.. && . compile.sh```
+   
 ### Configuration(***In Each VM***)
 1. Inside ```base-profile.sh``` and ```profileX.sh``` configure:
     1. Run Configs (NClients, etc.)
