@@ -4,12 +4,12 @@ source ../profile0.sh
 function prepareRun() {
     for ip in "${ServerIps[@]}"
     do
-        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "mkdir -p ${LogFolder}; rm -rf ${LogFolder}/*; cd ${EPaxosFolder} && chmod 777 runABD.sh" 2>&1
+        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "mkdir -p ${LogFolder}; rm -rf ${LogFolder}/*; cd ${EPaxosFolder}/gizaplus/run_abd && chmod 777 runABD.sh" 2>&1
         sleep 0.3
     done
     for ip in "${ClientIps[@]}"
     do
-        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "mkdir -p ${LogFolder}; rm -rf ${LogFolder}/*; cd ${EPaxosFolder} && chmod 777 runABD.sh" 2>&1
+        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "mkdir -p ${LogFolder}; rm -rf ${LogFolder}/*; cd ${EPaxosFolder}/gizaplus/run_abd && chmod 777 runABD.sh" 2>&1
         sleep 0.3
     done
     wait
@@ -53,7 +53,7 @@ function runServersAllMachines() {
     MachineIdx=0
     for ip in "${ServerIps[@]}"
     do
-        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "cd ${EPaxosFolder} && EPScriptOption=StartServers EPMachineIdx=${MachineIdx} /bin/bash runABD.sh" 2>&1 &
+        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "cd ${EPaxosFolder}/gizaplus/run_abd && EPScriptOption=StartServers EPMachineIdx=${MachineIdx} /bin/bash runABD.sh" 2>&1 &
         sleep 0.3
         ((MachineIdx++))
     done
@@ -63,7 +63,7 @@ function runClientsAllMachines() {
     MachineIdx=0
     for ip in "${ClientIps[@]}"
     do
-        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "cd ${EPaxosFolder} && EPScriptOption=StartClients EPMachineIdx=${MachineIdx} /bin/bash runABD.sh" 2>&1 &
+        ssh -o StrictHostKeyChecking=no -i ${SSHKey} root@"$ip" "cd ${EPaxosFolder}/gizaplus/run_abd && EPScriptOption=StartClients EPMachineIdx=${MachineIdx} /bin/bash runABD.sh" 2>&1 &
         sleep 0.3
         ((MachineIdx++))
     done
@@ -73,20 +73,6 @@ function runServersAndClientsAllMachines() {
     runServersAllMachines
     sleep 5 # TODO(highlight): add wait time here
     runClientsAllMachines
-}
-
-function SendEPaxosFolder() {
-    for ip in "${ServerIps[@]}"
-    do
-        scp -o StrictHostKeyChecking=no -i ${SSHKey} -r ${EPaxosFolder} root@"$ip":~  2>&1 &
-        sleep 0.3
-    done
-    for ip in "${ClientIps[@]}"
-    do
-        scp -o StrictHostKeyChecking=no -i ${SSHKey} -r ${EPaxosFolder} root@"$ip":~  2>&1 &
-        sleep 0.3
-    done
-    wait
 }
 
 function SSHCheckClientProgress() {
@@ -163,7 +149,6 @@ function Main() {
     esac
 }
 
-#SendEPaxosFolder
 #prepareRun;
 RemoveLogs
 wait
@@ -172,3 +157,4 @@ wait
 DownloadLogs
 wait
 EpKillAll
+Analysis
