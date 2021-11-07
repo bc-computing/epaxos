@@ -1,8 +1,11 @@
 ## Testing ABD on Cloudlab
 ### Installation(***In Each VM***)
 1. SSH into each of the VMs and do the following inside /root:
-    1. ```git clone https://github.com/bc-computing/epaxos.git && cd epaxos```
-    2. ```git checkout gizaplus```
+    1. ```sudo su```
+    2. ```cd```
+    3. ```mkdir -p go/src && cd go/src```
+    4. ```git clone https://github.com/bc-computing/epaxos.git && cd epaxos```
+    5. ```git checkout gizaplus```
 2. Install go, python, and configure ssh.
    1. ```cd gizaplus/install```
    2. ```. install.sh```

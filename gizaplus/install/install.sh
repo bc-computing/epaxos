@@ -1,3 +1,6 @@
+go_tar=go1.15.8.linux-amd64.tar.gz # the version of Golang to be downloaded in install_go
+py_ver=python3.8                   # the version of Python to be downloaded in install_python
+
 # Make sure shell code is run inside the directory
 source ../base-profile.sh
 
