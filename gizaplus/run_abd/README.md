@@ -23,7 +23,7 @@
     3. Make sure you then recompile binaries with, ```. compile.sh```
 
 ### Run(***In Controller VM***)
-1. Finally, run ```cd gizaplus/run_abd && runABD.sh > run.txt``` in the terminal of your controller vm.
+1. Finally, run ```cd gizaplus/run_abd && . runABD.sh > run.txt``` in the terminal of your controller vm.
 2. If all works correctly, you should see n client logs inside the /logs directory in your controller VM.
 3. For throughput/latency analysis, run:
     1. ```cd ../.. && python3.8 analysis.py ./logs```

@@ -128,6 +128,7 @@ function RemoveLogs(){
 
 function Analysis() {
     sleep 3
+    cd ${EPaxosFolder}
 #    cat ${LogFolder}/*.out  # for visual inspection
     python3.8 analysis.py ${LogFolder} print-title
 }
