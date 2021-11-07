@@ -9,9 +9,8 @@
 2. Install go, python, and configure ssh.
    1. ```cd gizaplus/install```
    2. ```. install.sh```
-   3. ```cd ../..```
 3. Compile go binaries
-   1. ```. compile.sh``` 
+   1. ```cd ../.. && . compile.sh``` 
    2. After compiling, you should see:
       </br>
       ```Built Master```

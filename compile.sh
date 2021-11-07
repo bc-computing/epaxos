@@ -1,5 +1,5 @@
 # assume EPaxos source code has been clone to efolder
-efolder=${HOME}/go/src/epaxos
+efolder=${HOME}/go/src/epaxos/src
 profile=${HOME}/.bash_profile # .bash_profile for MacOS but .profile for Ubuntu?
 
 touch ${profile} # create one if profile does not exist
