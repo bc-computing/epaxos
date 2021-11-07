@@ -4,7 +4,7 @@
     1. ```git clone https://github.com/bc-computing/epaxos.git && cd epaxos```
     2. ```git checkout gizaplus```
 2. Install go, python, and configure ssh.
-   1. ```cd giza-plus/install```
+   1. ```cd gizaplus/install```
    2. ```. install.sh```
    3. ```cd ../..```
 3. Compile go binaries
