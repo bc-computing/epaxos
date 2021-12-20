@@ -1,5 +1,5 @@
 #!/bin/sh
-# Usage: Inside the gryff/experiments/nsdi20 folder, run ./initialize_scripts.sh
+# Usage: Inside the gryff/experiments/nsdi20 folder, run ./initialize_experiment_configs.sh
 
 # Purpose: This script modifies the following variables in the JSON config files in gryff/experiments/nsdi20:
   # "base_local_exp_directory" --> path to a directory on your local machine in which you want the experiment results stored
@@ -41,4 +41,6 @@ do
   sed -i "/\"default_remote_shell\":/c \"default_remote_shell\": \"${DEFAULT_REMOTE_SHELL}\"," ./$FILENAME
   sed -i "/\"server_host_format_str\":/c \"server_host_format_str\": \"${SERVER_HOST_FORMAT_STR}\"," ./$FILENAME
   sed -i "/\"client_host_format_str\":/c \"client_host_format_str\": \"${CLIENT_HOST_FORMAT_STR}\"," ./$FILENAME
+
+  echo "$FILENAME configured"
 done
