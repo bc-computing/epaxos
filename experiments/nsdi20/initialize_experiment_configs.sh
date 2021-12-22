@@ -23,7 +23,7 @@ HOST_FORMAT_STR_SUFFIX="emulab.net" # Used to configure SERVER_HOST_FORMAT_STR a
 
 # Automatically configure other variables except base_local_exp_directory.
 SRC_DIRECTORY=/users/"${EMULAB_USER}/epaxos" # Gryff folder should be in this location.
-BASE_REMOTE_BIN_DIRECTORY_NFS="${SRC_DIRECTORY}/bin" # Client/server binaries are stored in epaxos/bin.
+BASE_REMOTE_BIN_DIRECTORY_NFS="${SRC_DIRECTORY}" # Client/server binaries are stored in <user>/epaxos.
 SERVER_HOST_FORMAT_STR="%s.%s.%s.${HOST_FORMAT_STR_SUFFIX}"
 CLIENT_HOST_FORMAT_STR="client-%d-%d.%s.%s.${HOST_FORMAT_STR_SUFFIX}"
 
