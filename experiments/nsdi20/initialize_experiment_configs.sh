@@ -22,8 +22,8 @@ HOST_FORMAT_STR_SUFFIX="emulab.net" # Used to configure SERVER_HOST_FORMAT_STR a
 # -----------------------------------------------------------------------------------
 
 # Automatically configure other variables except base_local_exp_directory.
-SRC_DIRECTORY=/users/"${EMULAB_USER}/gryff" # Gryff folder should be in this location.
-BASE_REMOTE_BIN_DIRECTORY_NFS="${SRC_DIRECTORY}/bin" # Client/server binaries are stored in gryff/bin.
+SRC_DIRECTORY=/users/"${EMULAB_USER}/epaxos" # Gryff folder should be in this location.
+BASE_REMOTE_BIN_DIRECTORY_NFS="${SRC_DIRECTORY}/bin" # Client/server binaries are stored in epaxos/bin.
 SERVER_HOST_FORMAT_STR="%s.%s.%s.${HOST_FORMAT_STR_SUFFIX}"
 CLIENT_HOST_FORMAT_STR="client-%d-%d.%s.%s.${HOST_FORMAT_STR_SUFFIX}"
 
@@ -38,6 +38,7 @@ do
   # Note 2: If this script is being run on MacOS, change each occurence of "sed" to "gsed".
   sed -i "/\"base_local_exp_directory\":/c \"base_local_exp_directory\": \"${BASE_LOCAL_EXP_DIRECTORY}\"," ./$FILENAME
   sed -i "/\"base_remote_bin_directory_nfs\":/c \"base_remote_bin_directory_nfs\": \"${BASE_REMOTE_BIN_DIRECTORY_NFS}\"," ./$FILENAME
+  sed -i "/\"emulab_user\":/c \"emulab_user\": \"${BASE_REMOTE_BIN_DIRECTORY_NFS}\"," ./$FILENAME
   sed -i "/\"experiment_name\":/c \"experiment_name\": \"${EXPERIMENT_NAME}\"," ./$FILENAME
   sed -i "/\"project_name\":/c \"project_name\": \"${PROJECT_NAME}\"," ./$FILENAME
   sed -i "/\"src_directory\":/c \"src_directory\": \"${SRC_DIRECTORY}\"," ./$FILENAME
