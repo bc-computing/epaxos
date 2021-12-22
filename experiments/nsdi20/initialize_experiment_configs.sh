@@ -38,7 +38,7 @@ do
   # Note 2: If this script is being run on MacOS, change each occurence of "sed" to "gsed".
   sed -i "/\"base_local_exp_directory\":/c \"base_local_exp_directory\": \"${BASE_LOCAL_EXP_DIRECTORY}\"," ./$FILENAME
   sed -i "/\"base_remote_bin_directory_nfs\":/c \"base_remote_bin_directory_nfs\": \"${BASE_REMOTE_BIN_DIRECTORY_NFS}\"," ./$FILENAME
-  sed -i "/\"emulab_user\":/c \"emulab_user\": \"${BASE_REMOTE_BIN_DIRECTORY_NFS}\"," ./$FILENAME
+  sed -i "/\"emulab_user\":/c \"emulab_user\": \"${EMULAB_USER}\"," ./$FILENAME
   sed -i "/\"experiment_name\":/c \"experiment_name\": \"${EXPERIMENT_NAME}\"," ./$FILENAME
   sed -i "/\"project_name\":/c \"project_name\": \"${PROJECT_NAME}\"," ./$FILENAME
   sed -i "/\"src_directory\":/c \"src_directory\": \"${SRC_DIRECTORY}\"," ./$FILENAME
