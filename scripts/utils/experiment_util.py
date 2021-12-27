@@ -454,39 +454,54 @@ def run_multiple_experiments(config_file, executor):
                             config['experiment_independent_vars_unused'][i][k]))
                         sys.exit(1)
 
+        # Get the name of the config file without the .json suffix.
         config_name = os.path.splitext(os.path.basename(config_file))[0]
 
         exp_futs = []
         exp_futs_idxs = []
         config_files = []
-        indep_vars_list = [] 
+        indep_vars_list = []
 
+        # returns the experiment result directory with the timestamp (%Y-%m-%d-%H-%M-%S) appended to it.
         exp_dir = get_timestamped_exp_dir(config)
         os.makedirs(exp_dir, exist_ok=True)
         
         out_dirs = []
         sub_out_dirs = []
+
+        # For each element of the first variable (first element of first list) in independent variable,
+        # make a new json object.
         for i in range(len(config[config['experiment_independent_vars_unused'][0][0]])):
             config_new = config.copy()
             config_new['base_local_exp_directory'] = exp_dir
+
+            # Get rid of the first independent variable list in the unused independent variable
+            # list since they will all be dealt with.
             config_new['experiment_independent_vars_unused'] = config['experiment_independent_vars_unused'][1:]
-            
+
+            # For each key of the first list of independent variables (used or unused), set the corresponding values for
+            # this new json object equal only to a single element from each list of values in the original config file.
             for j in range(len(config['experiment_independent_vars_unused'][0])):
                 config_new[config['experiment_independent_vars_unused'][0][j]] = config[config['experiment_independent_vars_unused'][0][j]][i]
-            
+
+            # Create a new configuration file for the split config object.
             config_file_new = os.path.join(exp_dir, '%s-%d.json' % (config_name, i))
             with open(config_file_new, 'w+') as f_new:
                 json.dump(config_new, f_new, indent=2, sort_keys=True)
             config_files.append(config_file_new)
 
+            # If there are no more lists inside independent_vars_unused, the only thing that is left is to run the
+            # newly created config file.
             if len(config_new['experiment_independent_vars_unused']) == 0:
                 exp_futs.append(run_experiment(config_file_new, i, executor))
                 exp_futs_idxs.append(i)
+            # Otherwise, recursively split the config file into sub-config files.
             else:
                 out_directory, sub_out_directories = run_multiple_experiments(config_file_new, executor)
                 out_dirs.append(out_directory)
                 sub_out_dirs.append(sub_out_directories)
 
+        # Check if executions of config files were successful. If not, retry them until max retries is reached.
         retries = 0
         while len(out_dirs) < len(config[config['experiment_independent_vars_unused'][0][0]]) and retries <= config['max_retries']:
             retry_exp_futs = []
