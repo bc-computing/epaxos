@@ -1,7 +1,7 @@
 {
   "experiment_independent_vars": [
-    ["replication_protocol", "replication_protocol_settings", "plot_cdf_series_title", "plot_tput_lat_series_title"],
-    ["client_write_percentage", "client_read_percentage", "client_rmw_percentage", "client_conflict_percentage"]
+    ["client_conflict_percentage", "client_write_percentage", "client_read_percentage", "client_rmw_percentage"],
+    ["replication_protocol", "replication_protocol_settings", "plot_cdf_series_title", "plot_tput_lat_series_title"]
   ],
   "replication_protocol": [
     "gryff",
