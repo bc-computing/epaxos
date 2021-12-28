@@ -1,7 +1,7 @@
 {
   "experiment_independent_vars": [
-    ["client_conflict_percentage", "client_write_percentage", "client_read_percentage", "client_rmw_percentage"],
-    ["replication_protocol", "replication_protocol_settings", "plot_cdf_series_title", "plot_tput_lat_series_title"]
+    ["replication_protocol", "replication_protocol_settings", "plot_cdf_series_title", "plot_tput_lat_series_title"],
+    ["client_conflict_percentage", "client_write_percentage", "client_read_percentage", "client_rmw_percentage"]
   ],
   "replication_protocol": [
     "gryff",
@@ -13,7 +13,7 @@
       "client_regular_consistency": false,
       "client_sequential_consistency": false,
       "proxy_operations": true,
-      "server_execute_commands": false,
+      "server_execute_commands": true,
       "server_delay_reply": true,
       "server_thrifty": true,
       "server_shortcircuit_timeout": -1,
@@ -22,39 +22,39 @@
     },
     {
       "server_delay_reply": true,
-      "server_execute_commands": false,
+      "server_execute_commands": true,
       "server_thrifty": true
     },
     {
       "server_delay_reply": true,
-      "server_execute_commands": false,
+      "server_execute_commands": true,
       "server_thrifty": true
     }
   ],
   "server_names":
-    [
-      "california",
-      "virginia",
-      "ireland"
-    ],
+  [
+    "california",
+    "virginia",
+    "ireland"
+  ],
   "server_ping_latencies":
-    {
-      "california": {
-        "california": 0,
-        "ireland": 151,
-        "virginia": 72
-      },
-      "ireland": {
-        "california": 151,
-        "ireland": 0,
-        "virginia": 88
-      },
-      "virginia": {
-        "california": 72,
-        "ireland": 88,
-        "virginia": 0
-      }
+  {
+    "california": {
+      "california": 0,
+      "ireland": 151,
+      "virginia": 72
     },
+    "ireland": {
+      "california": 151,
+      "ireland": 0,
+      "virginia": 88
+    },
+    "virginia": {
+      "california": 72,
+      "ireland": 88,
+      "virginia": 0
+    }
+  },
   "client_conflict_percentage": [2, 10, 25],
   "client_write_percentage": [45, 45, 45],
   "client_read_percentage": [945, 945, 945],
