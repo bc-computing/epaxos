@@ -1,6 +1,6 @@
 {
   "experiment_independent_vars": [
-    ["replication_protocol", "replication_protocol_settings", "plot_cdf_series_title", "plot_tput_lat_series_title"],
+    ["replication_protocol", "replication_protocol_settings", "plot_cdf_series_title", "plot_tput_lat_series_title"]
   ],
   "replication_protocol": [
     "gryff",
